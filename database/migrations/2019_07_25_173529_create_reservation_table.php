@@ -16,7 +16,7 @@ class CreateReservationTable extends Migration
         Schema::create('reservation', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('guest_id');
-            $table->integer('stylist_id');
+            $table->integer('hair_stylist_id');
             $table->integer('service_id');
             $table->dateTime('booking_time');
             $table->string('name');

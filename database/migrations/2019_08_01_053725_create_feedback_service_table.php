@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStylistTable extends Migration
+class CreateFeedbackServiceTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateStylistTable extends Migration
      */
     public function up()
     {
-        Schema::create('stylist', function (Blueprint $table) {
+        Schema::create('feedback_service', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('gender');
-            $table->string('avatar');
-            $table->string('address',255);
+            $table->integer('hair_stylist_id');
             $table->integer('feedback');
             $table->timestamps();
         });
@@ -31,6 +28,6 @@ class CreateStylistTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stylist');
+        Schema::dropIfExists('feedback_service');
     }
 }
