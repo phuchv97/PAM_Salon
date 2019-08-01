@@ -17,8 +17,8 @@ class CreateServiceUsageHistoryTable extends Migration
             $table->bigIncrements('id');
             $table->integer('guest_id');
             $table->integer('reservation_id');
-            $table->integer('feedback');
-            $table->integer('stylist_id');
+            $table->integer('feedback_service_id');
+            $table->integer('feedback_produce_id');
             $table->timestamps();
         });
     }
