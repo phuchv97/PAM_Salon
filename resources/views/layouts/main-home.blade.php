@@ -27,7 +27,8 @@
           <h4 class="modal-title">Modal Header</h4>
         </div>
         <div class="modal-body">
-          <input id="set-time" value="8:00" style="color: white">  
+          <input class="set-time" value="8:00" style="color: white">  
+          <input class="set-time" value="8:30" style="color: white">  
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -43,7 +44,7 @@
   @include('assets.home.asset-js')
   
     <script type="text/javascript">
-      $( "#set-time" ).click(function() {
+      $( ".set-time" ).click(function() {
          var settime = $(this).val();
          var timepicker = $(this).val();
          timepicker = $('#time-picker').val(settime);
