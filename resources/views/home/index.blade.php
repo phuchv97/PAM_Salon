@@ -26,7 +26,7 @@
                             <div class="form-group ml-md-4">
                                 <div class="input-wrap">
                             <div class="icon"><span class="ion-ios-clock"></span></div>
-                            <input type="text" id="appointment_time" class="form-control" placeholder="Time">
+                            <input type="text" id="time-picker" class="form-control" placeholder="Time" data-toggle="modal" data-target="#myModal">
                         </div>
                             </div>
                             <div class="form-group ml-md-4">

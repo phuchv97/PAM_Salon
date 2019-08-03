@@ -26,6 +26,15 @@ Route::get('blog', function () {
 Route::get('contact', function () {
     return view('home.contact');
 })->name('contact');
+Route::get('product', function () {
+    return view('home.product');
+})->name('product');
+Route::get('product-detail', function () {
+    return view('home.product-detail');
+})->name('product-detail');
 Route::get('login', function () {
     return view('home.login');
 })->name('login');
+Route::get('signup', function () {
+    return view('home.signup');
+})->name('signup');

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Đăng nhập</title>
+    <title>Đăng ký</title>
     @include('assets.home.asset-css')
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
@@ -13,7 +13,7 @@
       <form action="index.html" class="login-form">
         <p><a class="navbar-brand" href="{{ route('/') }}">PAM</a></p>
 
-        <h3>Đăng nhập</h3>
+        <h3>Đăng ký</h3>
 
         <div class="txtb">
           <input type="text" required />
@@ -25,10 +25,10 @@
           <span data-placeholder="Mật khẩu"></span>
         </div>
 
-        <input type="submit" class="logbtn" value="Đăng nhập">
+        <input type="submit" class="logbtn" value="Đăng ký">
 
         <div class="bottom-text">
-          Bạn chưa có tài khoản? <a href="#">Đăng ký</a>
+           <a href="#">Đăng nhập</a>
         </div>
 
       </form>

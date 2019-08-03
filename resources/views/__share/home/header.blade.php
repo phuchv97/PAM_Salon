@@ -10,9 +10,14 @@
 	          <li class="nav-item active"><a href="{{ route('/') }}" class="nav-link">Trang chủ</a></li>
 	          <li class="nav-item"><a href="{{ route('service') }}" class="nav-link">Dịch vụ</a></li>
 	          <li class="nav-item"><a href="{{ route('album') }}" class="nav-link">Album Ảnh</a></li>
+	          <li class="nav-item"><a href="{{ route('product') }}" class="nav-link">Sản phẩm</a></li>
 	          <li class="nav-item"><a href="{{ route('blog') }}" class="nav-link">Bài viết</a></li>
 	          <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link">Liên hệ</a></li>
-              <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Đăng nhập</a></li>
+              <li class="nav-item dropdown"><a href="{{ route('login') }}" class="nav-link">Đăng nhập</a>
+                <div class="dropdown-content">
+                   <a href="{{ route('signup') }}">Đăng ký</a>
+               </div>
+              </li>
 	        </ul>
 	      </div>
 	    </div>

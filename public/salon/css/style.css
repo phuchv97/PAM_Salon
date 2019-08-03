@@ -8501,7 +8501,8 @@ textarea.form-control {
     .blog-entry .text .heading {
       font-size: 18px;
       margin-bottom: 16px;
-      font-weight: 400; }
+      font-weight: 400; 
+      flex-grow: 1;}
       .blog-entry .text .heading a {
         color: #fff; }
         .blog-entry .text .heading a:hover, .blog-entry .text .heading a:focus, .blog-entry .text .heading a:active {
@@ -8908,7 +8909,7 @@ textarea.form-control {
   background-image: linear-gradient(120deg,#3498db,#8e44ad);
 }
 
-.login-form h1{
+.login-form h3{
   margin-top: 20px;
   text-align: center;
   margin-bottom: 40px;
@@ -8988,8 +8989,42 @@ textarea.form-control {
   font-size: 50px;
   line-height: 1;
   font-family: "Cookie", Arial, sans-serif, cursive; }
+.name-price{
+  display: flex;
+}
+.price{
+  font-size: 18px;
+      margin-bottom: 16px;
+      font-weight: 400; 
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  bottom: -10px;
+}
 
+.dropdown-content a {
+  color:rgba(255, 255, 255, 0.7);
+  padding: 0 20px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 14px;
+}
 
+.dropdown-content a:hover {background-color: none;color: #ce9c6b}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#set-time{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
 @media screen and (max-width: 480px) {
   .login-form{
     width: 90%;
