@@ -10,10 +10,7 @@
                     <form action="#" class="appointment-form">
                         <div class="d-md-flex">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name">
-                            </div>
-                            <div class="form-group ml-md-4">
-                                <input type="text" class="form-control" placeholder="Last Name">
+                                <input type="text" class="form-control" placeholder="Full Name">
                             </div>
                         </div>
                         <div class="d-md-flex">
@@ -32,9 +29,6 @@
                             <div class="form-group ml-md-4">
                                 <input type="text" class="form-control" placeholder="Phone">
                             </div>
-                        </div>
-                        <div class="form-group">
-                  <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
                 </div>
                 <div class="form-group">
                   <input type="submit" value="Đặt lịch giữ chỗ" class="btn btn-primary py-3 px-4">

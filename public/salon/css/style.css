@@ -9020,14 +9020,38 @@ textarea.form-control {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.set-time{
-  width: 100px;
+.box-datepicker{
+ 
   height: 100px;
   background-color: black;
+  margin: 5px 13px;
+  border-radius: 15px;
+}
+.set-time{
+  text-align: center;
+  margin-top: 10px;
+}
+.number{
+    width: 100%;
+    text-align: center;
+    background: none;
+    color: white;
+    border: none;
+}
+.modal-title{
+  color: black;
+  text-align: center;
+  margin:auto;
 }
 @media screen and (max-width: 480px) {
   .login-form{
     width: 90%;
     height: 90%;
   }
+  .appointment-form .form-group .icon span {
+    float: right;
+  }  
+/*  .box-datepicker{
+  margin: 5px 8px;
+}*/
 }
