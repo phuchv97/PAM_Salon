@@ -10,25 +10,28 @@
   </head>
   <body>
     <div id="login">
-      <form action="index.html" class="login-form">
+      <form action="{{ route('home') }}" class="login-form" onsubmit="return validate_form()">
         <p><a class="navbar-brand" href="{{ route('home') }}">PAM</a></p>
 
         <h3>Đăng nhập</h3>
 
         <div class="txtb">
-          <input type="text" required />
+          <input type="text" id="name" />
           <span data-placeholder="Tên đăng nhập"></span>
+          
         </div>
+        <span id="error_name"></span>
 
         <div class="txtb">
-          <input type="password" required />
-          <span data-placeholder="Mật khẩu"></span>
+          <input type="password" id="password" />
+          <span data-placeholder="Mật khẩu"></span> 
         </div>
+        <span id="error_password"></span>
 
-        <input type="submit" class="logbtn" value="Đăng nhập">
+        <button type="submit" class="logbtn">Đăng nhập</button>
 
         <div class="bottom-text">
-          Bạn chưa có tài khoản? <a href="#">Đăng ký</a>
+          Bạn chưa có tài khoản? <a href="{{ route('signup') }}">Đăng ký</a>
         </div>
 
       </form>
@@ -44,8 +47,8 @@
         if($(this).val() == "")
         $(this).removeClass("focus");
       });
-
       </script>
+      @include('assets.home.asset-js');
 
 
   </body>

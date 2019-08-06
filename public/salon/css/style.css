@@ -8919,7 +8919,7 @@ textarea.form-control {
 .txtb{
   border-bottom: 2px solid #adadad;
   position: relative;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 .txtb input{
@@ -8971,6 +8971,7 @@ textarea.form-control {
   outline: none;
   cursor: pointer;
   transition: .5s;
+  margin-top: 20px;
 }
 
 .logbtn:hover{
@@ -9054,4 +9055,10 @@ textarea.form-control {
 /*  .box-datepicker{
   margin: 5px 8px;
 }*/
+}
+#error_name, #error_password{
+  color:red;
+}
+#name:focus{
+  background-color: none;
 }

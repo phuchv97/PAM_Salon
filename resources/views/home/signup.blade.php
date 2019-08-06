@@ -10,25 +10,29 @@
   </head>
   <body>
     <div id="login">
-      <form action="index.html" class="login-form">
-        <p><a class="navbar-brand" href="{{ route('/') }}">PAM</a></p>
+      <form action="{{ route('login') }}" class="login-form" onsubmit="return validate_form()">
+        <p><a class="navbar-brand" href="{{ route('home') }}">PAM</a></p>
 
         <h3>Đăng ký</h3>
 
         <div class="txtb">
-          <input type="text" required />
+          <input type="text" id="name" />
           <span data-placeholder="Tên đăng nhập"></span>
+          
         </div>
+        <span id="error_name"></span>
 
         <div class="txtb">
-          <input type="password" required />
-          <span data-placeholder="Mật khẩu"></span>
+          <input type="password" id="password" />
+          <span data-placeholder="Mật khẩu"></span> 
         </div>
+        <span id="error_password"></span>
 
-        <input type="submit" class="logbtn" value="Đăng ký">
+        {{-- <input type="submit" class="logbtn" value="Đăng ký"> --}}
+        <button type="submit" class="logbtn">Đăng ký</button>
 
         <div class="bottom-text">
-           <a href="#">Đăng nhập</a>
+           <a href="{{ route('login') }}">Đăng nhập</a>
         </div>
 
       </form>
@@ -46,6 +50,7 @@
       });
 
       </script>
+       @include('assets.home.asset-js');
 
 
   </body>
