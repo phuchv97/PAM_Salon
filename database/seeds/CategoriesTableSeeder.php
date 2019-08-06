@@ -14,46 +14,22 @@ class CategoriesTableSeeder extends Seeder
         $faker = Faker\Factory::create();
         $categories = [
             [
-                'name' => 'Trang Chủ',
+                'name' => 'Bài viết được quan tâm',
                 'description'=> $faker-> realText($maxNbChars = 255),
                 'user_id'=>$faker->numberBetween(1,5),
-                'slug'=>'home'
+                'slug'=>'bai-viet-duoc-quan-tam'
             ],
             [
-                'name' => 'Dịch vụ',
+                'name' => 'Bài viết gần đây',
                 'description'=> $faker-> realText($maxNbChars = 255),
                 'user_id'=>$faker->numberBetween(1,5),
-                'slug'=>'service'
+                'slug'=>'bai-viet-gan-day'
             ],
             [
-                'name' => 'Bài Viết',
+                'name' => 'Dịch vụ hot nhat',
                 'description'=> $faker-> realText($maxNbChars = 255),
                 'user_id'=>$faker->numberBetween(1,5),
-                'slug'=>'blog'
-            ],
-            [
-                'name' => 'Album ảnh',
-                'description'=> $faker-> realText($maxNbChars = 255),
-                'user_id'=>$faker->numberBetween(1,5),
-                'slug'=>'album'
-            ],
-            [
-                'name' => 'Sản Phẩm',
-                'description'=> $faker-> realText($maxNbChars = 255),
-                'user_id'=>$faker->numberBetween(1,5),
-                'slug'=>'produce'
-            ],
-            [
-                'name' => 'Liên hệ',
-                'description'=> $faker-> realText($maxNbChars = 255),
-                'user_id'=>$faker->numberBetween(1,5),
-                'slug'=>'contact'
-            ],
-            [
-                'name' => 'Đăng Nhập',
-                'description'=> $faker-> realText($maxNbChars = 255),
-                'user_id'=>$faker->numberBetween(1,5),
-                'slug'=>'login'
+                'slug'=>'dich-vu-hot-nhat'
             ]
             ];
         DB::table('categories')->insert($categories);

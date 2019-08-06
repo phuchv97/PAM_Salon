@@ -130,81 +130,6 @@
 
     <section class="ftco-section">
         <div class="container">
-            <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Chúng ta làm gì</h2>
-            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
-            <p class="mt-5">Salon PAM tin tưởng và nỗ lực mỗi ngày để kết nối bàn tay tài hoa của người thợ Việt cùng công nghệ khoa học trong 30 phút nhằm đem đến cho phái mạnh toàn cầu kiểu tóc đẹp trai, làn da khỏe mạnh cuốn hút phái đẹp.</p>
-          </div>
-        </div>
-        </div>
-        <div class="container-wrap">
-            <div class="row no-gutters d-flex">
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="services-wrap d-flex">
-                        <a href="#" class="img" style="background-image: url({{ asset('salon/images/work-1.jpg') }});"></a>
-                        <div class="text p-4">
-                            <h3>Kiểu tóc </h3>
-                            <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới. </p>
-                            <span><a href="#">Đọc thêm</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="services-wrap d-flex">
-                        <a href="#" class="img" style="background-image: url({{ asset('salon/images/work-2.jpg') }})"></a>
-                        <div class="text p-4">
-                            <h3>Cắt tỉa</h3>
-                            <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.</p>
-                            <span><a href="#">Đọc thêm</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="services-wrap d-flex">
-                        <a href="#" class="img" style="background-image: url({{ asset('salon/images/work-3.jpg') }})"></a>
-                        <div class="text p-4">
-                            <h3>Cắt tóc truyền thống </h3>
-                            <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.</p>
-                            <span><a href="#">Đọc thêm</a></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="services-wrap d-flex">
-                        <a href="#" class="img order-md-last"  style="background-image: url({{ asset('salon/images/work-4.jpg') }})""></a>
-                        <div class="text p-4">
-                            <h3>Kiểu tóc cho nữ</h3>
-                            <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới. </p>
-                            <span><a href="#">Đọc thêm</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="services-wrap d-flex">
-                        <a href="#" class="img order-md-last"  style="background-image: url({{ asset('salon/images/work-5.jpg') }})""></a>
-                        <div class="text p-4">
-                            <h3>Cắt tỉa </h3>
-                            <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.</p>
-                            <span><a href="#">Đọc thêm</a></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="services-wrap d-flex">
-                        <a href="#" class="img order-md-last"  style="background-image: url({{ asset('salon/images/work-6.jpg') }})"></a>
-                        <div class="text p-4">
-                            <h3>Traditional Haircuts Mens </h3>
-                            <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.</p>
-                            <span><a href="#">Đọc thêm</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
             <div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h2 class="mb-4">Kế hoạch &amp;Giá cả</h2>
@@ -213,15 +138,15 @@
           </div>
         </div>
         <div class="row">
-        @foreach($services as $s )
+        @foreach($service_detail as $s_detail )
             <div class="col-md-6">
                 <div class="pricing-entry ftco-animate">
                     <div class="d-flex text align-items-center">
-                        <h3><span>{{$s->name}}</span></h3>
-                        <span class="price">{{$s->price}}Đ</span>
+                        <h3><span>{{$s_detail->name}}</span></h3>
+                        <span class="price">{{$s_detail->price}}Đ</span>
                     </div>
                     <div class="d-block">
-                        <p>{{$s->description}}</p>
+                        <p>{{$s_detail->description}}</p>
                     </div>
                 </div>
             </div>
@@ -359,7 +284,7 @@
         @foreach($posts as $post)
           <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry align-self-stretch">
-              <a href="#" class="block-20" style="background-image: url({{ asset($post -> image) }});">
+              <a href="{{route('blog_detail',['id' => $post->id])}}" class="block-20" style="background-image: url({{ asset($post -> image) }});">
               </a>
               <div class="text py-4 d-block">
                 <div class="meta">
@@ -367,7 +292,7 @@
                   <div><a href="#">Admin</a></div> -->
                   <!-- <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
                 </div>
-                <h3 class="heading mt-2"><a href="#">{{$post -> title}}</a></h3>
+                <h3 class="heading mt-2"><a href="{{route('blog_detail',['id'=> $post->id])}}">{{$post -> title}}</a></h3>
                 <p>{{$post -> description}}</p>
               </div>
             </div>

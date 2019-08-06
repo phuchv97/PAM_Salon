@@ -22,22 +22,32 @@ class HomeController extends Controller
     }
 
     public function index(){
-        $posts = Posts::all();
-        $services = Services::all();
-        $hairStylist = HairStylist::all();
+        $posts = Posts::take(3)->get();
+        $service_detail = Services::all();
+        $services = Services::take(4)->get();
+        $hairStylist = HairStylist::limit(4)->get();
         $gallery = Gallery::take(4)->get();
-        return view('home.index', compact('services','posts','hairStylist','gallery'));
+        return view('home.index', compact('services','posts','service_detail','hairStylist','gallery'));
+    }
+    public function blog_detail($id){
+        $post = Posts::where('id','=', $id)->first();
+        $post_new = Posts::orderBy('id','desc')->limit(3)->get();
+        return view('home.blog-detail',['post'=>$post,'post_new'=>$post_new]);
     }
     public function service(){
-        $services = Services::all();
-        return view('home.service',['services'=>$services]);
+        $service = Services::limit(4)->get();
+        $service_detail = Services::all();
+        return view('home.service',['service_detail'=>$service_detail, 'service'=>$service]);
     }
     public function blog(){
         $posts = Posts::all();
          return view('home.blog', compact('posts'));
     }
-    public function produce(){
-        return view('home.produce');
+    public function product(){
+        return view('home.product');
+    }
+    public function product_detail(){
+        return view('home.product-detail');
     }
     public function album(){
         $gallery = Gallery::all();

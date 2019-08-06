@@ -19,7 +19,7 @@
 			@foreach($posts as $p)
 	          <div class="col-md-4 d-flex ftco-animate">
 	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset($p->image) }});">
+	              <a href="{{route('blog_detail',['id' => $p->id])}}" class="block-20" style="background-image: url({{ asset($p->image) }});">
 	              </a>
 	              <div class="text py-4 d-block">
 	              	<!-- <div class="meta">

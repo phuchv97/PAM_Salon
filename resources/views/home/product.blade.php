@@ -22,7 +22,7 @@
 	              </a>
 	              <div class="text py-4 d-block">
 	              	<div class="name-price">
-	              		<h3 class="heading mt-2"><a href="#">Keo 502</a></h3>
+	              		<h3 class="heading mt-2"><a href="{{route('product_detail')}}">Keo 502</a></h3>
 	              		<h3 class="price mt-2">100.000đ</h3>
 	              	</div>
 	                <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
