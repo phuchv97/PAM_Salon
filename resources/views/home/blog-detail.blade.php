@@ -17,12 +17,12 @@
 	      <div class="container">
 	        <div class="row">
 	          <div class="col-md-8 ftco-animate">
-	            <h2 class="mb-3">10 Tips For The Traveler</h2>
-	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.</p>
+	            <h2 class="mb-3">{{$post -> title}}</h2>
+	            <p>{{$post -> description}}</p>
 	            <p>
-	              <img src={{ asset("salon/images/image_1.jpg" ) }} alt="" class="img-fluid">
+	              <img src="{{asset($post->image) }}" alt="" class="img-fluid">
 	            </p>
-	            <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
+	            <p>{{$post->detail}}</p>
 	            
 	            <div class="about-author d-flex p-5 ftco-bg-dark">
 	              <div class="bio align-self-md-center mr-5">
@@ -139,39 +139,18 @@
 
 	            <div class="sidebar-box ftco-animate">
 	              <h3>Bài viết gần đây</h3>
+				  @foreach($post_new as $p_new)
 	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url({{ asset('salon/images/image_1.jpg') }});"></a>
+	                <a class="blog-img mr-4" style="background-image: url({{ asset($p_new->image) }});"></a>
 	                <div class="text">
-	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+	                  <h3 class="heading"><a href="{{route('blog_detail',['id'=>$p_new->id])}}">{{$p_new->title}}</a></h3>
 	                  <div class="meta">
-	                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-	                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-	                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+	                    <div><a href="#"><span class="icon-calendar"></span>{{$p_new->created_at}} </a></div>
+	                    
 	                  </div>
 	                </div>
 	              </div>
-	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url({{ asset('salon/images/image_2.jpg') }});"></a>
-	                <div class="text">
-	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	                  <div class="meta">
-	                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-	                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-	                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-	                  </div>
-	                </div>
-	              </div>
-	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url({{ asset('salon/images/image_3.jpg') }});"></a>
-	                <div class="text">
-	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	                  <div class="meta">
-	                    <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-	                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-	                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-	                  </div>
-	                </div>
-	              </div>
+	              @endforeach
 	            </div>
 	          </div>
 
