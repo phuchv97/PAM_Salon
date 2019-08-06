@@ -16,96 +16,40 @@
 	    <section class="ftco-section">
 	      <div class="container">
 	        <div class="row d-flex">
+			@foreach($posts as $p)
 	          <div class="col-md-4 d-flex ftco-animate">
 	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_1.jpg') }});">
+	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset($p->image) }});">
 	              </a>
 	              <div class="text py-4 d-block">
-	              	<div class="meta">
+	              	<!-- <div class="meta">
 	                  <div><a href="#">Sept 10, 2018</a></div>
 	                  <div><a href="#">Admin</a></div>
 	                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-	                </div>
-	                <h3 class="heading mt-2"><a href="#">Kiểu tóc nam cho mọi khuôn mặt</a></h3>
-	                <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
+	                </div> -->
+	                <h3 class="heading mt-2"><a href="#">{{$p->title}}</a></h3>
+	                <p>{{$p-> description}}</p>
 	              </div>
 	            </div>
 	          </div>
+	        @endforeach
+			@foreach($posts as $p)
 	          <div class="col-md-4 d-flex ftco-animate">
 	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_2.jpg') }});">
+	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset($p->image) }});">
 	              </a>
 	              <div class="text py-4 d-block">
-	              	<div class="meta">
+	              	<!-- <div class="meta">
 	                  <div><a href="#">Sept 10, 2018</a></div>
 	                  <div><a href="#">Admin</a></div>
 	                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-	                </div>
-	                <h3 class="heading mt-2"><a href="#">Kiểu tóc nam cho mọi khuôn mặt</a></h3>
-	                <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
+	                </div> -->
+	                <h3 class="heading mt-2"><a href="#">{{$p->title}}</a></h3>
+	                <p>{{$p-> description}}</p>
 	              </div>
 	            </div>
 	          </div>
-	          <div class="col-md-4 d-flex ftco-animate">
-	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_3.jpg') }});">
-	              </a>
-	              <div class="text py-4 d-block">
-	              	<div class="meta">
-	                  <div><a href="#">Sept 10, 2018</a></div>
-	                  <div><a href="#">Admin</a></div>
-	                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-	                </div>
-	                <h3 class="heading mt-2"><a href="#">Kiểu tóc nam cho mọi khuôn mặt</a></h3>
-	                <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="col-md-4 d-flex ftco-animate">
-	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_4.jpg') }});">
-	              </a>
-	              <div class="text py-4 d-block">
-	              	<div class="meta">
-	                  <div><a href="#">Sept 10, 2018</a></div>
-	                  <div><a href="#">Admin</a></div>
-	                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-	                </div>
-	                <h3 class="heading mt-2"><a href="#">Kiểu tóc nam cho mọi khuôn mặt</a></h3>
-	                <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="col-md-4 d-flex ftco-animate">
-	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_5.jpg') }});">
-	              </a>
-	              <div class="text py-4 d-block">
-	              	<div class="meta">
-	                  <div><a href="#">Sept 10, 2018</a></div>
-	                  <div><a href="#">Admin</a></div>
-	                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-	                </div>
-	                <h3 class="heading mt-2"><a href="#">Kiểu tóc nam cho mọi khuôn mặt</a></h3>
-	                <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="col-md-4 d-flex ftco-animate">
-	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_6.jpg') }});">
-	              </a>
-	              <div class="text py-4 d-block">
-	              	<div class="meta">
-	                  <div><a href="#">Sept 10, 2018</a></div>
-	                  <div><a href="#">Admin</a></div>
-	                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-	                </div>
-	                <h3 class="heading mt-2"><a href="#">Kiểu tóc nam cho mọi khuôn mặt</a></h3>
-	                <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-	              </div>
-	            </div>
-	          </div>
+	        @endforeach  
 	        </div>
 	        <div class="row mt-5">
 	          <div class="col text-center">

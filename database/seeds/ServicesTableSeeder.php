@@ -15,29 +15,29 @@ class ServicesTableSeeder extends Seeder
 
         $services=[
             [
-               'name'=>'Haircuts & Styling',
-               'description' => 'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.',
+               'name'=>'Cắt tóc & Tạo kiểu',
+               'description' => 'Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.',
                 'price'=>'50000',
                 'icon'=>$faker->imageUrl(300,300),
                 'user_id'=> '2'
             ],
             [
-                'name'=>'Beard Treatment',
-                'description' => 'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.',
+                'name'=>'Cạo râu',
+                'description' => 'Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.',
                  'price'=>'100000',
                  'icon'=>$faker->imageUrl(300,300),
                  'user_id'=> '1'
              ],
              [
-                'name'=>'Coloring Services',
-                'description' => 'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.',
+                'name'=>'Nhuộm',
+                'description' => 'Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.',
                  'price'=>'150000',
                  'icon'=>$faker->imageUrl(300,300),
                  'user_id'=> '3'
              ],
              [
-                'name'=>'Beard Waxing',
-                'description' => 'Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.',
+                'name'=>'Tẩy lông',
+                'description' => 'Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.',
                  'price'=>'30000',
                  'icon'=>$faker->imageUrl(300,300),
                  'user_id'=> '4'

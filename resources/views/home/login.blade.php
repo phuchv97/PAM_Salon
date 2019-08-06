@@ -11,7 +11,7 @@
   <body>
     <div id="login">
       <form action="index.html" class="login-form">
-        <p><a class="navbar-brand" href="{{ route('/') }}">PAM</a></p>
+        <p><a class="navbar-brand" href="{{ route('home') }}">PAM</a></p>
 
         <h3>Đăng nhập</h3>
 
