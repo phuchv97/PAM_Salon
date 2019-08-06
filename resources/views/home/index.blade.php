@@ -95,7 +95,7 @@
         <div class="container">
             <div class="row justify-content-center mb-4">
           <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Welcome to <span>PAM</span> A Hair Salon</h2>
+            <h2 class="mb-4">Chào mừng bạn đã đến với <span>PAM Salon</span> </h2>
             <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
           </div>
         </div>
@@ -117,46 +117,19 @@
           </div>
         </div>
             <div class="row">
+          @foreach($services as $service)
           <div class="col-md-3 ftco-animate">
             <div class="media d-block text-center block-6 services">
               <div class="icon d-flex justify-content-center align-items-center mb-4">
                 <span class="flaticon-scissor-and-comb"></span>
               </div>
               <div class="media-body">
-                <h3 class="heading">Cắt tóc &amp; Tạo kiểu</h3>
-                <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.</p>
+                <h3 class="heading">{{$service->name}}</h3>
+                <p>{{$service -> description}}</p>
               </div>
             </div>      
           </div>
-          <div class="col-md-3 ftco-animate">
-            <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-4">
-                <span class="flaticon-male-head-hair-and-beard"></span>
-              </div>
-              <div class="media-body">
-                <h3 class="heading">Cạo râu</h3>
-                <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-3 ftco-animate">
-            <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-4"><span class="flaticon-heads-hairs-and-scissors"></span></div>
-              <div class="media-body">
-                <h3 class="heading">Nhuộm</h3>
-                <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.</p>
-              </div>
-            </div>    
-          </div>
-          <div class="col-md-3 ftco-animate">
-            <div class="media d-block text-center block-6 services">
-              <div class="icon d-flex justify-content-center align-items-center mb-4"><span class="flaticon-young-male-short-irregular-hair-on-head-and-a-small-beard"></span></div>
-              <div class="media-body">
-                <h3 class="heading">Tẩy lông</h3>
-                <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.</p>
-              </div>
-            </div>    
-          </div>
+          @endforeach
         </div>
         </div>
     </section>
@@ -246,83 +219,19 @@
           </div>
         </div>
         <div class="row">
+        @foreach($services as $s )
             <div class="col-md-6">
                 <div class="pricing-entry ftco-animate">
                     <div class="d-flex text align-items-center">
-                        <h3><span>Cắt tóc nam</span></h3>
-                        <span class="price">100.000đ</span>
+                        <h3><span>{{$s->name}}</span></h3>
+                        <span class="price">{{$s->price}}Đ</span>
                     </div>
                     <div class="d-block">
-                        <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-                    </div>
-                </div>
-                <div class="pricing-entry ftco-animate">
-                    <div class="d-flex text align-items-center">
-                        <h3><span>Cắt tóc trẻ em</span></h3>
-                        <span class="price">50.000đ</span>
-                    </div>
-                    <div class="d-block">
-                        <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-                    </div>
-                </div>
-                <div class="pricing-entry ftco-animate">
-                    <div class="d-flex text align-items-center">
-                        <h3><span>Cạo râu</span></h3>
-                        <span class="price">30.000đ</span>
-                    </div>
-                    <div class="d-block">
-                        <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-                    </div>
-                </div>
-                <div class="pricing-entry ftco-animate">
-                    <div class="d-flex text align-items-center">
-                        <h3><span>Cắt tóc nam</span></h3>
-                        <span class="price">$20.00</span>
-                    </div>
-                    <div class="d-block">
-                        <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
+                        <p>{{$s->description}}</p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6">
-                <div class="pricing-entry ftco-animate">
-                    <div class="d-flex text align-items-center">
-                        <h3><span>Cắt tóc nữ</span></h3>
-                        <span class="price">200.000đ</span>
-                    </div>
-                    <div class="d-block">
-                        <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-                    </div>
-                </div>
-                <div class="pricing-entry ftco-animate">
-                    <div class="d-flex text align-items-center">
-                        <h3><span>Cắt tóc nam</span></h3>
-                        <span class="price">100.000đ</span>
-                    </div>
-                    <div class="d-block">
-                        <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-                    </div>
-                </div>
-                <div class="pricing-entry ftco-animate">
-                    <div class="d-flex text align-items-center">
-                        <h3><span>Cắt tóc nam</span></h3>
-                        <span class="price">100.000đ</span>
-                    </div>
-                    <div class="d-block">
-                        <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-                    </div>
-                </div>
-                <div class="pricing-entry ftco-animate">
-                    <div class="d-flex text align-items-center">
-                        <h3><span>Cắt tóc nam</span></h3>
-                        <span class="price">100.000đ</span>
-                    </div>
-                    <div class="d-block">
-                        <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-                    </div>
-                </div>
-            </div>
+        @endforeach
         </div>
         </div>
     </section>
@@ -351,54 +260,20 @@
           </div>
         </div>
         <div class="row">
+        @foreach($hairStylist as $stylist)
             <div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
                 <div class="staff">
-                    <div class="img mb-4" style="background-image: url({{ asset('salon/images/person_1.jpg') }});"></div>
+                    <div class="img mb-4" style="background-image: url({{ asset($stylist->avatar) }});"></div>
                     <div class="info text-center">
-                        <h3><a href="teacher-single.html">Tom Smith</a></h3>
-                        <span class="position">Hair Specialist</span>
+                        <h3><a href="teacher-single.html">{{$stylist -> name}}</a></h3>
+                        <!-- <span class="position">Hair Specialist</span> -->
                         <div class="text">
-                            <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới., there live the blind texts.</p>
+                            <p>{{$stylist -> description}}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-                <div class="staff">
-                    <div class="img mb-4" style="background-image: url({{ asset('salon/images/person_2.jpg') }});"></div>
-                    <div class="info text-center">
-                        <h3><a href="teacher-single.html">Mark Wilson</a></h3>
-                        <span class="position">Beard Specialist</span>
-                        <div class="text">
-                            <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới., there live the blind texts.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-                <div class="staff">
-                    <div class="img mb-4" style="background-image: url({{ asset('salon/images/person_3.jpg') }});"></div>
-                    <div class="info text-center">
-                        <h3><a href="teacher-single.html">Patrick Jacobson</a></h3>
-                        <span class="position">Hair Stylist</span>
-                        <div class="text">
-                            <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới., there live the blind texts.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 d-flex mb-sm-4 ftco-animate">
-                <div class="staff">
-                    <div class="img mb-4" style="background-image: url({{ asset('salon/images/person_4.jpg') }});"></div>
-                    <div class="info text-center">
-                        <h3><a href="teacher-single.html">Ivan Dorchsner</a></h3>
-                        <span class="position">Beard Specialist</span>
-                        <div class="text">
-                            <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới., there live the blind texts.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        @endforeach    
         </div>
       </div>
     </section>
@@ -416,34 +291,15 @@
         </div>
         <div class="container-wrap">
             <div class="row no-gutters">
+                  @foreach($gallery as $g)
                     <div class="col-md-3 ftco-animate">
-                        <a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url({{ asset('salon/images/gallery-1.jpg') }});">
+                        <a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url({{ asset($g->image) }});">
                             <div class="icon mb-4 d-flex align-items-center justify-content-center">
                             <span class="icon-search"></span>
                         </div>
                         </a>
                     </div>
-                    <div class="col-md-3 ftco-animate">
-                        <a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url({{ asset('salon/images/gallery-2.jpg') }});">
-                            <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                            <span class="icon-search"></span>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 ftco-animate">
-                        <a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url({{ asset('salon/images/gallery-3.jpg') }});">
-                            <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                            <span class="icon-search"></span>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3 ftco-animate">
-                        <a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url({{ asset('salon/images/gallery-4.jpg') }});">
-                            <div class="icon mb-4 d-flex align-items-center justify-content-center">
-                            <span class="icon-search"></span>
-                        </div>
-                        </a>
-                    </div>
+                  @endforeach
         </div>
         </div>
     </section>
@@ -501,56 +357,28 @@
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Recent from blog</h2>
+            <h2 class="mb-4">Bài viết gần đây</h2>
             <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.</p>
           </div>
         </div>
         <div class="row d-flex">
+        @foreach($posts as $post)
           <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_1.jpg') }});">
+              <a href="#" class="block-20" style="background-image: url({{ asset($post -> image) }});">
               </a>
               <div class="text py-4 d-block">
                 <div class="meta">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                  <!-- <div><a href="#">Sept 10, 2018</a></div>
+                  <div><a href="#">Admin</a></div> -->
+                  <!-- <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
                 </div>
-                <h3 class="heading mt-2"><a href="#">Kiểu tóc nam cho mọi khuôn mặt</a></h3>
-                <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.</p>
+                <h3 class="heading mt-2"><a href="#">{{$post -> title}}</a></h3>
+                <p>{{$post -> description}}</p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_2.jpg') }});">
-              </a>
-              <div class="text py-4 d-block">
-                <div class="meta">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-2"><a href="#">Kiểu tóc nam cho mọi khuôn mặt</a></h3>
-                <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_3.jpg') }});">
-              </a>
-              <div class="text py-4 d-block">
-                <div class="meta">
-                  <div><a href="#">Sept 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mt-2"><a href="#">Kiểu tóc nam cho mọi khuôn mặt</a></h3>
-                <p>Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới.</p>
-              </div>
-            </div>
-          </div>
+        @endforeach  
         </div>
       </div>
     </section>

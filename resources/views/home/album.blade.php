@@ -25,63 +25,16 @@
 	    	</div>
 	    	<div class="container-wrap">
 	    		<div class="row no-gutters">
+					@foreach($gallery as $g)
 						<div class="col-md-3 ftco-animate">
-							<a href="{{ asset('salon/images/gallery-1.jpg') }}" class="gallery img image-popup d-flex align-items-center" style="background-image: url({{ asset('salon/images/gallery-1.jpg')}});">
+							<a href="{{ asset($g->image) }}" class="gallery img image-popup d-flex align-items-center" style="background-image: url({{ asset($g->image)}});">
 								<div class="icon mb-4 d-flex align-items-center justify-content-center">
-      						<span class="icon-search"></span>
-      					</div>
+									<span class="icon-search"></span>
+								</div>
 							</a>
 						</div>
-						<div class="col-md-3 ftco-animate">
-							<a href="{{ asset('salon/images/gallery-2.jpg') }}" class="gallery img image-popup d-flex align-items-center" style="background-image: url({{ asset('salon/images/gallery-2.jpg')}});">
-								<div class="icon mb-4 d-flex align-items-center justify-content-center">
-      						<span class="icon-search"></span>
-      					</div>
-							</a>
-						</div>
-						<div class="col-md-3 ftco-animate">
-							<a href="{{ asset('salon/images/gallery-3.jpg') }}" class="gallery img image-popup d-flex align-items-center" style="background-image: url({{ asset('salon/images/gallery-3.jpg')}});">
-								<div class="icon mb-4 d-flex align-items-center justify-content-center">
-      						<span class="icon-search"></span>
-      					</div>
-							</a>
-						</div>
-						<div class="col-md-3 ftco-animate">
-							<a href="{{ asset('salon/images/gallery-4.jpg') }}" class="gallery img image-popup d-flex align-items-center" style="background-image: url({{ asset('salon/images/gallery-4.jpg')}});">
-								<div class="icon mb-4 d-flex align-items-center justify-content-center">
-      						<span class="icon-search"></span>
-      					</div>
-							</a>
-						</div>
-						<div class="col-md-3 ftco-animate">
-							<a href="{{ asset('salon/images/gallery-5.jpg') }}" class="gallery img image-popup d-flex align-items-center" style="background-image: url({{ asset('salon/images/gallery-5.jpg')}});">
-								<div class="icon mb-4 d-flex align-items-center justify-content-center">
-      						<span class="icon-search"></span>
-      					</div>
-							</a>
-						</div>
-						<div class="col-md-3 ftco-animate">
-							<a href="{{ asset('salon/images/gallery-6.jpg') }}" class="gallery img image-popup d-flex align-items-center" style="background-image: url({{ asset('salon/images/gallery-6.jpg')}});">
-								<div class="icon mb-4 d-flex align-items-center justify-content-center">
-      						<span class="icon-search"></span>
-      					</div>
-							</a>
-						</div>
-						<div class="col-md-3 ftco-animate">
-							<a href="{{ asset('salon/images/gallery-7.jpg') }}" class="gallery img image-popup d-flex align-items-center" style="background-image: url({{ asset('salon/images/gallery-7.jpg')}});">
-								<div class="icon mb-4 d-flex align-items-center justify-content-center">
-      						<span class="icon-search"></span>
-      					</div>
-							</a>
-						</div>
-						<div class="col-md-3 ftco-animate">
-							<a href="{{ asset('salon/images/gallery-8.jpg') }}" class="gallery img image-popup d-flex align-items-center" style="background-image: url({{ asset('salon/images/gallery-8.jpg')}});">
-								<div class="icon mb-4 d-flex align-items-center justify-content-center">
-      						<span class="icon-search"></span>
-      					</div>
-							</a>
-						</div>
-	        </div>
+					@endforeach	
+	        	</div>
 	    	</div>
 	    </section>
 

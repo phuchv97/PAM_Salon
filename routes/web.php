@@ -11,21 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-})->name('/');
-Route::get('/service', function () {
-    return view('home.service');
-})->name('service');
-Route::get('album', function () {
-    return view('home.album');
-})->name('album');
-Route::get('blog', function () {
-    return view('home.blog');
-})->name('blog');
-Route::get('contact', function () {
-    return view('home.contact');
-})->name('contact');
+Route::get('/', 'Home\HomeController@index')->name('home');
+Route::get('service', 'Home\HomeController@service')->name('service');
+Route::get('produce', 'Home\HomeController@produce')->name('produce');
+Route::get('blog', 'Home\HomeController@blog')->name('blog');
+
+Route::get('contact', 'Home\HomeController@contact')->name('contact');
+Route::get('album', 'Home\HomeController@album')->name('album');
+
+
 Route::get('login', function () {
     return view('home.login');
 })->name('login');
