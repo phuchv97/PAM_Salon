@@ -18,7 +18,13 @@ Route::get('blog', 'Home\HomeController@blog')->name('blog');
 Route::get('contact', 'Home\HomeController@contact')->name('contact');
 Route::get('album', 'Home\HomeController@album')->name('album');
 
-
 Route::get('login', function () {
     return view('home.login');
 })->name('login');
+
+Route::get('product-detail', function () {
+    return view('home.product-detail');
+})->name('product-detail');
+Route::get('signup', function () {
+    return view('home.signup');
+})->name('signup');
