@@ -48,6 +48,7 @@
         $(this).removeClass("focus");
       });
       </script>
+      
       @include('assets.home.asset-js');
 
 
