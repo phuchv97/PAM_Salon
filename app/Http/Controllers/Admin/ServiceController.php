@@ -24,4 +24,79 @@ class ServiceController extends Controller
         }
         return view('admin.services.index',compact('services','name'));
     }
+    public function addService(){
+        $service = new Services();
+        
+        return view('admin.services.form-service',['service'=>$service]);
+    }
+    public function edit($id){
+    	$service = Services::find($id);
+    	if ($service != null) {
+    		
+    		return view('admin.services.form-service',['service'=> $service]);
+       	}
+       	redirect(route('list_services'));
+    	
+    }
+
+    public function remove($id){
+    	$service = Service::find($id);
+    	if ($service != null) {
+    		$service->delete();
+    	}
+    	return redirect(route('list-services'));
+    }
+
+    public function save(Request $request){
+        if ($request->id==null) {
+            $validateIcon = "image|required";
+        }else{
+            $validateIcon = "image";
+                
+        }
+        $validatedData = $request->validate([
+                'name' => [
+                    'required',
+                    Rule::unique('services')->ignore($request->id),
+                    'max:100'
+                ],
+                'description'=> 'required|max:255', 
+                'icon' => "$validateIcon",
+                'price' => 'required'
+            ],
+            [
+                'description.required' => 'Please enter a description for the service',
+                'name.unique' => 'Service name already exists',
+                'name.max' => 'Maximum length of no more than 100 characters',
+                'name.required' => 'Please enter the service name',
+                'description.max' => 'Maximum length of no more than 255 characters',
+                '3.image' => 'Please select the correct image format',
+                'icon.required' => 'Please select an icon',
+                'price.required' => 'Please enter the service price'
+                
+            ]
+        );
+        if($request->id == null){
+            $model = new Service();
+        }else{
+            $model = Service::find($request->id);
+        }
+            
+        $model->fill($request->all());
+        if ($request->hasFile('icon')) {
+            
+            $ext = $request->icon->extension();
+            
+            $filename = $request->icon->getClientOriginalName();
+            
+            $filename = $filename . "-" . str_random(20) . "." . $ext;
+            
+            $path = $request->icon->storeAs('service', $filename);
+            
+            $model->icon = "uploaded/$path";
+        }
+        
+        $model->save();
+        return redirect(route('list-services'));  
+    }
 }

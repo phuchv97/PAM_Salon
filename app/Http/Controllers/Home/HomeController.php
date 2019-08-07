@@ -31,7 +31,7 @@ class HomeController extends Controller
     }
     public function blog_detail($id){
         $post = Posts::where('id','=', $id)->first();
-        $post_new = Posts::orderBy('id','desc')->limit(3)->get();
+        $post_new = Posts::orderBy('id','desc')->limit(4)->get();
         return view('home.blog-detail',['post'=>$post,'post_new'=>$post_new]);
     }
     public function service(){

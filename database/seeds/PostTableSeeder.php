@@ -19,7 +19,7 @@ class PostTableSeeder extends Seeder
                 'detail' => $faker->realText($maxNbChars = 200, $indexSize = 1),
                 'user_id' => $faker->numberBetween(1,5),
                 'category_id' => $faker->numberBetween(1,5),
-                'image' => 'uploaded/images_1.jpg'
+                'image' => 'uploaded/image_1.jpg'
             ],
             [
                 'title' => '4 Kiểu layer đẹp nhất cho học sinh',
@@ -27,7 +27,7 @@ class PostTableSeeder extends Seeder
                 'detail' => $faker->realText($maxNbChars = 200, $indexSize = 1),
                 'user_id' => $faker->numberBetween(1,5),
                 'category_id' => $faker->numberBetween(1,5),
-                'image' => 'uploaded/images_2.jpg'
+                'image' => 'uploaded/image_2.jpg'
             ],
             [
                 'title' => 'Tác hại của việc không lấy ráy tai – Lấy ráy tai thế nào cho an toàn?',
@@ -35,7 +35,7 @@ class PostTableSeeder extends Seeder
                 'detail' => $faker->realText($maxNbChars = 200, $indexSize = 1),
                 'user_id' => $faker->numberBetween(1,5),
                 'category_id' => $faker->numberBetween(1,5),
-                'image' => 'uploaded/images_3.jpg'
+                'image' => 'uploaded/image_3.jpg'
             ],
         ];
         DB::table('posts')->insert($posts);

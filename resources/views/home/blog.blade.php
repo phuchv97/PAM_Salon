@@ -27,29 +27,13 @@
 	                  <div><a href="#">Admin</a></div>
 	                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
 	                </div> -->
-	                <h3 class="heading mt-2"><a href="#">{{$p->title}}</a></h3>
+	                <h3 class="heading mt-2"><a href="{{route('blog_detail',['id' => $p->id])}}">{{$p->title}}</a></h3>
 	                <p>{{$p-> description}}</p>
 	              </div>
 	            </div>
 	          </div>
 	        @endforeach
-			@foreach($posts as $p)
-	          <div class="col-md-4 d-flex ftco-animate">
-	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset($p->image) }});">
-	              </a>
-	              <div class="text py-4 d-block">
-	              	<!-- <div class="meta">
-	                  <div><a href="#">Sept 10, 2018</a></div>
-	                  <div><a href="#">Admin</a></div>
-	                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-	                </div> -->
-	                <h3 class="heading mt-2"><a href="#">{{$p->title}}</a></h3>
-	                <p>{{$p-> description}}</p>
-	              </div>
-	            </div>
-	          </div>
-	        @endforeach  
+			  
 	        </div>
 	        <div class="row mt-5">
 	          <div class="col text-center">
