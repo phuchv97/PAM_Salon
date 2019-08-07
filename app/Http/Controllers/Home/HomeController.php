@@ -10,7 +10,7 @@ use App\Model\Menus;
 use App\Model\Posts;
 use App\Model\HairStylist;
 use App\Model\Gallery;
-
+use App\Model\Product;
 
 
 
@@ -44,10 +44,13 @@ class HomeController extends Controller
          return view('home.blog', compact('posts'));
     }
     public function product(){
-        return view('home.product');
+        $products = Product::all();
+        return view('home.product',['products'=>$products]);
     }
-    public function product_detail(){
-        return view('home.product-detail');
+    public function product_detail($id){
+        $product = Product::where('id','=',$id)->first();
+        $products = Product::orderBy('id','desc')->limit(4)->get();
+        return view('home.product-detail',['product'=>$product,'products'=>$products]);
     }
     public function album(){
         $gallery = Gallery::all();

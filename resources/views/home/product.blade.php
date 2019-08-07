@@ -16,84 +16,21 @@
 	    <section class="ftco-section">
 	      <div class="container">
 	        <div class="row d-flex">
-	          <div class="col-md-4 d-flex ftco-animate">
-	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_1.jpg') }});">
-	              </a>
-	              <div class="text py-4 d-block">
-	              	<div class="name-price">
-	              		<h3 class="heading mt-2"><a href="{{route('product_detail')}}">Keo 502</a></h3>
-	              		<h3 class="price mt-2">100.000đ</h3>
-	              	</div>
-	                <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="col-md-4 d-flex ftco-animate">
-	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_2.jpg') }});">
-	              </a>
-	              <div class="text py-4 d-block">
-	                <div class="name-price">
-	              		<h3 class="heading mt-2"><a href="#">Keo 502</a></h3>
-	              		<h3 class="price mt-2">100.000đ</h3>
-	              	</div>
-	                <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="col-md-4 d-flex ftco-animate">
-	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_3.jpg') }});">
-	              </a>
-	              <div class="text py-4 d-block">
-	                <div class="name-price">
-	              		<h3 class="heading mt-2"><a href="#">Keo 502</a></h3>
-	              		<h3 class="price mt-2">100.000đ</h3>
-	              	</div>
-	                <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="col-md-4 d-flex ftco-animate">
-	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_4.jpg') }});">
-	              </a>
-	              <div class="text py-4 d-block">
-	                <div class="name-price">
-	              		<h3 class="heading mt-2"><a href="#">Keo 502</a></h3>
-	              		<h3 class="price mt-2">100.000đ</h3>
-	              	</div>
-	                <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="col-md-4 d-flex ftco-animate">
-	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_5.jpg') }});">
-	              </a>
-	              <div class="text py-4 d-block">
-	                <div class="name-price">
-	              		<h3 class="heading mt-2"><a href="#">Keo 502</a></h3>
-	              		<h3 class="price mt-2">100.000đ</h3>
-	              	</div>
-	                <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-	              </div>
-	            </div>
-	          </div>
-	          <div class="col-md-4 d-flex ftco-animate">
-	          	<div class="blog-entry align-self-stretch">
-	              <a href="blog-single.html" class="block-20" style="background-image: url({{ asset('salon/images/image_6.jpg') }});">
-	              </a>
-	              <div class="text py-4 d-block">
-	                <div class="name-price">
-	              		<h3 class="heading mt-2"><a href="#">Keo 502</a></h3>
-	              		<h3 class="price mt-2">100.000đ</h3>
-	              	</div>
-	                <p>Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-	              </div>
-	            </div>
-	          </div>
+				@foreach($products as $p)
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry align-self-stretch">
+						<a href="{{route('product_detail',['id'=>$p->id])}}" class="block-20" style="background-image: url({{ asset($p->image) }});">
+						</a>
+						<div class="text py-4 d-block">
+							<div class="name-price">
+								<h3 class="heading mt-2"><a href="{{route('product_detail',['id'=>$p->id])}}">{{$p->name}}</a></h3>
+								<h3 class="price mt-2 text-warning">{{$p->price}}đ</h3>
+							</div>
+							<p>{{$p->description}}</p>
+						</div>
+						</div>
+					</div>
+	          	@endforeach
 	        </div>
 	        <div class="row mt-5">
 	          <div class="col text-center">

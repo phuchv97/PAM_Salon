@@ -6,8 +6,8 @@
                 <div class="m-stack__item m-brand  m-brand--skin-dark ">
                     <div class="m-stack m-stack--ver m-stack--general">
                         <div class="m-stack__item m-stack__item--middle m-brand__logo">
-                            <a href="index.html" class="m-brand__logo-wrapper">
-                                <img alt="" src="{{asset('metronic/assets/demo/media/img/logo/logo_default_dark.png')}}" />
+                            <a href="#" class="m-brand__logo-wrapper text-white ">
+                                <h5>PAM Salon</h5>
                             </a>
                         </div>
                         <div class="m-stack__item m-stack__item--middle m-brand__tools">

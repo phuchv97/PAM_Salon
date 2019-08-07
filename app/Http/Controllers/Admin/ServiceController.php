@@ -13,11 +13,9 @@ class ServiceController extends Controller
         $query = null;
         if($request->has('name')){
             $name = $request ->name;
-            if($query == null){
-                $query = Services::where('name','like',"%$name%");
-            }else{
-                $query->where('name', 'like',"%$name%");
-            }
+            $query = Services::where('name','like',"%$name%");
+        }else{
+            $query = null;
         }
         if($query == null){
             $services = Services::paginate(3);
