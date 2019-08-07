@@ -17,13 +17,13 @@
 	      <div class="container">
 	        <div class="row">
 	          <div class="col-md-8 ftco-animate">
-	            <h2 class="mb-3">10 Tips For The Traveler</h2>
-	            <h3 class="price">Giá: 100.000đ</h3>
-	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.</p>
+	            <h2 class="mb-3">{{$product->name}}</h2>
+	            <h3 class="price text-warning">Giá: {{$product->price}}đ</h3>
+	            <p>{{$product->description}}</p>
 	            <p>
-	              <img src={{ asset("salon/images/image_1.jpg" ) }} alt="" class="img-fluid">
+	              <img src={{asset($product->image)}} alt="" class="img-fluid">
 	            </p>
-	            <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
+	            <p>{{$product->detail}}</p>
 	           
 
 	            <div class="pt-5 mt-5">
@@ -129,25 +129,15 @@
 	          <div class="col-md-4 sidebar ftco-animate">
 
 	            <div class="sidebar-box ftco-animate">
-	              <h3>Các sản phẩm khác</h3>
-	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url({{ asset('salon/images/image_1.jpg') }});"></a>
-	                <div class="text">
-	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	                </div>
-	              </div>
-	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url({{ asset('salon/images/image_2.jpg') }});"></a>
-	                <div class="text">
-	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	                </div>
-	              </div>
-	              <div class="block-21 mb-4 d-flex">
-	                <a class="blog-img mr-4" style="background-image: url({{ asset('salon/images/image_3.jpg') }});"></a>
-	                <div class="text">
-	                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-	                </div>
-	              </div>
+	              	<h3>Các sản phẩm mới</h3>
+					@foreach($products as $p)
+						<div class="block-21 mb-4 d-flex">
+							<a class="blog-img mr-4" style="background-image: url({{asset($p->image)}});"></a>
+							<div class="text">
+							<h3 class="heading"><a href="{{route('product_detail',['id'=>$p->id])}}">{{$p->name}}</a></h3>
+							</div>
+						</div>
+	              	@endforeach
 	            </div>
 	          </div>
 

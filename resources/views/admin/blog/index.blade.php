@@ -1,6 +1,6 @@
 @extends('layouts.main-admin')
 @section('content')
-@section('title','Service list')
+@section('title','Post list')
     <div class="container">
         <div class="row">
 
@@ -10,7 +10,7 @@
                         <div class="m-portlet__head-caption">
                             <div class="m-portlet__head-title">
                                 <h3 class="m-portlet__head-text">
-                                    Service list
+                                    Post list
                                 </h3>
                             </div>
 
@@ -20,9 +20,9 @@
                         <div class="container">
                             <div class="row searchFilter" >
                                 <div class="col-sm-12" >
-                                    <form class="form-inline" action="{{route('list_services')}}" method="get">
+                                    <form class="form-inline" action="{{route('list_post')}}" method="get">
                                         @csrf
-                                        <input class="form-control mr-sm-2" type="text" value="{{$name}}" name="name" placeholder="Service name">
+                                        <input class="form-control mr-sm-2" type="text" value="{{$name}}" name="name" placeholder="Product name">
                                         
                                         <button class="btn btn-primary" type="submit">Search</button>
                                     </form>
@@ -40,23 +40,21 @@
                                             <thead>
                                                 <tr>
                                                     <th>Id</th>
-                                                    <th>Service name</th>
-                                                    <th>Description</th>
-                                                    <th class="text-center">Price</th>
-                                                    <th class="text-center">icon</th>
+                                                    <th>Title</th>
+                                                    <th class="text-center">category</th>
+                                                    <th class="text-center">image</th>
 
-                                                    <th class="text-center"><a class="btn btn-outline-primary" href="#" role="button">Add service</a></th>
+                                                    <th class="text-center"><a class="btn btn-outline-primary" href="#" role="button">Add product</a></th>
                                                 </tr>
                                             </thead>
                                             <tbody >
-                                            @foreach ($services as $s)
+                                            @foreach ($posts as $p)
                                                 <tr>
-                                                    <td>{{$s->id}}</td>
-                                                    <td>{{$s->name}}</td>
-                                                    <td>...</td>
-                                                    <td class="text-center">{{$s->price}}</td>
+                                                    <td>{{$p->id}}</td>
+                                                    <td>{{$p->title}}</td>
+                                                    <td class="text-center">...</td>
                                                     <td class="text-center">
-                                                        <img src="{{asset($s->icon)}}" width="100">
+                                                        <img src="{{asset($p->image)}}" width="100">
                                                     </td>
                                                     <td class="text-center">
                                                         <a data-toggle="m-tooltip" data-placement="left" title data-original-title="Update" href="#" class="text-success btn btn-outline-accent m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
@@ -74,7 +72,7 @@
                                                 
                                                 <tr >
                                                     <td colspan="6" >
-                                                        {{$services->links()}}
+                                                        {{$posts->links()}}
                                                     </td>
                                                 </tr>
                                             </tbody>
