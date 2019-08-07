@@ -23,16 +23,7 @@
 	              <img src="{{asset($post->image) }}" alt="" class="img-fluid">
 	            </p>
 	            <p>{{$post->detail}}</p>
-	            
-	            <div class="about-author d-flex p-5 ftco-bg-dark">
-	              <div class="bio align-self-md-center mr-5">
-	                <img src="{{ asset('salon/images/person_4.jpg') }}" alt="Image placeholder" class="img-fluid mb-4">
-	              </div>
-	              <div class="desc align-self-md-center">
-	                <h3>Lance Smith</h3>
-	                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
-	              </div>
-	            </div>
+                <h5 style="text-align: right">Tác giả: Lance Smith</h5>
 
 
 	            <div class="pt-5 mt-5">

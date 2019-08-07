@@ -16,3 +16,4 @@
   <script src="{{asset('salon/js/google-map.js')}}"></script>
   <script src="{{asset('salon/js/main.js')}}"></script>
   <script src="{{asset('salon/js/validate.js')}}"></script>
+  <script src="{{asset('salon/js/backtotop.js')}}"></script>
