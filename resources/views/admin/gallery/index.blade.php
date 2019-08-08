@@ -20,9 +20,9 @@
                         <div class="container">
                             <div class="row searchFilter" >
                                 <div class="col-sm-12" >
-                                    <form class="form-inline" action="{{route('gallery')}}" method="get">
+                                    <form class="form-inline" action="{{route('list_gallery')}}" method="get">
                                         @csrf
-                                        <input class="form-control mr-sm-2" type="text" value="{{$name}}" name="name" placeholder="Service name">
+                                        <input class="form-control mr-sm-2" type="text" value="{{$description}}" name="description" placeholder="Gallery description">
                                         
                                         <button class="btn btn-primary" type="submit">Search</button>
                                     </form>

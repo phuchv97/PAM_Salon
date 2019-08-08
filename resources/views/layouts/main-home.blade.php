@@ -4,7 +4,7 @@
   <title>@yield('title')</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   @include('assets.home.asset-css')
 </head>
 <body>
@@ -15,7 +15,7 @@
 
 
 
-
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
   @include('__share.home.footer')
 
   <div class="modal fade" id="myModal" role="dialog">
