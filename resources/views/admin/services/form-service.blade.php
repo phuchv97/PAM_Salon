@@ -33,6 +33,7 @@ $title = $service->id==null ? "Add Service" : "Update Service";
                                         @csrf <!-- đây là mã độc để bảo vệ ứng dụng khỏi tấn công giả mạo-->
                                         <div class="m-portlet__body">
                                             <input type="hidden" name="id" value="{{$service->id}}">
+											<input type="hidden" name="user_id" value="2">
                                             <div class="form-group m-form__group">
 												<label >Service name</label>
 												<input type="text" name="name" class="form-control m-input" id="exampleInputName"  placeholder="service name" value="{{old('name',$service->name)}}" >
@@ -40,21 +41,6 @@ $title = $service->id==null ? "Add Service" : "Update Service";
                                                     <span class="text-danger">{{$errors->first('name')}}</span>
                                                 @endif
                                             </div>
-                                            <div class="form-group m-form__group">
-												<label for="exampleTextarea">Description</label>
-												<textarea class="form-control m-input" name="description" id="exampleTextarea" rows="4">{{old('description',$service->description)}}</textarea>
-                                                @if($errors)
-                                                    <span class="text-danger">{{$errors->first('description')}}</span>
-                                                @endif
-											</div>
-											<div class="form-group m-form__group">
-												<label >Price</label>
-												<input  type="number" name="price" class="form-control m-input" placeholder="price" value="{{old('price',$service->price)}}">
-												<br>
-                                                @if($errors)
-                                                <span class="text-danger">{{$errors->first('price')}}</span>
-                                                @endif
-											</div>
 											<div class="form-group m-form__group">
 												<label for="exampleInputEmail1">Icon</label>
 												<div>
@@ -76,11 +62,27 @@ $title = $service->id==null ? "Add Service" : "Update Service";
                                                 <span class="text-danger">{{$errors->first('icon')}}</span>
                                                 @endif
 											</div>
+                                            <div class="form-group m-form__group">
+												<label for="exampleTextarea">Description</label>
+												<textarea class="form-control m-input" name="description" id="exampleTextarea" rows="4">{{old('description',$service->description)}}</textarea>
+                                                @if($errors)
+                                                    <span class="text-danger">{{$errors->first('description')}}</span>
+                                                @endif
+											</div>
+											<div class="form-group m-form__group">
+												<label >Price</label>
+												<input  type="number" name="price" class="form-control m-input" placeholder="price" value="{{old('price',$service->price)}}">
+												<br>
+                                                @if($errors)
+                                                <span class="text-danger">{{$errors->first('price')}}</span>
+                                                @endif
+											</div>
+											
 										</div>
 										<div class="m-portlet__foot m-portlet__foot--fit">
 											<div class="m-form__actions">
 												<button type="submit" class="btn btn-primary">Submit</button>
-                                                <a href="{{ route('list-services') }}" class="btn btn-secondary">Cancel</a>
+                                                <a href="{{ route('list_services') }}" class="btn btn-secondary">Cancel</a>
 												
 											</div>
 										</div>

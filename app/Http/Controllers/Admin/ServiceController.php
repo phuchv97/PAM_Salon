@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Services;
+use Illuminate\Validation\Rule;
 
 class ServiceController extends Controller
 {
@@ -40,11 +41,11 @@ class ServiceController extends Controller
     }
 
     public function remove($id){
-    	$service = Service::find($id);
+    	$service = Services::find($id);
     	if ($service != null) {
     		$service->delete();
     	}
-    	return redirect(route('list-services'));
+    	return redirect(route('list_services'));
     }
 
     public function save(Request $request){
@@ -77,9 +78,9 @@ class ServiceController extends Controller
             ]
         );
         if($request->id == null){
-            $model = new Service();
+            $model = new Services();
         }else{
-            $model = Service::find($request->id);
+            $model = Services::find($request->id);
         }
             
         $model->fill($request->all());
@@ -91,12 +92,12 @@ class ServiceController extends Controller
             
             $filename = $filename . "-" . str_random(20) . "." . $ext;
             
-            $path = $request->icon->storeAs('service', $filename);
+            $path = $request->icon->storeAs('services', $filename);
             
             $model->icon = "uploaded/$path";
         }
         
         $model->save();
-        return redirect(route('list-services'));  
+        return redirect(route('list_services'));  
     }
 }
