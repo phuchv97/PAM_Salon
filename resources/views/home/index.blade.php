@@ -31,10 +31,14 @@
             </div>
             
             <div class="form-group ml-md-4">
+              <div class="input-wrap">
               <input type="number" id="phone_number" class="form-control" placeholder="Phone">
             </div>
             <span id="err_phone"></span>
+            </div>
+            
           </div>
+          
           
           <div class="form-group">
             <button type="submit" class="btn btn-primary py-3 px-4">Đặt lịch giữ chỗ</button>
