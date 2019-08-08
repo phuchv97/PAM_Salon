@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -25,7 +26,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    // protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -34,6 +35,22 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+        // $this->middleware('guest')->except('logout');
+    }
+    public function index(){
+        return view('admin.login.index');
+    }
+    public function login(Request $request){
+        $userEmail = $request['email'];
+        $password = $request['password'];
+        if(Auth::attempt(['email'=>$userEmail,'password'=>$password])){
+            return redirect(route('dashboard'));
+        }else{
+            return redirect(route('form_login_admin',['error'=>'Sai tài khoản, vui lòng nhập lại']));
+        }
+    }
+    public function logout(){
+        Auth::logout();
+        return redirect(route('form_login_admin'));
     }
 }
