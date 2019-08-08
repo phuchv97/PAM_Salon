@@ -26,7 +26,7 @@ class CategoriesTableSeeder extends Seeder
                 'slug'=>'bai-viet-gan-day'
             ],
             [
-                'name' => 'Dịch vụ hot nhat',
+                'name' => 'Dịch vụ hot nhất',
                 'description'=> $faker-> realText($maxNbChars = 255),
                 'user_id'=>$faker->numberBetween(1,5),
                 'slug'=>'dich-vu-hot-nhat'
