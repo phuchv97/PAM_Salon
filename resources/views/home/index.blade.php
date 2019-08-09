@@ -10,7 +10,7 @@
         <form action="#" class="appointment-form" onsubmit="return validate_datlich()">
           <div class="d-md-flex">
             <div class="form-group">
-              <input type="text" id="fullname" class="form-control" placeholder="Full Name">
+              <input type="text" id="fullname" class="form-control" placeholder="Họ tên">
             </div>
           </div>
           <span id="err_fullname"></span>
@@ -18,21 +18,21 @@
             <div class="form-group">
               <div class="input-wrap">
                 <div class="icon"><span class="ion-md-calendar"></span></div>
-                <input type="text" id="appointment_date" class="form-control" placeholder="Date">
+                <input type="text" id="appointment_date" class="form-control" placeholder="Ngày">
               </div>
               <span id="err_date"></span>
             </div>
             <div class="form-group ml-md-4">
               <div class="input-wrap">
                 <div class="icon"><span class="ion-ios-clock"></span></div>
-                <input type="text" id="time-picker" class="form-control" placeholder="Time" data-toggle="modal" data-target="#myModal">
+                <input type="text" id="time-picker" class="form-control" placeholder="Giờ" data-toggle="modal" data-target="#myModal">
               </div>
               <span id="err_time"></span>
             </div>
             
             <div class="form-group ml-md-4">
               <div class="input-wrap">
-              <input type="number" id="phone_number" class="form-control" placeholder="Phone">
+              <input type="number" id="phone_number" class="form-control" placeholder="Số điện thoại">
             </div>
             <span id="err_phone"></span>
             </div>
