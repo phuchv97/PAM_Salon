@@ -12,7 +12,7 @@
     <div id="login">
       <form action="{{route('login_admin')}}" method="POST" class="login-form">
         @csrf
-        <p><a class="navbar-brand" href="{{ route('home') }}">PAM</a></p>
+        <p><a class="navbar-brand" href="{{ route('home') }}"><img src="{{asset('logo/logo-PAM.png')}}" style="height:70px"></a></p>
 
         <h3>Đăng nhập</h3>
 
