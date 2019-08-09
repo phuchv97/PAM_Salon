@@ -6,9 +6,7 @@ Route::get('logout','Auth\LoginController@logout')->name('logout_admin');
 
 
 Route::group(['middleware'=>'checkAdmin'],function(){
-    Route::get('/',function(){
-        return view('admin.dashboard.index');
-    })->name('dashboard');
+    Route::get('/','Admin\DashboardController@index')->name('dashboard');
     Route::get('services','Admin\ServiceController@index')->name('list_services');
     Route::get('services/remove/{id}', 'Admin\ServiceController@remove')->name('service_remove');
     Route::get('services/edit/{id}', 'Admin\ServiceController@edit')->name('service_edit');
