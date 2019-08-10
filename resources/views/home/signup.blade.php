@@ -30,7 +30,7 @@
   </head>
   <body>
     <div id="login">
-      <form action="{{ route('login') }}" class="login-form" onsubmit="return validate_signup()">
+      <form autocomplete="off" action="{{ route('login') }}" class="login-form" onsubmit="return validate_signup()">
         <p><a class="navbar-brand" href="{{ route('home') }}">PAM</a></p>
 
         <h3>Đăng ký</h3>
@@ -42,7 +42,7 @@
         <span id="error_name"></span>
 
         <div class="txtb">
-          <input type="number" id="phone" />
+          <input autocomplete="off" type="number" id="phone" />
           <span data-placeholder="Số điện thoại"></span> 
         </div>
         <span id="error_phone"></span>
