@@ -11,7 +11,7 @@
   <body>
     <div id="login">
       <form autocomplete="off" action="{{ route('home') }}" class="login-form" onsubmit="return validate_form()">
-        <p><a class="navbar-brand" href="{{ route('home') }}">PAM</a></p>
+        <p><a class="navbar-brand" href="{{ route('home') }}"><img src="{{asset('logo/logo-PAM.png')}}" style="height:80px"></a></p>
 
         <h3>Đăng nhập</h3>
 

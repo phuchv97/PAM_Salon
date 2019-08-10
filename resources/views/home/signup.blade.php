@@ -15,7 +15,7 @@
       margin-top: -10px;
     }
     .login-form p {
-      margin-top: -75px;
+      margin-top: -62px;
     }
     .txtb input{
       height: 30px;
@@ -31,7 +31,7 @@
   <body>
     <div id="login">
       <form autocomplete="off" action="{{ route('login') }}" class="login-form" onsubmit="return validate_signup()">
-        <p><a class="navbar-brand" href="{{ route('home') }}">PAM</a></p>
+        <p><a class="navbar-brand" href="{{ route('home') }}"><img src="{{asset('logo/logo-PAM.png')}}" style="height:70px"></a></p>
 
         <h3>Đăng ký</h3>
 
