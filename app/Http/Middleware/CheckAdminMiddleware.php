@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-use Illuminate\Support\facades\Auth;
+use Illuminate\Support\Facades\Auth;
 use Closure;
 
 class CheckAdminMiddleware

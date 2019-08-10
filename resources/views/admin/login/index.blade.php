@@ -10,23 +10,26 @@
   </head>
   <body>
     <div id="login">
-      <form action="{{route('login_admin')}}" method="POST" class="login-form">
+      <form autocomplete="off" action="{{route('login_admin')}}" method="POST" class="login-form" onsubmit="return validate_form()">
         @csrf
         <p><a class="navbar-brand" href="{{ route('home') }}"><img src="{{asset('logo/logo-PAM.png')}}" style="height:70px"></a></p>
 
         <h3>Đăng nhập</h3>
 
         <div class="txtb">
-          <input type="email" name="email" required />
+          <input type="text" id="name" name="email" />
           <span data-placeholder="Email đăng nhập"></span>
+          
         </div>
+        <span id="error_name"></span>
 
         <div class="txtb">
-          <input type="password" name="password" required />
-          <span data-placeholder="Mật khẩu"></span>
+          <input type="password" id="password" name="password" />
+          <span data-placeholder="Mật khẩu"></span> 
         </div>
+        <span id="error_password"></span>
 
-        <input type="submit" class="logbtn" value="Đăng nhập">
+        <button type="submit" class="logbtn">Đăng nhập</button>
 
       </form>
 
@@ -44,6 +47,7 @@
 
       </script>
 
+      @include('assets.home.asset-js');
 
   </body>
 </html>
