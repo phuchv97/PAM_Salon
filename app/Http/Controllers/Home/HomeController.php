@@ -63,4 +63,8 @@ class HomeController extends Controller
     public function contact(){
         return view('home.contact');
     }
+    public function profile(){
+        $gallery = Gallery::all();
+        return view('home.profile',['gallery'=>$gallery]);
+    }
 }

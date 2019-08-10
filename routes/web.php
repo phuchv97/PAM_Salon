@@ -23,6 +23,7 @@ Route::get('service', 'Home\HomeController@service')->name('service');
 Route::get('product', 'Home\HomeController@product')->name('product');
 Route::get('blog', 'Home\HomeController@blog')->name('blog');
 Route::get('contact', 'Home\HomeController@contact')->name('contact');
+Route::get('profile', 'Home\HomeController@profile')->name('profile');
 Route::get('album', 'Home\HomeController@album')->name('album');
 Route::get('product-detail/{id}', 'Home\HomeController@product_detail')->name('product_detail');
 Route::get('blog-detail/{id}', 'Home\HomeController@blog_detail')->name('blog_detail');

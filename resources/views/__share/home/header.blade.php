@@ -11,18 +11,27 @@
             @foreach($menus as $menu )
               <li class="nav-item"><a href="{{route($menu->slug)}}" class="nav-link">{{$menu -> name}}</a></li>
             @endforeach
-              @php if(Auth::check()){
-              @endphp
-              <li class="nav-item"><a href="{{route('logout_guest')}}" class="nav-link">Đăng xuất</a></li>
-              @php 
+            <div class="dropdown-profile">
+                <button class="btn btn-default dropdown-toggle btn-profile" type="button" data-toggle="dropdown"><img src="{{asset('salon/images/g1.jpg')}}" alt=""></button>
 
-              }else{
-              @endphp
+                  <ul class="dropdown-menu">
+                    <div class="arrow-up"></div>
+                    <li><a href="{{route('profile')}}"><i class="fa fa-user"></i>Profile</a></li>
+                    @php if(Auth::check()){
+                    @endphp
+                    <li class="nav-item"><a href="{{route('logout_guest')}}" class="nav-link">Đăng xuất</a></li>
+                    @php 
+
+                  }else{
+                    @endphp
+
+                    <li class="nav-item"><a href="{{route('login')}}" class="nav-link">Đăng nhập</a></li>
+                    @php 
+                  }
+                  @endphp
+                  </ul>
+                </div>
               
-              <li class="nav-item"><a href="{{route('login')}}" class="nav-link">Đăng nhập</a></li>
-              @php 
-                }
-              @endphp
             </ul>
           </div>
         </div>
