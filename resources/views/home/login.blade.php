@@ -10,20 +10,21 @@
   </head>
   <body>
     <div id="login">
-      <form autocomplete="off" action="{{ route('home') }}" class="login-form" onsubmit="return validate_form()">
+    <form autocomplete="off" action="{{route('login_guest')}}" method="POST" class="login-form" onsubmit="return validate_form()">
+        @csrf
         <p><a class="navbar-brand" href="{{ route('home') }}"><img src="{{asset('logo/logo-PAM.png')}}" style="height:80px"></a></p>
 
         <h3>Đăng nhập</h3>
 
         <div class="txtb">
-          <input type="text" id="name" />
-          <span data-placeholder="Tên đăng nhập"></span>
+          <input type="text" id="name" name="email" />
+          <span data-placeholder="Email đăng nhập"></span>
           
         </div>
         <span id="error_name"></span>
 
         <div class="txtb">
-          <input type="password" id="password" />
+          <input type="password" id="password" name="password" />
           <span data-placeholder="Mật khẩu"></span> 
         </div>
         <span id="error_password"></span>

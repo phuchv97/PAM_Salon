@@ -31,6 +31,7 @@
   <body>
     <div id="login">
       <form autocomplete="off" action="{{ route('login') }}" class="login-form" onsubmit="return validate_signup()">
+      @csrf
         <p><a class="navbar-brand" href="{{ route('home') }}"><img src="{{asset('logo/logo-PAM.png')}}" style="height:70px"></a></p>
 
         <h3>Đăng ký</h3>
