@@ -11,6 +11,18 @@
             @foreach($menus as $menu )
               <li class="nav-item"><a href="{{route($menu->slug)}}" class="nav-link">{{$menu -> name}}</a></li>
             @endforeach
+              @php if(Auth::check()){
+              @endphp
+              <li class="nav-item"><a href="{{route('logout_guest')}}" class="nav-link">Đăng xuất</a></li>
+              @php 
+
+              }else{
+              @endphp
+              
+              <li class="nav-item"><a href="{{route('login')}}" class="nav-link">Đăng nhập</a></li>
+              @php 
+                }
+              @endphp
             </ul>
           </div>
         </div>

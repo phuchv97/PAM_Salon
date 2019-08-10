@@ -64,7 +64,7 @@ $title = $service->id==null ? "Add Service" : "Update Service";
 											</div>
                                             <div class="form-group m-form__group">
 												<label for="exampleTextarea">Description</label>
-												<textarea class="form-control m-input" name="description" id="exampleTextarea" rows="4">{{old('description',$service->description)}}</textarea>
+												<textarea class="form-control m-input" name="description" id="exampleTextarea" rows="2">{{old('description',$service->description)}}</textarea>
                                                 @if($errors)
                                                     <span class="text-danger">{{$errors->first('description')}}</span>
                                                 @endif

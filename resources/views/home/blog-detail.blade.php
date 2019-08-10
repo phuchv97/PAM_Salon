@@ -29,93 +29,41 @@
 	            <div class="pt-5 mt-5">
 	              <h3 class="mb-5">6 Comments</h3>
 	              <ul class="comment-list">
+				  	@foreach($comment as $c)
 	                <li class="comment">
 	                  <div class="vcard bio">
-	                    <img src="{{ asset('salon/images/person_1.jpg') }}" alt="Image placeholder">
+	                    <img src="{{ asset($c->user->image) }}" alt="Image placeholder">
 	                  </div>
 	                  <div class="comment-body">
-	                    <h3>John Doe</h3>
-	                    <div class="meta">June 27, 2018 at 2:21pm</div>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-	                    <p><a href="#" class="reply">Reply</a></p>
+	                    <h3>{{$c->user->name}}</h3>
+	                    <!-- <div class="meta">June 27, 2018 at 2:21pm</div> -->
+	                    <p>{{$c->comment}}</p>
+	                    
 	                  </div>
 	                </li>
-
-	                <li class="comment">
-	                  <div class="vcard bio">
-	                    <img src="{{ asset('salon/images/person_1.jpg') }}" alt="Image placeholder">
-	                  </div>
-	                  <div class="comment-body">
-	                    <h3>John Doe</h3>
-	                    <div class="meta">June 27, 2018 at 2:21pm</div>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-	                    <p><a href="#" class="reply">Reply</a></p>
-	                  </div>
-
-	                  <ul class="children">
-	                    <li class="comment">
-	                      <div class="vcard bio">
-	                        <img src="{{ asset('salon/images/person_1.jpg') }}" alt="Image placeholder">
-	                      </div>
-	                      <div class="comment-body">
-	                        <h3>John Doe</h3>
-	                        <div class="meta">June 27, 2018 at 2:21pm</div>
-	                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-	                        <p><a href="#" class="reply">Reply</a></p>
-	                      </div>
-
-
-	                      <ul class="children">
-	                        <li class="comment">
-	                          <div class="vcard bio">
-	                            <img src="{{ asset('salon/images/person_1.jpg') }}" alt="Image placeholder">
-	                          </div>
-	                          <div class="comment-body">
-	                            <h3>John Doe</h3>
-	                            <div class="meta">June 27, 2018 at 2:21pm</div>
-	                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-	                            <p><a href="#" class="reply">Reply</a></p>
-	                          </div>
-
-	                            <ul class="children">
-	                              <li class="comment">
-	                                <div class="vcard bio">
-	                                  <img src="{{ asset('salon/images/person_1.jpg') }}" alt="Image placeholder">
-	                                </div>
-	                                <div class="comment-body">
-	                                  <h3>John Doe</h3>
-	                                  <div class="meta">June 27, 2018 at 2:21pm</div>
-	                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-	                                  <p><a href="#" class="reply">Reply</a></p>
-	                                </div>
-	                              </li>
-	                            </ul>
-	                        </li>
-	                      </ul>
-	                    </li>
-	                  </ul>
-	                </li>
-
-	                <li class="comment">
-	                  <div class="vcard bio">
-	                    <img src="{{ asset('salon/images/person_1.jpg') }}" alt="Image placeholder">
-	                  </div>
-	                  <div class="comment-body">
-	                    <h3>John Doe</h3>
-	                    <div class="meta">June 27, 2018 at 2:21pm</div>
-	                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-	                    <p><a href="#" class="reply">Reply</a></p>
-	                  </div>
-	                </li>
-	              </ul>
+					@endforeach
 	              <!-- END comment-list -->
 	              
 	              <div class="comment-form-wrap pt-5">
 	                <h3 class="mb-5">Bình luận</h3>
-	                <form action="#">
+					@php
+						if(Auth::check()){
+					@endphp		
+							<form action="{{route('save_comment')}}" method="post">
+							@csrf
+							<input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+					@php	
+						}else{
+					@endphp
+					<form action="{{route('login')}}"  >
+					@php		
+						}
+					@endphp
+						<input type="hidden" name="post_id" value="{{$post->id}}">
+						
 	                  <div class="form-group">
 	                    <label for="message">Nội dung</label>
-	                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+	                    <textarea name="comment" id="message" cols="30" rows="10" class="form-control"></textarea>
 	                  </div>
 	                  <div class="form-group">
 	                    <input type="submit" value="Đăng bình luận" class="btn py-3 px-4 btn-primary">
