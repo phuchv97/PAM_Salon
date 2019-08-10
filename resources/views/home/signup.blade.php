@@ -15,7 +15,7 @@
       margin-top: -10px;
     }
     .login-form p {
-      margin-top: -75px;
+      margin-top: -62px;
     }
     .txtb input{
       height: 30px;
@@ -30,8 +30,8 @@
   </head>
   <body>
     <div id="login">
-      <form action="{{ route('login') }}" class="login-form" onsubmit="return validate_signup()">
-        <p><a class="navbar-brand" href="{{ route('home') }}">PAM</a></p>
+      <form autocomplete="off" action="{{ route('login') }}" class="login-form" onsubmit="return validate_signup()">
+        <p><a class="navbar-brand" href="{{ route('home') }}"><img src="{{asset('logo/logo-PAM.png')}}" style="height:70px"></a></p>
 
         <h3>Đăng ký</h3>
 
@@ -42,7 +42,7 @@
         <span id="error_name"></span>
 
         <div class="txtb">
-          <input type="number" id="phone" />
+          <input autocomplete="off" type="number" id="phone" />
           <span data-placeholder="Số điện thoại"></span> 
         </div>
         <span id="error_phone"></span>

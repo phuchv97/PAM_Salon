@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Đăng nhập | ADMIN</title>
+    <title>Đăng nhập</title>
     @include('assets.home.asset-css')
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
@@ -10,29 +10,28 @@
   </head>
   <body>
     <div id="login">
-      <form action="{{route('login_guest')}}" method="POST" class="login-form">
-        @csrf
-        <p><a class="navbar-brand" href="{{ route('home') }}"><img src="{{asset('logo/logo-PAM.png')}}" style="height:70px"></a></p>
+      <form autocomplete="off" action="{{ route('home') }}" class="login-form" onsubmit="return validate_form()">
+        <p><a class="navbar-brand" href="{{ route('home') }}"><img src="{{asset('logo/logo-PAM.png')}}" style="height:80px"></a></p>
 
         <h3>Đăng nhập</h3>
 
         <div class="txtb">
-          <input type="email" name="email" required />
-          <span data-placeholder="Email đăng nhập"></span>
+          <input type="text" id="name" />
+          <span data-placeholder="Tên đăng nhập"></span>
+          
         </div>
+        <span id="error_name"></span>
 
         <div class="txtb">
-          <input type="password" name="password" required />
-          <span data-placeholder="Mật khẩu"></span>
+          <input type="password" id="password" />
+          <span data-placeholder="Mật khẩu"></span> 
         </div>
+        <span id="error_password"></span>
 
-        <input type="submit" class="logbtn" value="Đăng nhập">
-        <br>
-        <div class="text-center btn-danger">
-          <a class="text-white" href="{{route('home')}}">Cancel</a>
-        </div>
-        <div class="">
-          Bạn chưa có tài khoản? <a href="">Đăng ký</a>
+        <button type="submit" class="logbtn">Đăng nhập</button>
+
+        <div class="bottom-text">
+          Bạn chưa có tài khoản? <a href="{{ route('signup') }}">Đăng ký</a>
         </div>
 
       </form>
@@ -43,13 +42,13 @@
       $(".txtb input").on("focus",function(){
         $(this).addClass("focus");
       });
-
       $(".txtb input").on("blur",function(){
         if($(this).val() == "")
         $(this).removeClass("focus");
       });
-
       </script>
+      
+      @include('assets.home.asset-js');
 
 
   </body>
