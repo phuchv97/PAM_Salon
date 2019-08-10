@@ -22,7 +22,7 @@
                                 <div class="col-sm-12" >
                                     <form class="form-inline" action="{{route('list_post')}}" method="get">
                                         @csrf
-                                        <input class="form-control mr-sm-2" type="text" value="{{$name}}" name="name" placeholder="Product name">
+                                        <input class="form-control mr-sm-2" type="text" value="{{$title}}" name="title" placeholder="Post title">
                                         
                                         <button class="btn btn-primary" type="submit">Search</button>
                                     </form>
@@ -44,7 +44,7 @@
                                                     <th class="text-center">category</th>
                                                     <th class="text-center">image</th>
 
-                                                    <th class="text-center"><a class="btn btn-outline-primary" href="#" role="button">Add product</a></th>
+                                                    <th class="text-center"><a class="btn btn-outline-primary" href="{{route('add_post')}}" role="button">Add post</a></th>
                                                 </tr>
                                             </thead>
                                             <tbody >
@@ -52,15 +52,15 @@
                                                 <tr>
                                                     <td>{{$p->id}}</td>
                                                     <td>{{$p->title}}</td>
-                                                    <td class="text-center">...</td>
+                                                    <td class="text-center">{{$p->category->name}}</td>
                                                     <td class="text-center">
                                                         <img src="{{asset($p->image)}}" width="100">
                                                     </td>
                                                     <td class="text-center">
-                                                        <a data-toggle="m-tooltip" data-placement="left" title data-original-title="Update" href="#" class="text-success btn btn-outline-accent m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+                                                        <a data-toggle="m-tooltip" data-placement="left" title data-original-title="Update" href="{{route('edit_post',['id'=>$p->id])}}" class="text-success btn btn-outline-accent m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
                                                             <i class="flaticon-edit-1"></i>
                                                         </a>
-                                                        <a href="javascript:void(0);" linkurl="" data-toggle="m-tooltip" data-placement="left" title data-original-title="remove" class="text-danger btn-remove btn btn-outline-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air delete_user_Model">
+                                                        <a href="javascript:void(0);" linkurl="{{route('delete_post',['id'=>$p->id])}}" data-toggle="m-tooltip" data-placement="left" title data-original-title="remove" class="text-danger btn-remove btn btn-outline-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air delete_user_Model">
                                                                             <i class="flaticon-delete-1"></i>
                                                                         </a>
                                                         

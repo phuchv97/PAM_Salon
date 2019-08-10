@@ -1,7 +1,7 @@
 @extends('layouts.main-admin')
 @section('title', 'Thống kê')
 @section('content')
-<div class="bg-white">
+							<div class="bg-white">
 
 								<!--begin: Search Form -->
 								<div class="row m-row--col-separator-xl">

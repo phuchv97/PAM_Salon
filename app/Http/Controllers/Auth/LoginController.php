@@ -49,8 +49,21 @@ class LoginController extends Controller
             return redirect(route('form_login_admin',['error'=>'Sai tài khoản, vui lòng nhập lại']));
         }
     }
+    public function loginGuest(Request $request){
+        $userEmail = $request['email'];
+        $password = $request['password'];
+        if(Auth::attempt(['email'=>$userEmail,'password'=>$password])){
+            return redirect(route('home'));
+        }else{
+            return redirect(route('login',['error'=>'Sai tài khoản, vui lòng nhập lại']));
+        }
+    }
     public function logout(){
         Auth::logout();
         return redirect(route('form_login_admin'));
+    }
+    public function logoutGuest(){
+        Auth::logout();
+        return redirect(route('login'));
     }
 }

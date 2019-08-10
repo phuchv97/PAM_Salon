@@ -11,6 +11,8 @@ use App\Model\Posts;
 use App\Model\HairStylist;
 use App\Model\Gallery;
 use App\Model\Product;
+use App\Model\Comment;
+
 
 
 
@@ -30,9 +32,11 @@ class HomeController extends Controller
         return view('home.index', compact('services','posts','service_detail','hairStylist','gallery'));
     }
     public function blog_detail($id){
+
         $post = Posts::where('id','=', $id)->first();
         $post_new = Posts::orderBy('id','desc')->limit(4)->get();
-        return view('home.blog-detail',['post'=>$post,'post_new'=>$post_new]);
+        $comment = Comment::where('post_id','=',"$id")->get();
+        return view('home.blog-detail',['post'=>$post,'post_new'=>$post_new,'comment'=>$comment]);
     }
     public function service(){
         $service = Services::limit(4)->get();
