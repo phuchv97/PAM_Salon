@@ -60,10 +60,10 @@ class LoginController extends Controller
     }
     public function logout(){
         Auth::logout();
-        return redirect(route('form_login_admin'));
+        return redirect(route('home'));
     }
     public function logoutGuest(){
         Auth::logout();
-        return redirect(route('login'));
+        return redirect(route('home'));
     }
 }

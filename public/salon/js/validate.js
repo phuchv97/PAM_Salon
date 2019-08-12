@@ -13,7 +13,7 @@ function validate_form(){
   }else{
     err_password.innerHTML = "";
   }
-  if(name_value.value == "" || name_value.value.length < 6 || name_value.value.length > 20){
+  if(name_value.value == "" || name_value.value.length < 6 ){
     err_name.innerHTML = "Tên đăng nhập không được để trống hoặc dưới 6 ký tự";
     name_value.focus();
     flag = false;
