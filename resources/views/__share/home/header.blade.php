@@ -11,15 +11,16 @@
             @foreach($menus as $menu )
               <li class="nav-item"><a href="{{route($menu->slug)}}" class="nav-link">{{$menu -> name}}</a></li>
             @endforeach
-            <div class="dropdown-profile">
-                <button class="btn btn-default dropdown-toggle btn-profile" type="button" data-toggle="dropdown"><img src="{{asset('salon/images/g1.jpg')}}" alt=""></button>
-
-                  <ul class="dropdown-menu">
-                    <div class="arrow-up"></div>
-                    <li><a href="{{route('profile')}}"><i class="fa fa-user"></i>Profile</a></li>
-                    @php if(Auth::check()){
+            @php if(Auth::check()){
                     @endphp
-                    <li class="nav-item"><a href="{{route('logout_guest')}}" class="nav-link">Đăng xuất</a></li>
+                    <div class="dropdown-profile">
+                      <button class="btn btn-default dropdown-toggle btn-profile" type="button" data-toggle="dropdown"><img src="{{asset(Auth::user()->image)}}" alt=""></button>
+                      <ul class="dropdown-menu">
+                        <div class="arrow-up"></div>
+                        <li><a href="{{route('profile')}}"><i class="fa fa-user"></i>Profile</a></li>
+                        <li class="nav-item"><a href="{{route('logout_guest')}}" class="nav-link">Đăng xuất</a></li>
+                      </ul>
+                    </div>
                     @php 
 
                   }else{
@@ -29,8 +30,7 @@
                     @php 
                   }
                   @endphp
-                  </ul>
-                </div>
+            
               
             </ul>
           </div>

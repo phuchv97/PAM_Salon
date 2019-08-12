@@ -56,6 +56,7 @@ class UsersController extends Controller
                     Rule::unique('users')->ignore($request->id),
                     'max:100'
                 ],
+                'phone_number' => Rule::unique('users')->ignore($request->id),
                 'name'=> 'required|max:100',
                 'password'=> 'required|max:36',
                 'address'=> 'required|max:255', 
@@ -76,6 +77,7 @@ class UsersController extends Controller
                 'address.max' => 'Maximum length of no more than 255 characters',
                 'address.required' => 'Please enter a address for the User',
                 'phone_number.required' => 'Please enter a phone_number for the User',
+                'phone_number.unique'=> 'user phone number already exists',
                 'gender.required' => 'Please enter a gender for the User',
                 'image.required' => 'Please select an Image',
                 'role_id.required' => 'Please enter the user role'

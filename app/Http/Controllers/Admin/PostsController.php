@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Model\Posts;
 use App\Model\Categories;
+use App\Model\Gallery;
+
 
 
 
@@ -75,7 +78,9 @@ class PostsController extends Controller
     }else{
         $model = Posts::find($request->id);
     }
-        
+    
+    
+    
     $model->fill($request->all());
     if ($request->hasFile('image')) {
         
@@ -89,8 +94,15 @@ class PostsController extends Controller
         
         $model->image = "uploaded/$path";
     }
-    
     $model->save();
+
+    $gallery = new Gallery();
+    $gallery->image= "uploaded/$path";
+    $gallery->description = $request->title;
+    $gallery->user_id = Auth::user()->id;
+    $gallery->save();
+    
+    
     return redirect(route('list_post')); 
     }
 

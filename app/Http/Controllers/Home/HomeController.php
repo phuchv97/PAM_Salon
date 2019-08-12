@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Model\Services;
 use App\Model\Categories;
 use App\Model\Menus;
@@ -64,7 +65,9 @@ class HomeController extends Controller
         return view('home.contact');
     }
     public function profile(){
-        $gallery = Gallery::all();
-        return view('home.profile',['gallery'=>$gallery]);
+        $user = Auth::user();
+        $gallery = Gallery::where('user_id','=',"$user->id")->get();
+        
+        return view('home.profile',['gallery'=>$gallery,'user'=>$user]);
     }
 }

@@ -142,7 +142,7 @@
   <div class="container">
     <div class="row justify-content-center mb-5 pb-3 ">
       <div class="col-md-7 heading-section text-center ftco-animate">
-        <h2 class="mb-4">Kế hoạch &amp;Giá cả</h2>
+        <h2 class="mb-4">Giá cả Dịch vụ</h2>
         <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
         <p class="mt-5">Dàn Skinner khéo léo, nhẹ nhàng đồng thời sở hữu ngoại hình xinh đẹp, ưa nhìn giúp xua tan những bộn bề công việc hàng ngày của khách hành nam giới., there live the blind texts.</p>
       </div>
