@@ -28,28 +28,33 @@
         </div>
         <div class="modal-body">
           <div class="row">
-            <div class="col-5 col-md-2 box-datepicker">
+            <div class="col-5 col-md-2 box-datepicker" data-number=2>
              <h5 class="set-time">8:00</h5>
-             <input type="text" class="number" value="so cho trong" disabled/>
+             <input type="text" class="number-seat"  value="Số chỗ: 2" disabled/>
            </div>
-           <div class=" col-5 col-md-2 box-datepicker">
+           <div class=" col-5 col-md-2 box-datepicker" data-number=2>
              <h5 class="set-time">8:30</h5>
-             <input type="text" class="number" value="so cho trong" disabled/>
+             <input type="text" class="number-seat"  value="Số chỗ: 2" disabled/>
            </div>
-           <div class=" col-5 col-md-2 box-datepicker">
+           <div class=" col-5 col-md-2 box-datepicker" data-number=2>
              <h5 class="set-time">9:00</h5>
+             <input type="text" class="number-seat"  value="Số chỗ: 2"  disabled/>
            </div>
-           <div class=" col-5 col-md-2 box-datepicker">
+           <div class=" col-5 col-md-2 box-datepicker" data-number=2>
              <h5 class="set-time">8:30</h5>
+             <input type="text" class="number-seat"  value="Số chỗ: 2"  disabled/>
            </div>
-           <div class=" col-5 col-md-2 box-datepicker">
+           <div class=" col-5 col-md-2 box-datepicker" data-number=2>
              <h5 class="set-time">8:30</h5>
+             <input type="text" class="number-seat"  value="Số chỗ: 2"  disabled/>
            </div>
-           <div class=" col-5 col-md-2 box-datepicker">
+           <div class=" col-5 col-md-2 box-datepicker" data-number=2>
              <h5 class="set-time">8:30</h5>
+             <input type="text" class="number-seat"   value="Số chỗ: 2"  disabled/>
            </div>
-           <div class=" col-5 col-md-2 box-datepicker">
+           <div class=" col-5 col-md-2 box-datepicker" data-number=2>
              <h5 class="set-time">8:30</h5>
+             <input type="text" class="number-seat"  value="Số chỗ: 2"  disabled/>
            </div>
 
          </div>
@@ -69,14 +74,21 @@
   @include('assets.home.asset-js')
   
   <script type="text/javascript">
-    $( ".box-datepicker" ).click(function() {
-        var settime = $(this).text().trim();
-        var timepicker = $(this).val();
-        timepicker = $('#time-picker').val(settime);
-     $('#myModal').modal('hide');
-   });
+    $(".box-datepicker").click(function(){
+     var settime = $(this).text().trim();
+     var timepicker = $(this).val();
+     timepicker = $('#time-picker').val(settime);
+     var curentnumber=$(this).data("number");
+     curentnumberhi = curentnumber-1;
 
-
+     $(this).find(".number-seat").val("Số chỗ: "+curentnumberhi);
+     $(this).data('number',curentnumberhi);
+     if(curentnumberhi == 0){
+      $(this).addClass("disabledbutton");
+    }
+    $('#myModal').modal('hide');
+  });
+  
  </script>
 </body>
 </html>

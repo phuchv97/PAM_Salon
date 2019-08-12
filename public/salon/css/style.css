@@ -9034,7 +9034,7 @@ textarea.form-control {
   text-align: center;
   margin-top: 10px;
 }
-.number{
+.number-seat{
     width: 100%;
     text-align: center;
     background: none;
@@ -9141,4 +9141,11 @@ textarea.form-control {
 }
 .profile-container{
   background: white;
+}
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
+}
+p{
+  color: white;
 }
