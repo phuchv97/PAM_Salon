@@ -9172,7 +9172,7 @@ p{
   justify-content: center;
   overflow: hidden;
   flex-direction: row-reverse;
-  height: 150px;
+  height: 135px;
   position: relative;
 }
 
@@ -9264,7 +9264,7 @@ p{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: center;
 }
 textarea.form-control {
     height: 150px!important;

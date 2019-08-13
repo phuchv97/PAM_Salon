@@ -22,7 +22,26 @@
 						<div class="col-md-12 mb-3">
 							<p><span>Người cắt: </span>abcxyz</p>
 						</div>
+						
+					</div>
+				</div>
+				<div class="col-md-4 ratting-botom ftco-animate">
+					<div class="row">
+						<div class="col-md-12 mb-4">
+							<h2 class="h4">Lịch sử đặt lịch</h2>
+						</div>
 						<div class="col-md-12 mb-3">
+							<button class="btn btn-primary py-3 px-4" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Lịch sử đặt lịch</button>
+						</div>
+						<div class="collapse" id="collapseExample">
+							<div class="card card-body">
+								<div class="col-md-12">
+									<p><span>Ngày:</span> dcvsahcc</p>
+								</div>
+								<div class="col-md-12">
+									<p><span>Giờ:</span> 2h</p>
+								</div>
+								<div class="col-md-12">
 							<p><span>Đánh giá: </span></p>
 							<div class="container-rating">
 								<div class="feedback">
@@ -128,24 +147,6 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-4 ratting-botom ftco-animate">
-					<div class="row">
-						<div class="col-md-12 mb-4">
-							<h2 class="h4">Lịch sử đặt lịch</h2>
-						</div>
-						<div class="col-md-12 mb-3">
-							<button class="btn btn-primary py-3 px-4" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Lịch sử đặt lịch</button>
-						</div>
-						<div class="collapse" id="collapseExample">
-							<div class="card card-body">
-								<div class="col-md-12">
-									<p><span>Ngày:</span> dcvsahcc</p>
-								</div>
-								<div class="col-md-12">
-									<p><span>Giờ:</span> 2h</p>
-								</div>
 							</div>
 						</div>
 					</div>
