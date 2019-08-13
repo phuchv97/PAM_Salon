@@ -26,19 +26,12 @@ function validate_form(){
 }
 function validate_datlich(){
   var full_name = document.getElementById('fullname');
-  var date_book = document.getElementById('appointment_date');
   var time_book = document.getElementById('time-picker');
   var err_fullname = document.getElementById('err_fullname');
   var err_timee = document.getElementById('err_time');
-  var err_datee = document.getElementById('err_date');
+
   var flag = true;
-  if(date_book.value == ""){
-    err_datee.innerHTML = "Vui lòng chọn ngày"; 
-    flag = false;
-  }
-  else{
-    err_datee.innerHTML = ""; 
-  }
+ 
   if(time_book.value == ""){
     err_timee.innerHTML = "Vui lòng chọn khung giờ"; 
     time_book.focus();
@@ -60,8 +53,17 @@ function validate_datlich(){
 }
 function validate_phonenumber(){
   var flag = true;
+    var date_book = document.getElementById('appointment_date');
   var phonenumber = document.getElementById('phone_number');
    var err_phonenumber = document.getElementById('err_phone');
+     var err_datee = document.getElementById('err_date');
+      if(date_book.value == ""){
+    err_datee.innerHTML = "Vui lòng chọn ngày"; 
+    flag = false;
+  }
+  else{
+    err_datee.innerHTML = ""; 
+  }
  if(phonenumber.value == ""){
     err_phonenumber.innerHTML = "Vui lòng nhập số điện thoại"; 
     phonenumber.focus();

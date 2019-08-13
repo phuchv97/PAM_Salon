@@ -17,25 +17,14 @@
           <div class="d-md-flex">
             <div class="form-group col-md-6">
               <div class="input-wrap">
-                <div class="icon"><span class="ion-md-calendar"></span></div>
-                <input type="text" id="appointment_date" class="form-control" placeholder="Ngày">
-              </div>
-              <span id="err_date"></span>
-            </div>
-            <div class="form-group col-md-6">
-              <div class="input-wrap">
                 <div class="icon"><span class="ion-ios-clock"></span></div>
                 <input type="text" id="time-picker" class="form-control" placeholder="Giờ" data-toggle="modal" data-target="#myModal">
               </div>
               <span id="err_time"></span>
             </div>
-            
-            
-          </div>
-          
-          <div class="d-md-flex">
-          <div class="form-group col-md-6 mt-4">
-           <label for="exampleFormControlSelect1">Dịch vụ</label>
+
+            <div class="form-group col-md-6 form-stylist">
+           <label for="exampleFormControlSelect1" class="stylist">Dịch vụ</label>
            <select class="form-control" id="exampleFormControlSelect1">
               <option>1</option>
               <option>2</option>
@@ -44,18 +33,11 @@
               <option>5</option>
            </select>
             </div>
-
-            <div class="form-group col-md-6 mt-4">
-              <label for="exampleFormControlSelect2">Stylist</label>
-             <select class="form-control" id="exampleFormControlSelect2">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+            
+            
           </div>
-        </div> 
+          
+          
           <div class="form-group">
             <button type="submit" class="btn btn-primary py-3 px-4">Đặt lịch</button>
           </div>

@@ -9279,3 +9279,11 @@ textarea.form-control {
 select option{
   color:black;
 }
+.form-stylist{
+  position: relative;
+}
+.stylist{
+  position: absolute;
+      right: 36px;
+    top: 15px;
+}
