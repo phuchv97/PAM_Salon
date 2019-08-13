@@ -70,4 +70,7 @@ class HomeController extends Controller
         
         return view('home.profile',['gallery'=>$gallery,'user'=>$user]);
     }
+    public function formdatlich(){
+        return view('home.formdatlich');
+    }
 }

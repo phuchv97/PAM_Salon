@@ -1,12 +1,12 @@
 @extends('layouts.main-home')
 @section('title', 'Chi tiết bài viết')
 @section('content')
-<div class="hero-wrap" style="background-image: url({{asset('salon/images/bg_2.jpg')}});" data-stellar-background-ratio="0.5">
+<div class="hero-wrap" style="background-image: url({{asset($post->image) }});" data-stellar-background-ratio="0.5">
 	      <div class="overlay"></div>
 	      <div class="container">
 	        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
 	          <div class="col-md-6 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-	          	<h1 class="mb-3 mt-5 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Chi tiết bài viết</h1>
+	          	<h1 class="mb-3 mt-5 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{{$post -> title}}</h1>
 	            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="{{route('home')}}">Trang chủ</a></span> <span class="mr-2"><a href="{{route('blog')}}">Bài viết</a></span> <span>Chi tiết bài viết</span></p>
 	          </div>
 	        </div>

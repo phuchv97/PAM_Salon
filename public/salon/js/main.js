@@ -282,7 +282,7 @@
   $('#appointment_date').datepicker({
 	  startDate: '0',
 	  format: 'dd/mm/yyyy',	 
-	  autoclose: true
+	  autoclose: true,
 
 	});
 

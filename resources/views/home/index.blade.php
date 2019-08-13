@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
       
-      <div class="col-md-7 appointment ftco-animate">
+      <div class="col-md-8 appointment ftco-animate">
         <form autocomplete="off" action="#" class="appointment-form" onsubmit="return validate_datlich()">
           <div class="d-md-flex">
             <div class="form-group">
@@ -45,9 +45,9 @@
           </div>
         </form>
       </div>
-      <div class="col-md-5 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+      <div class="col-md-4 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
         <p class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Salon PAM</p>
-        <h1 class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Chúng tôi sẽ làm cho bạn phong cách</h1>
+        <h2 class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Tút lại vẻ đẹp trai để tỏa sáng</h2>
       </div>
 
     </div>
@@ -173,7 +173,7 @@
         <h3>Tiết kiệm tới 25%</h3>
         <h2 class="mb-4">TẤT CẢ CÁC DỊCH VỤ GIẢM GIÁ</h2>
         <p class="mb-4">Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-        <p><a href="#" class="btn btn-primary px-4 py-3">Đặt lịch</a></p>
+        <p><a href="{{route('formdatlich')}}" class="btn btn-primary px-4 py-3">Đặt lịch</a></p>
       </div>
     </div>
   </div>
