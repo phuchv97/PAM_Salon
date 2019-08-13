@@ -28,11 +28,9 @@ function validate_datlich(){
   var full_name = document.getElementById('fullname');
   var date_book = document.getElementById('appointment_date');
   var time_book = document.getElementById('time-picker');
-  var phonenumber = document.getElementById('phone_number');
   var err_fullname = document.getElementById('err_fullname');
   var err_timee = document.getElementById('err_time');
   var err_datee = document.getElementById('err_date');
-  var err_phonenumber = document.getElementById('err_phone');
   var flag = true;
   if(date_book.value == ""){
     err_datee.innerHTML = "Vui lòng chọn ngày"; 
@@ -49,14 +47,6 @@ function validate_datlich(){
   else{
     err_timee.innerHTML = ""; 
   }
-  if(phonenumber.value == ""){
-    err_phonenumber.innerHTML = "Vui lòng chọn khung giờ"; 
-    phonenumber.focus();
-    flag = false;
-  }
-  else{
-    err_phonenumber.innerHTML = ""; 
-  }
     if(full_name.value == "" || full_name.value.length < 6 || full_name.value.length > 20 || !isNaN(full_name.value)){
     err_fullname.innerHTML = "Tên đăng nhập không được để trống hoặc dưới 6 ký tự";
     full_name.focus();
@@ -68,3 +58,18 @@ function validate_datlich(){
   return flag;
  
 }
+function validate_phonenumber(){
+  var flag = true;
+  var phonenumber = document.getElementById('phone_number');
+   var err_phonenumber = document.getElementById('err_phone');
+ if(phonenumber.value == ""){
+    err_phonenumber.innerHTML = "Vui lòng nhập số điện thoại"; 
+    phonenumber.focus();
+    flag = false;
+  }
+  else{
+    err_phonenumber.innerHTML = ""; 
+  }
+  return flag;
+}
+

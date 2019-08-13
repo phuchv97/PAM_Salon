@@ -9276,3 +9276,6 @@ textarea.form-control {
 .ftco-navbar-light.scrolled .navbar-brand {
   padding-top: 25px;
 }
+select option{
+  color:black;
+}
