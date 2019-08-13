@@ -9060,6 +9060,9 @@ textarea.form-control {
   .feedback{
     align-items: center !important;
   }
+  #collapseExample{
+    width: 100%;
+  }
 /*  .box-datepicker{
   margin: 5px 8px;
 }*/

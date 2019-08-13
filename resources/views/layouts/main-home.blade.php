@@ -99,6 +99,11 @@
       var curentnumber=$(this).data("number");
       $(this).data('number',curentnumber);
     });
+         $("label").click(function(){
+           var rating=$(this).data("number");
+           console.log(rating);
+         });
+
 
  </script>
 

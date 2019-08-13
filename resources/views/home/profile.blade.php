@@ -46,16 +46,16 @@
 							<div class="container-rating">
 								<div class="feedback">
 									<div class="rating">
-										<input type="radio" name="rating" id="rating-5">
-										<label for="rating-5"></label>
+										<input type="radio" name="rating" id="rating-5" class="ratinggg" value="5" >
+										<label for="rating-5" data-number=5></label>
 										<input type="radio" name="rating" id="rating-4">
-										<label for="rating-4"></label>
-										<input type="radio" name="rating" id="rating-3">
-										<label for="rating-3"></label>
+										<label for="rating-4" data-number=4></label>
+										<input type="radio" name="rating" id="rating-3" >
+										<label for="rating-3" data-number=3></label>
 										<input type="radio" name="rating" id="rating-2">
-										<label for="rating-2"></label>
-										<input type="radio" name="rating" id="rating-1">
-										<label for="rating-1"></label>
+										<label for="rating-2" data-number=2></label>
+										<input type="radio" name="rating" id="rating-1" >
+										<label for="rating-1"  data-number=1></label>
 										<div class="emoji-wrapper">
 											<div class="emoji">
 												<svg class="rating-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
