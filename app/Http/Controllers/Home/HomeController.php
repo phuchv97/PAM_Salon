@@ -93,7 +93,7 @@ class HomeController extends Controller
         $model->hair_stylist_id = $request->hair_stylist;
         $model->service_id = $request->service;
         $model->name = $request->name;
-        $model->status = 'Chưa Sử Dụng';
+        $model->status = 'Chưa Thanh Toán';
         $model->phone_number = $request->phone_number;
         $model->reservation_date = $request->reservation_date;
         $model->reservation_time_id = $reservation_time_id;

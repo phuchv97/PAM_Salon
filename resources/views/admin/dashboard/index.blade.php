@@ -129,22 +129,22 @@
 										<!--end::Total Profit-->
 									</div>
 									
-									<!-- <div class="rounded border border-secondary col-md-12 col-lg-6 col-xl-3">
+									<div class="rounded border border-secondary col-md-12 col-lg-6 col-xl-3">
 
 										
 										<div class="m-widget24">
 											<div class="m-widget24__item">
-												<a href="" class="m-widget24__title text-brand">
+												<a href="{{route('list_reservation')}}" class="m-widget24__title text-brand">
 												<h4 class="">
-													Total Frofit
+													Payment management
 												</h4>
 												</a>
 												<br>
 												<span class="m-widget24__desc">
-													All Customs Value
+													Total
 												</span>
 												<span class="m-widget24__stats m--font-brand">
-													$18M
+													
 												</span>
 												<div class="m--space-10"></div>
 												
@@ -200,7 +200,7 @@
 										</div>
 
 										
-									</div> -->
+									</div>
 								</div>
 
 								<!--end: Search Form -->
