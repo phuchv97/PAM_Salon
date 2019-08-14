@@ -6,7 +6,7 @@
 	      <div class="container">
 
 	        <h2>Đặt lịch thành công</h2>
-	        <a href="{{route('home')}}">trang chủ</a>
+	        <a href="{{route('home')}}">Trở về trang chủ</a>
 	      </div>
 	    </div>
 

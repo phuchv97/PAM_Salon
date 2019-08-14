@@ -33,6 +33,10 @@ Route::group(['middleware'=>'checkAdmin'],function(){
     Route::get('delete-post/{id}','Admin\PostsController@delete')->name('delete_post');
     Route::post('save-post','Admin\PostsController@save')->name('save_post');
 
+    Route::get('list-reservation','Admin\ReservationController@index')->name('list_reservation');
+    Route::post('update-status-reservation/{id}','Admin\ReservationController@updateStatus')->name('update_status_reservation');
+    Route::get('revenue-management','Admin\ReservationController@revenueManagement')->name('revenue_management');
+
     
 
 
