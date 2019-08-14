@@ -191,6 +191,17 @@
             <div class="text">
               <p>{{$stylist -> description}}</p>
             </div>
+            <div class="wrapper">
+              <div class="rating-holder">
+                <div class="c-rating c-rating--small" data-rating-value="2">
+                  <button>1</button>
+                  <button>2</button>
+                  <button>3</button>
+                  <button>4</button>
+                  <button>5</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -31,5 +31,7 @@ Route::get('blog-detail/{id}', 'Home\HomeController@blog_detail')->name('blog_de
 Route::post('save-comment', 'Home\CommentController@save')->name('save_comment');
 Route::post('reservation', 'Home\HomeController@save_reservation')->name('save_reservation');
 
+Route::get('bookb1', 'Home\HomeController@bookb1')->name('bookb1');
+
 
 

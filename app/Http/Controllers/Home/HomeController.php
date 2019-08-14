@@ -104,4 +104,9 @@ class HomeController extends Controller
 
 
     }
+    public function bookb1(){
+        $hairStylist = HairStylist::limit(4)->get();
+        $stylist = HairStylist::all();
+        return view('home.bookb1',compact('hairStylist','stylist'));
+    }
 }
