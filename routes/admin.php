@@ -13,12 +13,13 @@ Route::group(['middleware'=>'checkAdmin'],function(){
     Route::get('services/add', 'Admin\ServiceController@addService')->name('add_service');
     Route::post('services/save', 'Admin\ServiceController@save')->name('service_save');
     
-    Route::get('list-user','UsersController@index')->name('list_user');
-    Route::get('add-user','UsersController@addUser')->name('add_user');
-    Route::post('save-user','UsersController@save')->name('save_user');
-    Route::get('edit-user/{id}','UsersController@editUser')->name('edit_user');
-    Route::get('delete-user/{id}','UsersController@delete')->name('delete_user');
-
+    Route::group(['middleware'=>'checkBoss'],function(){
+        Route::get('list-user','UsersController@index')->name('list_user');
+        Route::get('add-user','UsersController@addUser')->name('add_user');
+        Route::post('save-user','UsersController@save')->name('save_user');
+        Route::get('edit-user/{id}','UsersController@editUser')->name('edit_user');
+        Route::get('delete-user/{id}','UsersController@delete')->name('delete_user');
+    );
 
 
     Route::get('gallery','Admin\GalleryController@index')->name('list_gallery');
@@ -33,10 +34,11 @@ Route::group(['middleware'=>'checkAdmin'],function(){
     Route::get('delete-post/{id}','Admin\PostsController@delete')->name('delete_post');
     Route::post('save-post','Admin\PostsController@save')->name('save_post');
 
-    Route::get('list-reservation','Admin\ReservationController@index')->name('list_reservation');
-    Route::post('update-status-reservation/{id}','Admin\ReservationController@updateStatus')->name('update_status_reservation');
-    Route::get('revenue-management','Admin\ReservationController@revenueManagement')->name('revenue_management');
-
+    Route::group(['middleware'=>'checkRolePayment'],function(){
+        Route::get('list-reservation','Admin\ReservationController@index')->name('list_reservation');
+        Route::post('update-status-reservation/{id}','Admin\ReservationController@updateStatus')->name('update_status_reservation');
+        Route::get('revenue-management','Admin\ReservationController@revenueManagement')->name('revenue_management');
+    });
     
 
 
