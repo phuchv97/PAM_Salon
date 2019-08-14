@@ -9024,9 +9024,9 @@ textarea.form-control {
   display: block;
 }
 .box-datepicker{
- 
+  cursor: pointer;
   height: 100px;
-  background-color: black;
+  background-color: green;
   margin: 5px 13px;
   border-radius: 15px;
 }
@@ -9150,6 +9150,10 @@ textarea.form-control {
 }
 .disabledbutton {
     pointer-events: none;
+    height: 100px;
+    background-color: black;
+    margin: 5px 13px;
+    border-radius: 15px;
     opacity: 0.4;
 }
 p{

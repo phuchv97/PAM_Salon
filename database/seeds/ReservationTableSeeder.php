@@ -93,7 +93,7 @@ class ReservationTableSeeder extends Seeder
                 'status'=>'Chưa Sử Dụng',
                 'phone_number'=>'0958779999',
                 'reservation_time_id'=> '3',
-                'reservation_date'=> '2019-08-14',
+                'reservation_date'=> '2019-08-15',
             ],
             [
                 'hair_stylist_id'=>'3',
@@ -102,7 +102,7 @@ class ReservationTableSeeder extends Seeder
                 'status'=>'Chưa Sử Dụng',
                 'phone_number'=>'0933449999',
                 'reservation_time_id'=> '7',
-                'reservation_date'=> '2019-08-14',
+                'reservation_date'=> '2019-08-15',
             ],
             [
                 'hair_stylist_id'=>'3',
@@ -111,7 +111,7 @@ class ReservationTableSeeder extends Seeder
                 'status'=>'Chưa Sử Dụng',
                 'phone_number'=>'0952244999',
                 'reservation_time_id'=> '7',
-                'reservation_date'=> '2019-08-14',
+                'reservation_date'=> '2019-08-15',
             ],
             [
                 'hair_stylist_id'=>'3',

@@ -280,8 +280,8 @@
   });
 
   $('#appointment_date').datepicker({
-	  startDate: '0',
-	  format: 'dd/mm/yyyy',	 
+	  startDate: '+1d',
+	  format: 'yyyy-mm-dd',	 
 	  autoclose: true,
 
 	});
