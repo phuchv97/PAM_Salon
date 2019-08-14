@@ -19,7 +19,7 @@ Route::group(['middleware'=>'checkAdmin'],function(){
         Route::post('save-user','UsersController@save')->name('save_user');
         Route::get('edit-user/{id}','UsersController@editUser')->name('edit_user');
         Route::get('delete-user/{id}','UsersController@delete')->name('delete_user');
-    );
+    });
 
 
     Route::get('gallery','Admin\GalleryController@index')->name('list_gallery');
