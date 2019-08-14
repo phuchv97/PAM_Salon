@@ -165,7 +165,6 @@
         <h3>Tiết kiệm tới 25%</h3>
         <h2 class="mb-4">TẤT CẢ CÁC DỊCH VỤ GIẢM GIÁ</h2>
         <p class="mb-4">Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
-        <p><a href="{{route('formdatlich')}}" class="btn btn-primary px-4 py-3">Đặt lịch</a></p>
       </div>
     </div>
   </div>

@@ -9063,6 +9063,27 @@ textarea.form-control {
   #collapseExample{
     width: 100%;
   }
+  .wrapper {
+    top: 88% !important;
+}
+.navbar-brand{
+  padding-top: 15px;
+}
+.navbar-brand img{
+  padding-top: 20px;
+}
+.dropdown-profile {
+  left: 0 !important;
+  top: -9px !important;
+  padding-bottom: 25px;
+}
+.dropdown-menu{
+    left: 0 !important;
+    position: absolute !important;
+}
+.arrow-up {
+     left: 12% !important; 
+}
 /*  .box-datepicker{
   margin: 5px 8px;
 }*/
@@ -9100,7 +9121,7 @@ textarea.form-control {
   position: relative;
   left: 20px;
     position: relative;
-    top: 10px;
+    top: -6px;
 }
 .btn-profile{
   width: 50px;

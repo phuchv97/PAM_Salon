@@ -13,7 +13,9 @@
             @endforeach
             @php if(Auth::check()){
                     @endphp
-                    <div class="dropdown-profile">
+                    <li class="nav-item">
+                     <div class="nav-link"> 
+                    <div class="dropdown-profile ">
                       <button class="btn btn-default dropdown-toggle btn-profile" type="button" data-toggle="dropdown"><img src="{{asset(Auth::user()->image)}}" alt=""></button>
                       <ul class="dropdown-menu">
                         <div class="arrow-up"></div>
@@ -21,6 +23,8 @@
                         <li class="nav-item"><a href="{{route('logout_guest')}}" class="nav-link">Đăng xuất</a></li>
                       </ul>
                     </div>
+                    </div>
+                  </li>
                     @php 
 
                   }else{
