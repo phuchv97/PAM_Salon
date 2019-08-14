@@ -9088,7 +9088,7 @@ textarea.form-control {
   margin: 5px 8px;
 }*/
 }
-#error_name, #error_password, #error_phone, #error_repassword{
+#error_name, #error_password, #error_phone, #error_repassword, #error_email{
   color:red;
   font-size: 13px;
 }

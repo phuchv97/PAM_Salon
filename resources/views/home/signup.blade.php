@@ -16,8 +16,8 @@
     }
     .login-form p {
       margin-top: -62px;
-    }
-    .txtb input{
+    } 
+    .txtb input{    
       height: 30px;
     }
     .txtb {
@@ -43,6 +43,12 @@
         <span id="error_name"></span>
 
         <div class="txtb">
+          <input type="email" id="email"/>
+          <span data-placeholder="Email"></span> 
+        </div>
+        <span id="error_email"></span>
+
+        <div class="txtb">
           <input autocomplete="off" type="number" id="phone" />
           <span data-placeholder="Số điện thoại"></span> 
         </div>
@@ -54,11 +60,6 @@
         </div>
         <span id="error_password"></span>
 
-        <div class="txtb">
-          <input type="password" id="re-password" />
-          <span data-placeholder="Xác nhận mật khẩu"></span> 
-        </div>
-        <span id="error_repassword"></span>
 
         <button type="submit" id="btn-signup" class="logbtn">Đăng ký</button>
 

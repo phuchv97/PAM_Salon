@@ -2,21 +2,21 @@ function validate_signup(){
   var name_value = document.getElementById('name');
   var pass = document.getElementById('password');
   var sdt = document.getElementById('phone');
-  var repass = document.getElementById('re-password');
+  var email = document.getElementById('email');
   var err_name = document.getElementById('error_name');
   var err_password = document.getElementById('error_password');
   var err_sdt = document.getElementById('error_phone');
-  var err_repassword = document.getElementById('error_repassword');
+  var err_email = document.getElementById('error_email');
   var flag = true;
   var btn = document.getElementById("btn-signup");
 
-  if(repass.value == ""){
-    err_repassword.innerHTML = "Vui lòng xác nhận mật khẩu";
-    repass.focus();
+  if(email.value == ""){
+    err_email.innerHTML = "Vui lòng nhập email";
+    email.focus();
     flag = false;
     btn.style.marginTop = '20px';
   }else{
-    err_repassword.innerHTML = "";
+    err_email.innerHTML = "";
   }
   
 
