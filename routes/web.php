@@ -29,4 +29,7 @@ Route::get('album', 'Home\HomeController@album')->name('album');
 Route::get('product-detail/{id}', 'Home\HomeController@product_detail')->name('product_detail');
 Route::get('blog-detail/{id}', 'Home\HomeController@blog_detail')->name('blog_detail');
 Route::post('save-comment', 'Home\CommentController@save')->name('save_comment');
+Route::post('reservation', 'Home\HomeController@save_reservation')->name('save_reservation');
+
+
 

@@ -13,6 +13,8 @@ use App\Model\HairStylist;
 use App\Model\Gallery;
 use App\Model\Product;
 use App\Model\Comment;
+use App\Model\Reservation;
+use App\Model\TimeReservation;
 
 
 
@@ -29,8 +31,9 @@ class HomeController extends Controller
         $service_detail = Services::all();
         $services = Services::take(4)->get();
         $hairStylist = HairStylist::limit(4)->get();
+        $stylist = HairStylist::all();
         $gallery = Gallery::take(4)->get();
-        return view('home.index', compact('services','posts','service_detail','hairStylist','gallery'));
+        return view('home.index', compact('services','posts','service_detail','hairStylist','gallery','stylist'));
     }
     public function blog_detail($id){
 
@@ -70,7 +73,35 @@ class HomeController extends Controller
         
         return view('home.profile',['gallery'=>$gallery,'user'=>$user]);
     }
-    public function formdatlich(){
-        return view('home.formdatlich');
+    public function formdatlich(Request $request){
+        $phone_number = $request->phone_number;
+        $reservation_date = $request->reservation_date;
+        $hair_stylist = $request->hair_stylist;
+        $services = Services::all();
+        $reservation_time = TimeReservation::orderBy('time_reservation')->get();
+        return view('home.formdatlich',compact('phone_number','reservation_date','hair_stylist','services','reservation_time'));
+    }
+    public function save_reservation(Request $request){
+        
+        
+
+        $time_reservation = $request->time_reservation;
+        $time_reservation_id = TimeReservation::where('time_reservation','=',"$time_reservation")->first();
+        $reservation_time_id = $time_reservation_id->id;
+
+        $model = new Reservation();
+        $model->hair_stylist_id = $request->hair_stylist;
+        $model->service_id = $request->service;
+        $model->name = $request->name;
+        $model->status = 'Chưa Sử Dụng';
+        $model->phone_number = $request->phone_number;
+        $model->reservation_date = $request->reservation_date;
+        $model->reservation_time_id = $reservation_time_id;
+        $model->save();
+
+        return view('home.reservation-notice',['model'=>$model]);
+
+
+
     }
 }
