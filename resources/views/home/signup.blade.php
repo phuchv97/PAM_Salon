@@ -24,42 +24,54 @@
      margin: 20px 0 10px 0;
     }
     .logbtn{
-    margin-top: 70px;
+    margin-top: 40px;
     }
     </style>
   </head>
   <body>
     <div id="login">
-      <form autocomplete="off" action="{{ route('login') }}" class="login-form" onsubmit="return validate_signup()">
+      <form autocomplete="off" method="POST" action="{{ route('signup_guest') }}" class="login-form" onsubmit="return ">
       @csrf
         <p><a class="navbar-brand" href="{{ route('home') }}"><img src="{{asset('logo/logo-PAM.png')}}" style="height:70px"></a></p>
 
         <h3>Đăng ký</h3>
 
         <div class="txtb">
-          <input type="text" id="name" />
-          <span data-placeholder="Tên đăng nhập"></span> 
+          <input autocomplete="off" name="role_id" type="hidden" value="4" />
+          <input type="text" name="name" id="name" value="{{old('name')}}" />
+          <span data-placeholder=" Họ Tên"></span> 
         </div>
-        <span id="error_name"></span>
+        @if($errors)
+            <span class="text-danger">{{$errors->first('name')}}</span>
+        @endif
 
         <div class="txtb">
-          <input type="email" id="email"/>
-          <span data-placeholder="Email"></span> 
+          <input type="email" name="email" id="email" value="{{old('email')}}" />
+          <span data-placeholder="Email đăng nhập"></span> 
         </div>
-        <span id="error_email"></span>
+        @if($errors)
+            <span class="text-danger">{{$errors->first('email')}}</span>
+        @endif
+        
 
         <div class="txtb">
-          <input autocomplete="off" type="number" id="phone" />
+          <input autocomplete="off" name="phone_number" type="number" id="phone" value="{{old('phone_number')}}" />
           <span data-placeholder="Số điện thoại"></span> 
         </div>
-        <span id="error_phone"></span>
+        @if($errors)
+            <span class="text-danger">{{$errors->first('phone_number')}}</span>
+        @endif
+        
 
         <div class="txtb">
-          <input type="password" id="password" />
-          <span data-placeholder="Mật khẩu"></span> 
-        </div>
-        <span id="error_password"></span>
 
+          <input type="password" name="password" id="password" value="{{old('password')}}" />
+          <span data-placeholder="Mật khẩu"></span>
+           
+        </div>
+        @if($errors)
+            <span class="text-danger">{{$errors->first('password')}}</span>
+        @endif
 
         <button type="submit" id="btn-signup" class="logbtn">Đăng ký</button>
 

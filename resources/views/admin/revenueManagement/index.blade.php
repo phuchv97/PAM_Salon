@@ -56,7 +56,7 @@
                                             <thead>
                                                 <tr>
                                                     <th></th>
-                                                    <th class="text-center">Total Orders</th>
+                                                    <th class="text-center ">Total Orders</th>
                                                     <th class="text-center">Total number of paid orders </th>
                                                     <th class="text-center">Total Revenue (VND)</th>
                                                     
@@ -65,10 +65,10 @@
                                             </thead>
                                             <tbody >
                                                 <tr>
-                                                    <td class="text-center ">Month</td>
-                                                    <td class="text-center text-info ">{{$totalOrdersInMonth}}</td>
-                                                    <td class="text-center text-info">{{$TotalNumberOfPaidOrdersInMonth}}</td>
-                                                    <td class="text-center text-danger">
+                                                    <td class="text-center font-weight-bold">Month</td>
+                                                    <td class="text-center font-weight-bold text-info ">{{$totalOrdersInMonth}}</td>
+                                                    <td class="text-center font-weight-bold text-info">{{$TotalNumberOfPaidOrdersInMonth}}</td>
+                                                    <td class="text-center font-weight-bold text-danger">
                                                         {{$totalRevenueInMonth}}
                                                     </td>
                                                 </tr>
@@ -76,10 +76,10 @@
                                             
                                                 
                                                 <tr >
-                                                    <td class="text-center ">All</td>
-                                                    <td class="text-center text-info">{{$totalOrders}}</td>
-                                                    <td class="text-center text-info">{{$TotalNumberOfPaidOrders}}</td>
-                                                    <td class="text-center text-danger">
+                                                    <td class="text-center font-weight-bold">All</td>
+                                                    <td class="text-center font-weight-bold text-info">{{$totalOrders}}</td>
+                                                    <td class="text-center font-weight-bold text-info">{{$TotalNumberOfPaidOrders}}</td>
+                                                    <td class="text-center font-weight-bold text-danger">
                                                         {{$totalRevenue}}
                                                     </td>
                                                 </tr>

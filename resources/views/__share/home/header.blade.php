@@ -20,7 +20,7 @@
                       <ul class="dropdown-menu">
                         <div class="arrow-up"></div>
                         <li><a href="{{route('profile')}}"><i class="fa fa-user"></i>Profile</a></li>
-                        <li class="nav-item"><a href="{{route('logout_guest')}}" class="nav-link">Đăng xuất</a></li>
+                        <li><a href="{{route('logout_guest')}}" >Đăng xuất</a></li>
                       </ul>
                     </div>
                     </div>

@@ -15,7 +15,7 @@ use App\Model\Product;
 use App\Model\Comment;
 use App\Model\Reservation;
 use App\Model\TimeReservation;
-
+use App\Model\Contact;
 
 
 
@@ -108,5 +108,28 @@ class HomeController extends Controller
         $hairStylist = HairStylist::limit(4)->get();
         $stylist = HairStylist::all();
         return view('home.bookb1',compact('hairStylist','stylist'));
+    }
+    public function saveContact(Request $request){
+        $validatedData = $request->validate([
+                'email' => 'required',
+                'name'=> 'required',
+                'titles' => 'required',
+                'message' => 'required',
+
+            ],
+            [
+                'name.required' => 'vui lòng nhập tên',
+                'email.required' => 'vui lòng nhập email ',
+                'titles.required' => 'vui lòng nhập tiêu đề',
+                'message.required' => 'vui lòng nhập góp ý của bạn'
+                
+            ]
+        );
+
+        $model = new Contact();
+        $model->fill($request->all());
+        $model->save();
+        return view('home.contact',['notification'=>'Gửi góp ý thành công']);
+
     }
 }

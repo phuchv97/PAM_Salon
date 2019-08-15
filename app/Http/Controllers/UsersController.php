@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Model\Role;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
@@ -26,7 +27,7 @@ class UsersController extends Controller
     }
     public function addUser(){
         $user = new User();
-        $roles = Role::all();
+        $roles = Role::where('id','<','4')->get();
         return view('admin.users.form-user',['user'=>$user,'roles'=>$roles]);
     }
     public function editUser($id){
@@ -47,9 +48,52 @@ class UsersController extends Controller
         return redirect(route('list_user'));
     }
 
+    public function signupGuest(Request $request){
+        $validatedData = $request->validate([
+            'email'=>[
+                'required',
+                Rule::unique('users')
+            ],
+            'phone_number'=> [
+                'min:9',
+                'max:11',
+                Rule::unique('users')],
+            'name'=>'required',
+            'password'=> 'required',
+
+        ],
+        [
+            'name.required'=> 'Vui lòng nhập họ tên của bạn',
+            'password.required'=> 'Vui lòng nhập mật khẩu đăng nhập',
+            'email.required'=> 'Vui lòng nhập email đăng nhập',
+            'phone_number.unique'=>'Số điện thoại đã từng đăng ký',
+            'email.unique'=>'Email đã từng đăng ký',
+            'phone_number.min' => 'vui lòng nhập đúng số điện thoại',
+            'phone_number.max' => 'vui lòng nhập đúng số điện thoại',
+
+        ]
+    );
+        $model = new User();
+        $model->name = $request->name;
+        $model->email = $request->email;
+        $model->phone_number = $request->phone_number;
+        $model->role_id = $request->role_id;
+        $model->password = Hash::make("$request->password");
+        $model->address = "";
+        $model->gender = "";
+        $model->image = "uploaded/users/default.jpg";
+        $model->save();
+
+        return view('home.login',['notification'=>'Đăng ký thành công bạn có thể đăng nhập']);
+
+    }
 
     public function save(Request $request){
-        
+        if($request->id == null){
+            $validateImage = 'required';
+        }else{
+            $validateImage = "";
+        }
         $validatedData = $request->validate([
                 'email' => [
                     'required',
@@ -60,7 +104,7 @@ class UsersController extends Controller
                 'name'=> 'required|max:100',
                 'password'=> 'required|max:36',
                 'address'=> 'required|max:255', 
-                'image' => "required",
+                'image' => $validateImage,
                 'phone_number' => 'required',
                 'gender' => 'required',
                 'role_id' => 'required',
@@ -89,8 +133,17 @@ class UsersController extends Controller
         }else{
             $model = User::find($request->id);
         }
-            
-        $model->fill($request->all());
+        if($request->id == null){
+           $model->fill($request->all()); 
+       }else{
+            $model->name = $request->name;
+            $model->email = $request->email;
+            $model->address = $request->address;
+            $model->phone_number = $request->phone_number;
+            $model->role_id = $request->role_id;
+
+       }
+        
         if ($request->hasFile('image')) {
             
             $ext = $request->image->extension();
