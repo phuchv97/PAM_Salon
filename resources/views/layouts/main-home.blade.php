@@ -47,7 +47,8 @@
     });
          $("label").click(function(){
            var rating=$(this).data("number");
-           console.log(rating);
+           var rating1 = document.getElementById('rating-1').value = rating;
+           console.log(rating1);
          });
 
 

@@ -49,7 +49,7 @@
 								<div class="container-rating">
 									<div class="feedback">
 										<div class="rating">
-											<input type="radio" name="rating" id="rating-5" class="ratinggg" value="5" >
+											<input type="radio" name="rating" id="rating-5" class="ratinggg" >
 											<label for="rating-5" data-number=5></label>
 											<input type="radio" name="rating" id="rating-4">
 											<label for="rating-4" data-number=4></label>
