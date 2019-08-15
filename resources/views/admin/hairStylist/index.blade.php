@@ -56,7 +56,19 @@
                                                     <td class="text-center">
                                                         <img src="{{asset($stylist->avatar)}}" width="100">
                                                     </td>
-                                                    <td class="text-center">{{$stylist->feedback}}</td>
+                                                    <td class="text-center">
+                                                        <div class="wrapper">
+                                                          <div class="rating-holder">
+                                                            <div class="c-rating c-rating--small" data-rating-value="{{$stylist->feedback}}">
+                                                              <button>1</button>
+                                                              <button>2</button>
+                                                              <button>3</button>
+                                                              <button>4</button>
+                                                              <button>5</button>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                    </td>
                                                     <td class="text-center">
                                                         <a data-toggle="m-tooltip" data-placement="left" title data-original-title="Update" href="#" class="text-success btn btn-outline-accent m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
                                                             <i class="flaticon-edit-1"></i>

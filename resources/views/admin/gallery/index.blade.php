@@ -44,7 +44,7 @@
                                                     <th>Description</th>
                                                     <th class="text-center">User id</th>
 
-                                                    <th class="text-center"><a class="btn btn-outline-primary" href="#" role="button">Add Image</a></th>
+                                                    <th class="text-center"><a class="btn btn-outline-primary" href="{{route('add_image_gallery')}}" role="button">Add Image</a></th>
                                                 </tr>
                                             </thead>
                                             <tbody >
@@ -58,10 +58,7 @@
                                                     <td class="text-center">{{$g->user_id}}</td>
                                                     
                                                     <td class="text-center">
-                                                        <a data-toggle="m-tooltip" data-placement="left" title data-original-title="Update" href="#" class="text-success btn btn-outline-accent m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
-                                                            <i class="flaticon-edit-1"></i>
-                                                        </a>
-                                                        <a href="javascript:void(0);" linkurl="" data-toggle="m-tooltip" data-placement="left" title data-original-title="remove" class="text-danger btn-remove btn btn-outline-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air delete_user_Model">
+                                                        <a href="javascript:void(0);" linkurl="{{route('delete_gallery',['id'=>$g->id])}}" data-toggle="m-tooltip" data-placement="left" title data-original-title="remove" class="text-danger btn-remove btn btn-outline-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air delete_user_Model">
                                                                             <i class="flaticon-delete-1"></i>
                                                                         </a>
                                                         

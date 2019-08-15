@@ -1,5 +1,5 @@
 @extends('layouts.main-admin')
-@section('title', 'Thống kê')
+@section('title', 'Dashboard')
 @section('content')
 							<div class="bg-white">
 

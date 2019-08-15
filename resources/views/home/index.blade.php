@@ -77,11 +77,7 @@
         </div>
       </div>
       <div class="social pl-md-5 p-4">
-        <ul class="social-icon">
-          <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-          <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-          <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-        </ul>
+        
       </div>
     </div>
   </div>
@@ -117,7 +113,7 @@
       <div class="col-md-3 ftco-animate">
         <div class="media d-block text-center block-6 services">
           <div class="icon d-flex justify-content-center align-items-center mb-4">
-            <span class="flaticon-scissor-and-comb"></span>
+            <span class="text-center"><img src="{{asset($service->icon)}}" width="50%"></span>
           </div>
           <div class="media-body">
             <h3 class="heading">{{$service->name}}</h3>
@@ -145,7 +141,7 @@
         <div class="pricing-entry ftco-animate">
           <div class="d-flex text align-items-center">
             <h3><span>{{$s_detail->name}}</span></h3>
-            <span class="price">{{$s_detail->price}}Đ</span>
+            <span class="price">{{number_format($s_detail->price).' đ'}}</span>
           </div>
           <div class="d-block">
             <p>{{$s_detail->description}}</p>
@@ -192,7 +188,7 @@
             </div>
             <div class="wrapper">
               <div class="rating-holder">
-                <div class="c-rating c-rating--small" data-rating-value="2">
+                <div class="c-rating c-rating--small" data-rating-value="{{$stylist->feedback}}">
                   <button>1</button>
                   <button>2</button>
                   <button>3</button>
@@ -234,56 +230,6 @@
     </div>
   </div>
 </section>
-
-
-<section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url({{ asset('salon/images/bg_1.jpg')}});" data-stellar-background-ratio="0.5">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <div class="icon"><span class="flaticon-scissor-and-comb"></span></div>
-                <strong class="number" data-number="705">0</strong>
-                <span>Creative Makeup</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <div class="icon"><span class="flaticon-scissor-and-comb"></span></div>
-                <strong class="number" data-number="1000">0</strong>
-                <span>Number of Awards</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <div class="icon"><span class="flaticon-scissor-and-comb"></span></div>
-                <strong class="number" data-number="3000">0</strong>
-                <span>Happy Clients</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18 text-center">
-              <div class="text">
-                <div class="icon"><span class="flaticon-scissor-and-comb"></span></div>
-                <strong class="number" data-number="900">0</strong>
-                <span>Piercing Done</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="ftco-section">
   <div class="container">
     <div class="row justify-content-center mb-5 pb-3">

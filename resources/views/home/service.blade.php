@@ -33,6 +33,7 @@
                                 <h3 class="heading">{{$s->name}}</h3>
                                 <p>{{$s->description}}</p>
                             </div>
+                            
                         </div>      
                     </div>
                 @endforeach
@@ -56,7 +57,7 @@
                     <div class="pricing-entry ftco-animate">
                         <div class="d-flex text align-items-center">
                             <h3><span>{{$s_detail->name}}</span></h3>
-                            <span class="price">{{$s_detail->price}}Đ</span>
+                            <span class="price">{{number_format($s_detail->price).' đ'}}</span>
                         </div>
                         <div class="d-block">
                             <p>{{$s_detail->description}}</p>

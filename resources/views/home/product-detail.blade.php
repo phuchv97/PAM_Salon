@@ -18,7 +18,7 @@
 	        <div class="row">
 	          <div class="col-md-8 ftco-animate">
 	            <h2 class="mb-3">{{$product->name}}</h2>
-	            <h3 class="price text-warning">Giá: {{$product->price}}đ</h3>
+	            <h3 class="price text-warning">Giá: {{number_format($product->price).' đ'}}</h3>
 	            <p>{{$product->description}}</p>
 	            <p>
 	              <img src={{asset($product->image)}} alt="" class="img-fluid">

@@ -48,7 +48,7 @@ class HomeController extends Controller
         return view('home.service',['service_detail'=>$service_detail, 'service'=>$service]);
     }
     public function blog(){
-        $posts = Posts::all();
+        $posts = Posts::paginate(3);
          return view('home.blog', compact('posts'));
     }
     public function product(){
@@ -68,10 +68,13 @@ class HomeController extends Controller
         return view('home.contact');
     }
     public function profile(){
-        $user = Auth::user();
+        $user = Auth::user();    
+        $phone_number = $user->phone_number;
+        $reservation = Reservation::where('phone_number','=',"$phone_number")->get();
+        
         $gallery = Gallery::where('user_id','=',"$user->id")->get();
         
-        return view('home.profile',['gallery'=>$gallery,'user'=>$user]);
+        return view('home.profile',['gallery'=>$gallery,'user'=>$user,'reservation'=>$reservation]);
     }
     public function formdatlich(Request $request){
         $phone_number = $request->phone_number;

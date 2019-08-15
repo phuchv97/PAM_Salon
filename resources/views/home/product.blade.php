@@ -24,8 +24,9 @@
 						<div class="text py-4 d-block">
 							<div class="name-price">
 								<h3 class="heading mt-2"><a href="{{route('product_detail',['id'=>$p->id])}}">{{$p->name}}</a></h3>
-								<h3 class="price mt-2 text-warning">{{$p->price}}đ</h3>
+								
 							</div>
+							<h3 class="price mt-2 font-weight-bold text-danger">{{number_format($p->price).' đ'}}</h3>
 							<p>{{$p->description}}</p>
 						</div>
 						</div>

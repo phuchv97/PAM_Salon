@@ -7,79 +7,79 @@
                     <li class="m-menu__item  m-menu__item--active" aria-haspopup="true"><a href="{{route('dashboard')}}" class="m-menu__link "><i class="m-menu__link-icon flaticon-line-graph"></i><span class="m-menu__link-title"> <span class="m-menu__link-wrap"> <span class="m-menu__link-text">Dashboard</span>
 											<span class="m-menu__link-badge"><span class="m-badge m-badge--danger">2</span></span> </span></span></a></li>
                     <li class="m-menu__section ">
-                        <h4 class="m-menu__section-text">Components</h4>
+                        <h4 class="m-menu__section-text text-white">Components</h4>
                         <i class="m-menu__section-icon flaticon-more-v2"></i>
                     </li>
-                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text">Payment management</span><i
+                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text text-white">Payment management</span><i
                                     class="m-menu__ver-arrow la la-angle-right"></i></a>
                         <div class="m-menu__submenu "><span class="m-menu__arrow"></span>
                             <ul class="m-menu__subnav">
-                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_reservation')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">List Reservation</span></a></li>
-                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('revenue_management')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Total Revenue</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_reservation')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white" >List Reservation</span></a></li> 
+                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('revenue_management')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">Total Revenue</span></a></li>
 
                             </ul>
                         </div>
                     </li>
-                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text">Post</span><i
+                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text text-white">Post</span><i
                                     class="m-menu__ver-arrow la la-angle-right"></i></a>
                         <div class="m-menu__submenu "><span class="m-menu__arrow"></span>
                             <ul class="m-menu__subnav">
-                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_post')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">List Post</span></a></li>
-                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('add_post')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">New Post</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_post')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">List Post</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('add_post')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">New Post</span></a></li>
 
                             </ul>
                         </div>
                     </li>
-                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text">Service</span><i
+                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text text-white">Service</span><i
                                     class="m-menu__ver-arrow la la-angle-right"></i></a>
                         <div class="m-menu__submenu "><span class="m-menu__arrow"></span>
                             <ul class="m-menu__subnav">
-                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_services')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">List Services</span></a></li>
-                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('add_service')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">New Service</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_services')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">List Services</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('add_service')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">New Service</span></a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text">Product</span><i
+                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text text-white">Product</span><i
                                     class="m-menu__ver-arrow la la-angle-right"></i></a>
                         <div class="m-menu__submenu "><span class="m-menu__arrow"></span>
                             <ul class="m-menu__subnav">
-                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_product')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">List Product</span></a></li>
-                                <li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">New Product</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_product')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">List Product</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">New Product</span></a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text">Hair Stylist</span><i
+                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text text-white">Hair Stylist</span><i
                                     class="m-menu__ver-arrow la la-angle-right"></i></a>
                         <div class="m-menu__submenu "><span class="m-menu__arrow"></span>
                             <ul class="m-menu__subnav">
-                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_hair_stylist')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Hair Stylist</span></a></li>
-                                <li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">New hair stylist</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_hair_stylist')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">Hair Stylist</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">New hair stylist</span></a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text">Gallery Image</span><i
+                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text text-white">Gallery Image</span><i
                                     class="m-menu__ver-arrow la la-angle-right"></i></a>
                         <div class="m-menu__submenu "><span class="m-menu__arrow"></span>
                             <ul class="m-menu__subnav">
-                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_gallery')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Gallery Image</span></a></li>
-                                <li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">New Image</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_gallery')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">Gallery Image</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="#" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">New Image</span></a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text">User list</span><i
+                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text text-white">User list</span><i
                                     class="m-menu__ver-arrow la la-angle-right"></i></a>
                         <div class="m-menu__submenu "><span class="m-menu__arrow"></span>
                             <ul class="m-menu__subnav">
-                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_user')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">User list</span></a></li>
-                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('add_user')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">New User</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_user')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">User list</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('add_user')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">New User</span></a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text">Comment List</span><i
+                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text text-white">Comment List</span><i
                                     class="m-menu__ver-arrow la la-angle-right"></i></a>
                         <div class="m-menu__submenu "><span class="m-menu__arrow"></span>
                             <ul class="m-menu__subnav">
-                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_comment')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Comment List</span></a></li>
+                                <li class="m-menu__item " aria-haspopup="true"><a href="{{route('list_comment')}}" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text text-white">Comment List</span></a></li>
                             </ul>
                         </div>
                     </li>
@@ -117,52 +117,7 @@
                             </ul>
                         </div>
                     </li> -->
-                    <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-icon "></i><span class="m-menu__link-text">Custom
-										Pages</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
-                        <div class="m-menu__submenu "><span class="m-menu__arrow"></span>
-                            <ul class="m-menu__subnav">
-                                <li class="m-menu__item  m-menu__item--parent" aria-haspopup="true"><span class="m-menu__link"><span class="m-menu__link-text">Custom Pages</span></span></li>
-                                <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span
-                                                class="m-menu__link-text">User Pages</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
-                                    <div class="m-menu__submenu "><span class="m-menu__arrow"></span>
-                                        <ul class="m-menu__subnav">
-                                            <li class="m-menu__item " aria-haspopup="true"><a target="_blank" href="snippets/pages/user/login-1.html" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Login
-																- 1</span></a></li>
-                                            <li class="m-menu__item " aria-haspopup="true"><a target="_blank" href="snippets/pages/user/login-2.html" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Login
-																- 2</span></a></li>
-                                            <li class="m-menu__item " aria-haspopup="true"><a target="_blank" href="snippets/pages/user/login-3.html" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Login
-																- 3</span></a></li>
-                                            <li class="m-menu__item " aria-haspopup="true"><a target="_blank" href="snippets/pages/user/login-4.html" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Login
-																- 4</span></a></li>
-                                            <li class="m-menu__item " aria-haspopup="true"><a target="_blank" href="snippets/pages/user/login-5.html" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Login
-																- 5</span></a></li>
-                                            <li class="m-menu__item " aria-haspopup="true"><a target="_blank" href="snippets/pages/user/login-6.html" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Login
-																- 6</span></a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true" m-menu-submenu-toggle="hover"><a href="javascript:;" class="m-menu__link m-menu__toggle"><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span
-                                                class="m-menu__link-text">Error Pages</span><i class="m-menu__ver-arrow la la-angle-right"></i></a>
-                                    <div class="m-menu__submenu "><span class="m-menu__arrow"></span>
-                                        <ul class="m-menu__subnav">
-                                            <li class="m-menu__item " aria-haspopup="true"><a target="_blank" href="snippets/pages/errors/error-1.html" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Error
-																1</span></a></li>
-                                            <li class="m-menu__item " aria-haspopup="true"><a target="_blank" href="snippets/pages/errors/error-2.html" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Error
-																2</span></a></li>
-                                            <li class="m-menu__item " aria-haspopup="true"><a target="_blank" href="snippets/pages/errors/error-3.html" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Error
-																3</span></a></li>
-                                            <li class="m-menu__item " aria-haspopup="true"><a target="_blank" href="snippets/pages/errors/error-4.html" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Error
-																4</span></a></li>
-                                            <li class="m-menu__item " aria-haspopup="true"><a target="_blank" href="snippets/pages/errors/error-5.html" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Error
-																5</span></a></li>
-                                            <li class="m-menu__item " aria-haspopup="true"><a target="_blank" href="snippets/pages/errors/error-6.html" class="m-menu__link "><i class="m-menu__link-bullet m-menu__link-bullet--dot"><span></span></i><span class="m-menu__link-text">Error
-																6</span></a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                    
                 </ul>
             </div>
 

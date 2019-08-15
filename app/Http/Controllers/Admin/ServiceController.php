@@ -19,9 +19,9 @@ class ServiceController extends Controller
             $query = null;
         }
         if($query == null){
-            $services = Services::paginate(3);
+            $services = Services::paginate(8);
         }else{
-            $services = $query->paginate(3);
+            $services = $query->paginate(8);
         }
         return view('admin.services.index',compact('services','name'));
     }
@@ -50,9 +50,9 @@ class ServiceController extends Controller
 
     public function save(Request $request){
         if ($request->id==null) {
-            $validateIcon = "image|required";
+            $validateIcon = "required";
         }else{
-            $validateIcon = "image";
+            $validateIcon = "";
                 
         }
         $validatedData = $request->validate([
@@ -71,7 +71,7 @@ class ServiceController extends Controller
                 'name.max' => 'Maximum length of no more than 100 characters',
                 'name.required' => 'Please enter the service name',
                 'description.max' => 'Maximum length of no more than 255 characters',
-                '3.image' => 'Please select the correct image format',
+                
                 'icon.required' => 'Please select an icon',
                 'price.required' => 'Please enter the service price'
                 
@@ -82,8 +82,15 @@ class ServiceController extends Controller
         }else{
             $model = Services::find($request->id);
         }
-            
-        $model->fill($request->all());
+        if($request->id == null){    
+            $model->fill($request->all());
+        }else{
+            $model->name = $request->name;
+            $model->description = $request->description;
+            $model->price = $request->price;
+            $model->user_id = $request->user_id;
+
+        }
         if ($request->hasFile('icon')) {
             
             $ext = $request->icon->extension();

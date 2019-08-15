@@ -23,6 +23,11 @@ Route::group(['middleware'=>'checkAdmin'],function(){
 
 
     Route::get('gallery','Admin\GalleryController@index')->name('list_gallery');
+    Route::get('add-image-in-gallery','Admin\GalleryController@addImage')->name('add_image_gallery');
+    Route::get('delete-image-in-gallery/{id}','Admin\GalleryController@delete')->name('delete_gallery');
+    Route::post('save-image-in-gallery','Admin\GalleryController@save')->name('save_gallery');
+
+    
     Route::get('products','Admin\ProductController@index')->name('list_product');
     Route::get('hair-stylist','Admin\HairStylistController@index')->name('list_hair_stylist');
     Route::get('comment','Home\CommentController@index')->name('list_comment');
