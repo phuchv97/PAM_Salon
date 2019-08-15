@@ -27,7 +27,7 @@
                     <div class="col-md-3 ftco-animate">
                         <div class="media d-block text-center block-6 services">
                             <div class="icon d-flex justify-content-center align-items-center mb-4">
-                                <span class="flaticon-scissor-and-comb"></span>
+                                <img src="{{asset($s->icon)}}" width="100%">
                             </div>
                             <div class="media-body">
                                 <h3 class="heading">{{$s->name}}</h3>

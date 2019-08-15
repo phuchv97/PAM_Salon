@@ -57,7 +57,7 @@
 											<label for="rating-3" data-number=3></label>
 											<input type="radio" name="rating" id="rating-2">
 											<label for="rating-2" data-number=2></label>
-											<input type="radio" name="rating" id="rating-1" >
+											<input type="radio" name="feedback" id="rating-1" >
 											<label for="rating-1"  data-number=1></label>
 											<div class="emoji-wrapper">
 												<div class="emoji">

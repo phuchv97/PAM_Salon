@@ -27,7 +27,7 @@
 	           
 
 	            <div class="pt-5 mt-5">
-	              <h3 class="mb-5">6 Comments</h3>
+	              <!-- <h3 class="mb-5">6 Comments</h3>
 	              <ul class="comment-list">
 	                <li class="comment">
 	                  <div class="vcard bio">
@@ -108,7 +108,6 @@
 	                  </div>
 	                </li>
 	              </ul>
-	              <!-- END comment-list -->
 	              
 	              <div class="comment-form-wrap pt-5">
 	                <h3 class="mb-5">Bình luận</h3>
@@ -122,7 +121,7 @@
 	                  </div>
 
 	                </form>
-	              </div>
+	              </div> -->
 	            </div>
 
 	          </div> <!-- .col-md-8 -->

@@ -39,22 +39,22 @@
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
-                                                    <th>Id</th>
-                                                    <th>Service name</th>
-                                                    <th>Description</th>
-                                                    <th class="text-center">Price</th>
-                                                    <th class="text-center">icon</th>
+                                                    <th class="text-center font-weight-normal">Id</th>
+                                                    <th class="text-center font-weight-normal">Service name</th>
+                                                    <th class="text-center font-weight-normal">Description</th>
+                                                    <th class="text-center font-weight-normal">Price</th>
+                                                    <th class="text-center font-weight-normal">icon</th>
 
-                                                    <th class="text-center"><a class="btn btn-outline-primary" href="{{route('add_service')}}" role="button">Add service</a></th>
+                                                    <th class="text-center font-weight-normal"><a class="btn btn-outline-primary" href="{{route('add_service')}}" role="button">Add service</a></th>
                                                 </tr>
                                             </thead>
                                             <tbody >
                                             @foreach ($services as $s)
                                                 <tr>
-                                                    <td>{{$s->id}}</td>
-                                                    <td>{{$s->name}}</td>
+                                                    <td class="text-center font-weight-normal">{{$s->id}}</td>
+                                                    <td class="text-center font-weight-normal">{{$s->name}}</td>
                                                     <td>...</td>
-                                                    <td class="text-center">{{$s->price}}</td>
+                                                    <td class="text-center font-weight-normal">{{$s->price}}</td>
                                                     <td class="text-center">
                                                         <img src="{{asset($s->icon)}}" width="100">
                                                     </td>

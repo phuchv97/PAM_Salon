@@ -23,7 +23,7 @@
 	              <img src="{{asset($post->image) }}" alt="" class="img-fluid">
 	            </p>
 	            <p>{{$post->detail}}</p>
-                <h5 style="text-align: right">Tác giả: Lance Smith</h5>
+                <h5 style="text-align: right">{{$post->user->name}}</h5>
 
 
 	            <div class="pt-5 mt-5">

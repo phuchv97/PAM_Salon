@@ -48,8 +48,11 @@ class HomeController extends Controller
         return view('home.service',['service_detail'=>$service_detail, 'service'=>$service]);
     }
     public function blog(){
-        $posts = Posts::paginate(3);
-         return view('home.blog', compact('posts'));
+        $postsCate1 = Posts::where('category_id','=','1')->get();
+        $postsCate2 = Posts::where('category_id','=','2')->get();
+        $postsCate3 = Posts::where('category_id','=','3')->get();
+
+         return view('home.blog', compact('postsCate1','postsCate2','postsCate3'));
     }
     public function product(){
         $products = Product::all();

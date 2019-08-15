@@ -65,22 +65,22 @@
                                             </thead>
                                             <tbody >
                                                 <tr>
-                                                    <td class="text-center font-weight-bold">Month</td>
-                                                    <td class="text-center font-weight-bold text-info ">{{$totalOrdersInMonth}}</td>
-                                                    <td class="text-center font-weight-bold text-info">{{$TotalNumberOfPaidOrdersInMonth}}</td>
-                                                    <td class="text-center font-weight-bold text-danger">
-                                                        {{$totalRevenueInMonth}}
+                                                    <td class="text-center font-weight-normal">Month</td>
+                                                    <td class="text-center font-weight-normal text-info ">{{$totalOrdersInMonth}}</td>
+                                                    <td class="text-center font-weight-normal text-info">{{$TotalNumberOfPaidOrdersInMonth}}</td>
+                                                    <td class="text-center font-weight-normal text-danger">
+                                                        {{number_format($totalRevenueInMonth).' đ'}}
                                                     </td>
                                                 </tr>
                                                 
                                             
                                                 
                                                 <tr >
-                                                    <td class="text-center font-weight-bold">All</td>
-                                                    <td class="text-center font-weight-bold text-info">{{$totalOrders}}</td>
-                                                    <td class="text-center font-weight-bold text-info">{{$TotalNumberOfPaidOrders}}</td>
-                                                    <td class="text-center font-weight-bold text-danger">
-                                                        {{$totalRevenue}}
+                                                    <td class="text-center font-weight-normal">All</td>
+                                                    <td class="text-center font-weight-normal text-info">{{$totalOrders}}</td>
+                                                    <td class="text-center font-weight-normal text-info">{{$TotalNumberOfPaidOrders}}</td>
+                                                    <td class="text-center font-weight-normal text-danger">
+                                                        {{number_format($totalRevenue).' đ'}}
                                                     </td>
                                                 </tr>
                                             </tbody>

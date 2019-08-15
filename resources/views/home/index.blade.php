@@ -113,7 +113,7 @@
       <div class="col-md-3 ftco-animate">
         <div class="media d-block text-center block-6 services">
           <div class="icon d-flex justify-content-center align-items-center mb-4">
-            <span class="text-center"><img src="{{asset($service->icon)}}" width="50%"></span>
+            <img src="{{asset($service->icon)}}" width="100%">
           </div>
           <div class="media-body">
             <h3 class="heading">{{$service->name}}</h3>
@@ -246,9 +246,9 @@
           </a>
           <div class="text py-4 d-block">
             <div class="meta">
-                  <!-- <div><a href="#">Sept 10, 2018</a></div>
-                    <div><a href="#">Admin</a></div> -->
-                    <!-- <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div> -->
+                  <div><a >Sept 10, 2018</a></div>
+                    <div><a >Admin</a></div>
+                    
                   </div>
                   <h3 class="heading mt-2"><a href="{{route('blog_detail',['id'=> $post->id])}}">{{$post -> title}}</a></h3>
                   <p>{{$post -> description}}</p>

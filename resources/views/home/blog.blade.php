@@ -15,33 +15,67 @@
 
 	    <section class="ftco-section">
 	      <div class="container">
+	      	<h3>Giới thiệu sản phẩm </h3><br/>
 	        <div class="row d-flex">
-			@foreach($posts as $p)
+			@foreach($postsCate1 as $p1)
 	          <div class="col-md-4 d-flex ftco-animate">
 	          	<div class="blog-entry align-self-stretch">
-	              <a href="{{route('blog_detail',['id' => $p->id])}}" class="block-20" style="background-image: url({{ asset($p->image) }});">
+	              <a href="{{route('blog_detail',['id' => $p1->id])}}" class="block-20" style="background-image: url({{ asset($p1->image) }});">
 	              </a>
 	              <div class="text py-4 d-block">
-	              	<!-- <div class="meta">
-	                  <div><a href="#">Sept 10, 2018</a></div>
-	                  <div><a href="#">Admin</a></div>
-	                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-	                </div> -->
-	                <h3 class="heading mt-2"><a href="{{route('blog_detail',['id' => $p->id])}}">{{$p->title}}</a></h3>
-	                <p>{{$p-> description}}</p>
+	              	<div class="meta">
+	                  <div><a >{{$p1->updated_at }}</a></div>
+	                  <div><a >{{$p1->user->name }}</a></div>
+	                </div>  
+	                <h3 class="heading mt-2"><a href="{{route('blog_detail',['id' => $p1->id])}}">{{$p1->title}}</a></h3>
+	                <p>{{$p1-> description}}</p>
 	              </div>
 	            </div>
 	          </div>
 	        @endforeach
 			  
 	        </div>
-	        <div class="row mt-5 text-center">
-	          <div class="col text-center">
-	            
-	              {{$posts->links()}}
-	            
+	        <h3>Bài viết giải trí </h3><br/>
+	        <div class="row d-flex">
+			@foreach($postsCate2 as $p2)
+	          <div class="col-md-4 d-flex ftco-animate">
+	          	<div class="blog-entry align-self-stretch">
+	              <a href="{{route('blog_detail',['id' => $p2->id])}}" class="block-20" style="background-image: url({{ asset($p2->image) }});">
+	              </a>
+	              <div class="text py-4 d-block">
+	              	<div class="meta">
+	                  <div><a >{{$p2->updated_at }}</a></div>
+	                  <div><a >{{$p2->user->name }}</a></div>
+	                </div>  
+	                <h3 class="heading mt-2"><a href="{{route('blog_detail',['id' => $p2->id])}}">{{$p2->title}}</a></h3>
+	                <p>{{$p2-> description}}</p>
+	              </div>
+	            </div>
 	          </div>
+	        @endforeach
+			  
 	        </div>
+	        <h3>Tư vấn chăm sóc tóc </h3><br/>
+	        <div class="row d-flex">
+			@foreach($postsCate3 as $p3)
+	          <div class="col-md-4 d-flex ftco-animate">
+	          	<div class="blog-entry align-self-stretch">
+	              <a href="{{route('blog_detail',['id' => $p3->id])}}" class="block-20" style="background-image: url({{ asset($p3->image) }});">
+	              </a>
+	              <div class="text py-4 d-block">
+	              	<div class="meta">
+	                  <div><a >{{$p3->updated_at }}</a></div>
+	                  <div><a >{{$p3->user->name }}</a></div>
+	                </div>  
+	                <h3 class="heading mt-2"><a href="{{route('blog_detail',['id' => $p3->id])}}">{{$p3->title}}</a></h3>
+	                <p>{{$p3-> description}}</p>
+	              </div>
+	            </div>
+	          </div>
+	        @endforeach
+			  
+	        </div>
+	        
 	      </div>
 	    </section>
 @endsection
