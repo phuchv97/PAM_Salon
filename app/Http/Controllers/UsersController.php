@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Model\Role;
+use App\Model\Menus;
+
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Hash;
 
@@ -15,10 +17,10 @@ class UsersController extends Controller
         $query = null;
         if($request->has('name')){
             $name = $request->name;
-            $query = User::where('name','like',"%$name%");
+            $query = User::whare('role_id','<','4')->where('name','like',"%$name%");
         }
         if($query == null){
-            $users = User::paginate(8);
+            $users = User::whare('role_id','<','4')->paginate(8);
         }else{
             $users = $query->paginate(8);
         }
@@ -40,6 +42,7 @@ class UsersController extends Controller
         }
 
     }
+
     public function delete($id){
         $user = User::find($id);
         if($user != null){
@@ -86,6 +89,56 @@ class UsersController extends Controller
 
         return view('home.login',['notification'=>'Đăng ký thành công bạn có thể đăng nhập']);
 
+    }
+
+    public function editAccountGuest($id){
+        $guest = User::find($id);
+        $menus = Menus::all();
+        if($guest != null){
+            return view('home.form-edit-account-guest',['guest'=>$guest,'menus'=>$menus]);
+        }
+        return view('home');
+    }
+    public function saveAccountGuest(Request $request){
+                
+        $validatedData = $request->validate([
+                
+                'name'=> 'required|max:100',
+                'address'=> 'required|max:255', 
+                'gender' => 'required'
+
+            ],
+            [
+                'name.required' => 'Please enter a name for the User',
+                'name.max' => 'Maximum length of no more than 100 characters',
+                'address.max' => 'Maximum length of no more than 255 characters',
+                'address.required' => 'Please enter a address for the User',
+                'gender.required' => 'Please enter a gender for the User',
+            ]
+        );
+
+        $model = User::find($request->id);
+        
+            $model->name = $request->name;
+            $model->address = $request->address;
+            $model->gender = $request->gender;
+        
+        if ($request->hasFile('image')) {
+            
+            $ext = $request->image->extension();
+            
+            $filename = $request->image->getClientOriginalName();
+            
+            $filename = $filename . "-" . str_random(20) . "." . $ext;
+            
+            $path = $request->image->storeAs('users', $filename);
+            
+            $model->image = "uploaded/$path";
+        }
+        
+        $model->save();
+        return redirect(route('profile'));
+        
     }
 
     public function save(Request $request){

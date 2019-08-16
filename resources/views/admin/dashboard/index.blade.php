@@ -7,45 +7,46 @@
 								<div class="row m-row--col-separator-xl">
 									<div class="rounded border border-secondary col-md-12 col-lg-6 col-xl-3">
 
-										<!--begin::Total Profit-->
+										
 										<div class="m-widget24">
 											<div class="m-widget24__item">
-												<a href="{{route('list_post')}}" class="m-widget24__title text-info">
+												<a href="{{route('list_reservation')}}" class="m-widget24__title text-info">
 												<h4 class="">
-													Post List
+													Manage reservations
 												</h4>
 												</a>
 												<br>
 												<span class="m-widget24__desc">
-													Amount
+												
 												</span>
 												<span class="m-widget24__stats m--font-info">
-													{{$posts}}
+													
 												</span>
 												<div class="m--space-10"></div>
 												
 											</div>
 										</div>
 
-										<!--end::Total Profit-->
+										
 									</div>
+									
 									
 									<div class="rounded border border-secondary col-md-12 col-lg-6 col-xl-3">
 
 										<!--begin::New Feedbacks-->
 										<div class="m-widget24">
 											<div class="m-widget24__item">
-												<a href="{{route('list_product')}}" class="m-widget24__title text-danger">
+												<a href="{{route('revenue_management')}}" class="m-widget24__title text-danger">
 												<h4 class="">
-													Product List
+													Revenue Management
 												</h4>
 												</a>
 												<br>
 												<span class="m-widget24__desc">
-													Amount
+												
 												</span>
 												<span class="m-widget24__stats m--font-danger">
-													{{$product}}
+													
 												</span>
 												<div class="m--space-10"></div>
 												
@@ -66,7 +67,7 @@
 												</a>
 												<br>
 												<span class="m-widget24__desc">
-													Amount
+												All value
 												</span>
 												<span class="m-widget24__stats m--font-info">
 													{{$services}}
@@ -90,7 +91,7 @@
 												</a>
 												<br>
 												<span class="m-widget24__desc">
-													Amount
+												All value
 												</span>
 												<span class="m-widget24__stats m--font-danger">
 													{{$hairStylist}}
@@ -116,7 +117,7 @@
 												</a>
 												<br>
 												<span class="m-widget24__desc">
-													Amount
+												All value
 												</span>
 												<span class="m-widget24__stats m--font-danger">
 													{{$gallery}} 
@@ -131,44 +132,44 @@
 									
 									<div class="rounded border border-secondary col-md-12 col-lg-6 col-xl-3">
 
-										
+										<!--begin::Total Profit-->
 										<div class="m-widget24">
 											<div class="m-widget24__item">
-												<a href="{{route('list_reservation')}}" class="m-widget24__title text-brand">
+												<a href="{{route('list_post')}}" class="m-widget24__title text-info">
 												<h4 class="">
-													Payment management
+													Post List
 												</h4>
 												</a>
 												<br>
 												<span class="m-widget24__desc">
-													Total
+												All value
 												</span>
-												<span class="m-widget24__stats m--font-brand">
-													
+												<span class="m-widget24__stats m--font-info">
+													{{$posts}}
 												</span>
 												<div class="m--space-10"></div>
 												
 											</div>
 										</div>
 
-										
+										<!--end::Total Profit-->
 									</div>
 									<div class="rounded border border-secondary col-md-12 col-lg-6 col-xl-3">
 
 										
 										<div class="m-widget24">
 											<div class="m-widget24__item">
-												<a href="" class="m-widget24__title text-danger">
+												<a href="{{route('list_user')}}" class="m-widget24__title text-danger">
 												<h4 class="">
-													Total Frofit
+													User list
 												</h4>
 												</a>
 												<br>
 												<span class="m-widget24__desc">
-													All Customs Value
+												All value
 												</span>
 												<span class="m-widget24__stats m--font-danger">
-													$18M
+													{{$users}}
 												</span>
 												<div class="m--space-10"></div>
 												
@@ -182,17 +183,17 @@
 										
 										<div class="m-widget24">
 											<div class="m-widget24__item">
-												<a href="" class="m-widget24__title text-brand">
+												<a href="{{route('list_comment')}}" class="m-widget24__title text-info">
 												<h4 class="">
-													Total Frofit
+													Comment list
 												</h4>
 												</a>
 												<br>
 												<span class="m-widget24__desc">
-													All Customs Value
+													All value
 												</span>
-												<span class="m-widget24__stats m--font-brand">
-													$18M
+												<span class="m-widget24__stats m--font-info">
+													{{$comment}}
 												</span>
 												<div class="m--space-10"></div>
 												
@@ -201,6 +202,34 @@
 
 										
 									</div>
+								</div>
+								<div class="row m-row--col-separator-xl">
+									<div class="rounded border border-secondary col-md-12 col-lg-6 col-xl-3">
+
+										<!--begin::New Feedbacks-->
+										<div class="m-widget24">
+											<div class="m-widget24__item">
+												<a href="{{route('list_product')}}" class="m-widget24__title text-info">
+												<h4 class="">
+													Product List
+												</h4>
+												</a>
+												<br>
+												<span class="m-widget24__desc">
+												All value
+												</span>
+												<span class="m-widget24__stats m--font-info">
+													{{$product}}
+												</span>
+												<div class="m--space-10"></div>
+												
+											</div>
+										</div>
+
+										<!--end::New Feedbacks-->
+									</div>
+									
+									
 								</div>
 
 								<!--end: Search Form -->

@@ -52,6 +52,8 @@ Route::group(['middleware'=>'checkAdmin'],function(){
     //reservation payment and revenue
     Route::group(['middleware'=>'checkRolePayment'],function(){
         Route::get('list-reservation','Admin\ReservationController@index')->name('list_reservation');
+        Route::get('delete-reservation/{id}','Admin\ReservationController@delete')->name('delete_reservation');
+        Route::get('list-payment','Admin\ReservationController@payment')->name('list_payment');
         Route::post('update-status-reservation/{id}','Admin\ReservationController@updateStatus')->name('update_status_reservation');
         Route::get('revenue-management','Admin\ReservationController@revenueManagement')->name('revenue_management');
     }); 

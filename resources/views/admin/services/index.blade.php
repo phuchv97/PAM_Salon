@@ -54,7 +54,7 @@
                                                     <td class="text-center font-weight-normal">{{$s->id}}</td>
                                                     <td class="text-center font-weight-normal">{{$s->name}}</td>
                                                     <td>...</td>
-                                                    <td class="text-center font-weight-normal">{{$s->price}}</td>
+                                                    <td class="text-center font-weight-normal">{{number_format($s->price).' đ'}}</td>
                                                     <td class="text-center">
                                                         <img src="{{asset($s->icon)}}" width="100">
                                                     </td>

@@ -65,7 +65,7 @@
                                             </thead>
                                             <tbody >
                                                 <tr>
-                                                    <td class="text-center font-weight-normal">Month</td>
+                                                    <td class="text-center font-weight-normal">Month: {{$month}}</td>
                                                     <td class="text-center font-weight-normal text-info ">{{$totalOrdersInMonth}}</td>
                                                     <td class="text-center font-weight-normal text-info">{{$TotalNumberOfPaidOrdersInMonth}}</td>
                                                     <td class="text-center font-weight-normal text-danger">

@@ -5,27 +5,33 @@
 	<section class="ftco-section contact-section">
 		<div class="container mt-5">
 			<div class="row block-9">
-				<div class="col-md-4 contact-info ftco-animate">
+				<div class="col-md-6 contact-info ftco-animate">
 					<div class="row">
 						<div class="col-md-12 mb-4">
 							<h2 class="h4">Thông tin của bạn</h2>
 						</div>
 						<div class="col-md-12 mb-3">
-							<p><span>Tên:</span> {{$user->name}}</p>
+							<p><span>Tên:</span> <span class="text-warning">{{$user->name}}</span></p>
 						</div>
 						<div class="col-md-12 mb-3">
-							<p><span>Số Điện thoại:</span> {{$user->phone_number}}</p>
+							<p><span>Số Điện thoại:</span> <span class="text-warning">{{$user->phone_number}}</span></p>
 						</div>
 						<div class="col-md-12 mb-3">
-							<p><span>Email:</span> {{$user->email}}</p>
+							<p><span>Email:</span> <span class="text-warning">{{$user->email}}</span></p>
 						</div>
 						<div class="col-md-12 mb-3">
-							<p><span>Người cắt: </span>abcxyz</p>
+							<p><span>Địa chỉ: </span><span class="text-warning">{{$user->address}}</span></p>
 						</div>
+						<div class="col-md-12 mb-3">
+							<p><span>Ảnh đại diện: </span></p>
+							<br>
+							<img src="{{asset($user->image)}}" width="30%">
+						</div>
+						<a href="{{route('edit_account_guest',['id'=>$user->id])}}" class="btn btn-primary py-3 px-4 mt-3">Sửa thông tin</a>
 						
 					</div>
 				</div>
-				<div class="col-md-4 ratting-botom ftco-animate">
+				<div class="col-md-6 ratting-botom ftco-animate">
 					<div class="row">
 						<div class="col-md-12 mb-4">
 							<h2 class="h4">Lịch sử đặt lịch</h2>
@@ -155,77 +161,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 ftco-animate">
-					<div class="row no-gutters">
-					<!-- @php if($gallery != null){
-					@endphp -->
-						@foreach($gallery as $g)
-							<div class="col-md-6 ftco-animate">
-								<a href="{{ asset($g->image) }}" class="gallery img image-popup d-flex align-items-center" style="background-image: url({{ asset('salon/images/bg_2.jpg')}});">
-									<div class="icon mb-4 d-flex align-items-center justify-content-center">
-										<span>Album</span>
-									</div>
-								</a>
-							</div>
-						@endforeach
-					<!-- @php
-					}
-					@endphp -->
-						
-	        	</div>
-				</div>
+				
 
 			</div>
 		</div>
-		<div class="container mt-5">
-		<div class="pt-5 mt-5">
-	              <h3 class="mb-5">6 Comments</h3>
-	              <ul class="comment-list">
-				  {{-- 	@foreach($comment as $c)
-	                <li class="comment">
-	                  <div class="vcard bio">
-	                    <img src="{{ asset($c->user->image) }}" alt="Image placeholder">
-	                  </div>
-	                  <div class="comment-body">
-	                    <h3>{{$c->user->name}}</h3>
-	                    <!-- <div class="meta">June 27, 2018 at 2:21pm</div> -->
-	                    <p>{{$c->comment}}</p>
-	                    
-	                  </div>
-	                </li>
-					@endforeach --}}
-				</ul>
-	              <!-- END comment-list -->
-	              
-	              <div class="comment-form-wrap pt-5">
-	                <h3 class="mb-5">Bình luận</h3>
-					{{-- @php
-						if(Auth::check()){
-					@endphp		
-							<form action="{{route('save_comment')}}" method="post">
-							@csrf
-							<input type="hidden" name="user_id" value="{{Auth::user()->id}}">
-					@php	
-						}else{
-					@endphp
-					<form action="{{route('login')}}"  >
-					@php		
-						}
-					@endphp --}}
-{{-- 						<input type="hidden" name="post_id" value="{{$post->id}}">
- --}}						
-	                  <div class="form-group">
-	                    <label for="message">Nội dung</label>
-	                    <textarea name="comment" id="message" cols="30" rows="10" class="form-control"></textarea>
-	                  </div>
-	                  <div class="form-group">
-	                    <input type="submit" value="Đăng bình luận" class="btn py-3 px-4 btn-primary">
-	                  </div>
-
-	                </form>
-	              </div>
-	            </div>
-	            </div>
 	</section>
 
 	@endsection

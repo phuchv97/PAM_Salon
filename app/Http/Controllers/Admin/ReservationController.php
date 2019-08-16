@@ -16,7 +16,7 @@ class ReservationController extends Controller
     	$name = null;
     	if($request ->has('name')){
     		$name = $request->name;
-    		$query = Reservation::where('name','like',"%$name%")->orderBy('reservation_date','desc');
+    		$query = Reservation::where('phone_number','like',"%$name%")->orderBy('reservation_date','desc');
     	}
     	if($query==null){
     		$reservation = Reservation::orderBy('reservation_date','desc')->paginate(10);
@@ -25,13 +25,34 @@ class ReservationController extends Controller
     	}
     	return view('admin.reservation.index',['reservation'=>$reservation,'name'=>$name]);
     }
+    public function delete($id){
+        $reservation = Reservation::find($id);
+        if($reservation != null){
+            $reservation->delete();
+        }
+        return redirect(route('list_reservation'));
+    }
+    public function payment(Request $request){
+        $query = null;
+        $name = null;
+        if($request ->has('name')){
+            $name = $request->name;
+            $query = Reservation::where('phone_number','like',"%$name%")->orderBy('reservation_date','desc');
+        }
+        if($query==null){
+            $reservation = Reservation::orderBy('reservation_date','desc')->paginate(10);
+        }else{
+            $reservation = $query->paginate(10);
+        }
+        return view('admin.payment.index',['reservation'=>$reservation,'name'=>$name]);
+    }
     public function updateStatus(Request $request){
     	if($request->id != null){
     		$model = Reservation::find($request->id);
     		$model->status = $request->status;
     		$model->save();
     	}
-    	return redirect(route('list_reservation'));
+    	return redirect(route('list_payment'));
 
     }
     public function revenueManagement(Request $request){

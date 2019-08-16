@@ -8,6 +8,7 @@
       
       <div class="col-md-8 appointment ftco-animate">
         <form autocomplete="off" action="{{route('form_book_p2')}}" class="appointment-form" onsubmit="return validate_phonenumber()">
+          @csrf
           @php if(Auth::check()){
           @endphp
           <div >

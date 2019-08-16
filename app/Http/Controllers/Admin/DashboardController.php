@@ -9,6 +9,9 @@ use App\Model\HairStylist;
 use App\Model\Posts;
 use App\Model\Product;
 use App\Model\Services;
+use App\Model\Comment;
+use App\User;
+
 
 
 class DashboardController extends Controller
@@ -19,8 +22,10 @@ class DashboardController extends Controller
         $posts = Posts::count();
         $product = Product::count();
         $services = Services::count();
+        $users = User::where('role_id','<','4')->count();
+        $comment = Comment::count();
 
-        return view('admin.dashboard.index',compact('gallery','hairStylist','posts','product','services'));
+        return view('admin.dashboard.index',compact('gallery','hairStylist','posts','product','services','users','comment'));
     }
     
 }

@@ -19,6 +19,9 @@ Route::get('signup', function () {
     return view('home.signup');
 })->name('signup');
 Route::post('signup-guest','UsersController@signupGuest')->name('signup_guest');
+Route::get('edit-account-guest/{id}','UsersController@editAccountGuest')->name('edit_account_guest');
+Route::post('save-account-guest','UsersController@saveAccountGuest')->name('save_account_guest');
+
 
 Route::post('save-contact','Home\HomeController@saveContact')->name('save_contact');
 Route::get('/', 'Home\HomeController@index')->name('home');

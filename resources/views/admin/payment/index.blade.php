@@ -10,7 +10,7 @@
                         <div class="m-portlet__head-caption">
                             <div class="m-portlet__head-title">
                                 <h3 class="m-portlet__head-text">
-                                    Manage reservations
+                                    Payment management
                                 </h3>
                             </div>
 
@@ -20,9 +20,9 @@
                         <div class="container">
                             <div class="row searchFilter" >
                                 <div class="col-sm-12" >
-                                    <form class="form-inline" action="{{route('list_reservation')}}" method="get">
+                                    <form class="form-inline" action="{{route('list_payment')}}" method="get">
                                         @csrf
-                                        <input class="form-control mr-sm-2" type="text" value="{{$name}}" name="name" placeholder="phone number">
+                                        <input class="form-control mr-sm-2" type="number" value="{{$name}}" name="name" placeholder="phone number">
                                         
                                         <button class="btn btn-primary" type="submit">Search</button>
                                     </form>
@@ -43,10 +43,8 @@
                                                     <th>Name</th>
                                                     <th class="text-center">Phone Number</th>
                                                     <th class="text-center">Reservation Date</th>
-                                                    <th class="text-center">Reservation Time</th>
-                                                    <th class="text-center">Hair Stylist</th>
+                                                    <th class="text-center">Price</th>
                                                     <th class="text-center">Status</th>
-                                                    <th>Action</th>
                                                     
                                                 </tr>
                                             </thead>
@@ -59,15 +57,24 @@
                                                     <td class="text-center">
                                                         {{$r->reservation_date}}
                                                     </td>
-                                                    <td class="text-center">{{$r->timeReservation->time_reservation}}</td>
-                                                    <td class="text-center">{{$r->hairStylist->name}}</td>
+                                                    <td class="text-center">{{number_format($r->service->price).' đ'}}</td>
                                                     <td class="text-center">
-                                                        {{$r->status}}
-                                                    </td>
-                                                    <td class="text-center">
-                                                        <a href="javascript:void(0);" linkurl="{{route('delete_reservation',['id'=>$r->id])}}" data-toggle="m-tooltip" data-placement="left" title data-original-title="remove" class="text-danger btn-remove btn btn-outline-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air delete_user_Model">
-                                                                            <i class="flaticon-delete-1"></i>
-                                                                        </a>
+                                                        <form action="{{route('update_status_reservation',['id'=>$r->id])}}"n method="post">
+                                                            @csrf
+                                                            @php
+                                                            if($r->status=="Đã Thanh Toán"){
+                                                            @endphp
+                                                            <input type="hidden" name="status" value="Chưa Sử Dụng">
+                                                            <button type="submit" class="btn btn-success">{{$r->status}}</button>
+                                                            @php
+                                                            }else{
+                                                            @endphp
+                                                            <input type="hidden" name="status" value="Đã Thanh Toán">
+                                                            <button type="submit" class="btn btn-danger">{{$r->status}}</button>
+                                                            @php
+                                                            }
+                                                            @endphp
+                                                        </form>
                                                     </td>
 
                                                 </tr>
