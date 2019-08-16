@@ -60,17 +60,17 @@
 										<!--begin::New Orders-->
 										<div class="m-widget24">
 											<div class="m-widget24__item">
-												<a href="{{route('list_services')}}" class="m-widget24__title text-info">
+												<a href="{{route('list_payment')}}" class="m-widget24__title text-info">
 												<h4 class="">
-													Service List
+													Payment management
 												</h4>
 												</a>
 												<br>
 												<span class="m-widget24__desc">
-												All value
+												
 												</span>
 												<span class="m-widget24__stats m--font-info">
-													{{$services}}
+													
 												</span>
 												<div class="m--space-10"></div>
 												
@@ -220,6 +220,54 @@
 												</span>
 												<span class="m-widget24__stats m--font-info">
 													{{$product}}
+												</span>
+												<div class="m--space-10"></div>
+												
+											</div>
+										</div>
+
+										<!--end::New Feedbacks-->
+									</div>
+									<div class="rounded border border-secondary col-md-12 col-lg-6 col-xl-3">
+
+										<!--begin::New Orders-->
+										<div class="m-widget24">
+											<div class="m-widget24__item">
+												<a href="{{route('list_services')}}" class="m-widget24__title text-danger">
+												<h4 class="">
+													Service List
+												</h4>
+												</a>
+												<br>
+												<span class="m-widget24__desc">
+												All value
+												</span>
+												<span class="m-widget24__stats m--font-danger">
+													{{$services}}
+												</span>
+												<div class="m--space-10"></div>
+												
+											</div>
+										</div>
+
+										<!--end::New Orders-->
+									</div>
+									<div class="rounded border border-secondary col-md-12 col-lg-6 col-xl-3">
+
+										<!--begin::New Feedbacks-->
+										<div class="m-widget24">
+											<div class="m-widget24__item">
+												<a href="{{route('list_category')}}" class="m-widget24__title text-info">
+												<h4 class="">
+													Category List
+												</h4>
+												</a>
+												<br>
+												<span class="m-widget24__desc">
+												All value
+												</span>
+												<span class="m-widget24__stats m--font-info">
+													{{$category}}
 												</span>
 												<div class="m--space-10"></div>
 												

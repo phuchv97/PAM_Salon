@@ -10,6 +10,8 @@ use App\Model\Posts;
 use App\Model\Product;
 use App\Model\Services;
 use App\Model\Comment;
+use App\Model\Categories;
+
 use App\User;
 
 
@@ -24,8 +26,8 @@ class DashboardController extends Controller
         $services = Services::count();
         $users = User::where('role_id','<','4')->count();
         $comment = Comment::count();
-
-        return view('admin.dashboard.index',compact('gallery','hairStylist','posts','product','services','users','comment'));
+        $category = Categories::count();
+        return view('admin.dashboard.index',compact('gallery','hairStylist','posts','product','services','users','comment','category'));
     }
     
 }

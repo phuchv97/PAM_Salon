@@ -38,6 +38,9 @@ Route::get('product-detail/{id}', 'Home\HomeController@product_detail')->name('p
 Route::get('blog-detail/{id}', 'Home\HomeController@blog_detail')->name('blog_detail');
 Route::post('save-comment', 'Home\CommentController@save')->name('save_comment');
 Route::post('reservation', 'Home\HomeController@save_reservation')->name('save_reservation');
+Route::post('reservation', 'Home\HomeController@save_reservation')->name('save_reservation');
+Route::post('save-feedback-hair-stylist', 'Home\FeedbackHairStylistController@save')->name('feedback_hair_stylist');
+
 
 
 

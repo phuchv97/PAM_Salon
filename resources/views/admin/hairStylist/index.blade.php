@@ -1,6 +1,9 @@
 @extends('layouts.main-admin')
 @section('content')
 @section('title','Hair Stylist')
+@php 
+    use App\Model\FeedbackHairStylist;
+@endphp
     <div class="container">
         <div class="row">
 
@@ -44,11 +47,24 @@
                                                     <th class="text-center">Gender</th>
                                                     <th class="text-center">Avatar</th>
                                                     <th class="text-center">Feedback</th>
-                                                    <th class="text-center"><a class="btn btn-outline-primary" href="#" role="button">Add product</a></th>
+                                                    <th class="text-center"><a class="btn btn-outline-primary" href="{{route('add_hair_stylist')}}" role="button">Add product</a></th>
                                                 </tr>
                                             </thead>
                                             <tbody >
                                             @foreach ($hairStylist as $stylist)
+                                            @php 
+                                                $feedbackStylist = FeedbackHairStylist::where('hair_stylist_id', '=', "$stylist->id")->get();
+                                                $arrFeedback = [];
+                                                foreach($feedbackStylist as $feedbackStylistSmall){
+                                                $feedbackSmall = $feedbackStylistSmall->feedback;
+                                                array_push($arrFeedback,$feedbackSmall);
+
+                                            }
+                                            $totalFeedback = array_sum($arrFeedback);
+                                            $countFeedback = count($arrFeedback);
+                                            $averageFeedback = $totalFeedback/$countFeedback;
+
+                                            @endphp
                                                 <tr>
                                                     <td>{{$stylist->id}}</td>
                                                     <td>{{$stylist->name}}</td>
@@ -59,7 +75,7 @@
                                                     <td class="text-center">
                                                         <div class="wrapper">
                                                           <div class="rating-holder">
-                                                            <div class="c-rating c-rating--small" data-rating-value="{{$stylist->feedback}}">
+                                                            <div class="c-rating c-rating--small" data-rating-value="{{$averageFeedback}}">
                                                               <button>1</button>
                                                               <button>2</button>
                                                               <button>3</button>
@@ -70,10 +86,10 @@
                                                         </div>
                                                     </td>
                                                     <td class="text-center">
-                                                        <a data-toggle="m-tooltip" data-placement="left" title data-original-title="Update" href="#" class="text-success btn btn-outline-accent m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
+                                                        <a data-toggle="m-tooltip" data-placement="left" title data-original-title="Update" href="{{route('edit_hair_stylist',['id'=>$stylist->id])}}" class="text-success btn btn-outline-accent m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air">
                                                             <i class="flaticon-edit-1"></i>
                                                         </a>
-                                                        <a href="javascript:void(0);" linkurl="" data-toggle="m-tooltip" data-placement="left" title data-original-title="remove" class="text-danger btn-remove btn btn-outline-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air delete_user_Model">
+                                                        <a href="javascript:void(0);" linkurl="{{route('delete_hair_stylist',['id'=>$stylist->id])}}" data-toggle="m-tooltip" data-placement="left" title data-original-title="remove" class="text-danger btn-remove btn btn-outline-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air delete_user_Model">
                                                                             <i class="flaticon-delete-1"></i>
                                                                         </a>
                                                         

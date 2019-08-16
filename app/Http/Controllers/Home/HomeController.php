@@ -74,7 +74,7 @@ class HomeController extends Controller
         $user = Auth::user();    
         $phone_number = $user->phone_number;
         $reservation = Reservation::where('phone_number','=',"$phone_number")->get();
-        
+        // $reservationPaid = Reservation::where('phone_number','=',"$phone_number")->where('status','=','Đã Thanh Toán')->get();
         $gallery = Gallery::where('user_id','=',"$user->id")->get();
         
         return view('home.profile',['gallery'=>$gallery,'user'=>$user,'reservation'=>$reservation]);

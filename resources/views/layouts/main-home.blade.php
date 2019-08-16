@@ -47,7 +47,7 @@
     });
          $("label").click(function(){
            var rating=$(this).data("number");
-           var rating1 = document.getElementById('rating-1').value = rating;
+           var rating1 = document.getElementById('feedback').value = rating;
            console.log(rating1);
          });
 

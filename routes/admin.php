@@ -36,10 +36,19 @@ Route::group(['middleware'=>'checkAdmin'],function(){
     Route::get('delete-product/{id}','Admin\ProductController@delete')->name('delete_product');
     Route::post('save-product','Admin\ProductController@save')->name('save_product');
 
-
+    //category
+    Route::get('category','Admin\CategoryController@index')->name('list_category');
+    Route::get('add-category','Admin\CategoryController@addCategory')->name('add_category');
+    Route::get('edit-category/{id}','Admin\CategoryController@edit')->name('edit_category');
+    Route::get('delete-category/{id}','Admin\CategoryController@delete')->name('delete_category');
+    Route::post('save-category','Admin\CategoryController@save')->name('save_category');
 
     // hair stylist
     Route::get('hair-stylist','Admin\HairStylistController@index')->name('list_hair_stylist');
+    Route::get('add-hair_stylist','Admin\HairStylistController@addHairStylist')->name('add_hair_stylist');
+    Route::get('edit-hair_stylist/{id}','Admin\HairStylistController@edit')->name('edit_hair_stylist');
+    Route::get('delete-hair_stylist/{id}','Admin\HairStylistController@delete')->name('delete_hair_stylist');
+    Route::post('save-hair_stylist','Admin\HairStylistController@save')->name('save_hair_stylist');
     //comment
     Route::get('comment','Home\CommentController@index')->name('list_comment');
     Route::get('delete-comment/{id}','Home\CommentController@delete')->name('delete_comment');
