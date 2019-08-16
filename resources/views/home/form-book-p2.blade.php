@@ -21,11 +21,22 @@ use App\Model\Reservation;
               
             </div>
           </div>
-          <div class="d-md-flex">
+          @php if(Auth::check()){
+          @endphp
+            <div class="d-md-flex">
             <div class="form-group col-md-12">
-              <input type="text" id="fullname" name="name" class="form-control" placeholder="Họ tên">
+              <input type="text" id="fullname" name="name" class="form-control" placeholder="Họ tên" value="{{Auth::user()->name}}">
             </div>
           </div>
+          @php 
+            }else{
+          @endphp
+          <div class="d-md-flex">
+            <div class="form-group col-md-12">
+              <input type="text" id="fullname" name="name" class="form-control" placeholder="Họ tên" value="">
+            </div>
+          </div>
+          @php } @endphp
           <span class="col-md-12" id="err_fullname"></span>
           <div class="d-md-flex">
             <div class="form-group col-md-6">

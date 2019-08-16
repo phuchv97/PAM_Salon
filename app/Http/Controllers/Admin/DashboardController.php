@@ -11,6 +11,7 @@ use App\Model\Product;
 use App\Model\Services;
 use App\Model\Comment;
 use App\Model\Categories;
+use App\Model\FeedbackHairStylist;
 
 use App\User;
 
@@ -27,7 +28,8 @@ class DashboardController extends Controller
         $users = User::where('role_id','<','4')->count();
         $comment = Comment::count();
         $category = Categories::count();
-        return view('admin.dashboard.index',compact('gallery','hairStylist','posts','product','services','users','comment','category'));
+        $feedback = FeedbackHairStylist::count();
+        return view('admin.dashboard.index',compact('gallery','hairStylist','posts','product','services','users','comment','category','feedback'));
     }
     
 }

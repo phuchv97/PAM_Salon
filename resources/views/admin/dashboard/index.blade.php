@@ -276,6 +276,30 @@
 
 										<!--end::New Feedbacks-->
 									</div>
+									<div class="rounded border border-secondary col-md-12 col-lg-6 col-xl-3">
+
+										<!--begin::New Orders-->
+										<div class="m-widget24">
+											<div class="m-widget24__item">
+												<a href="{{route('list_feedback')}}" class="m-widget24__title text-danger">
+												<h4 class="">
+													Feedback
+												</h4>
+												</a>
+												<br>
+												<span class="m-widget24__desc">
+												All value
+												</span>
+												<span class="m-widget24__stats m--font-danger">
+													{{$feedback}}
+												</span>
+												<div class="m--space-10"></div>
+												
+											</div>
+										</div>
+
+										<!--end::New Orders-->
+									</div>
 									
 									
 								</div>

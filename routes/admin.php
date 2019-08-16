@@ -49,6 +49,10 @@ Route::group(['middleware'=>'checkAdmin'],function(){
     Route::get('edit-hair_stylist/{id}','Admin\HairStylistController@edit')->name('edit_hair_stylist');
     Route::get('delete-hair_stylist/{id}','Admin\HairStylistController@delete')->name('delete_hair_stylist');
     Route::post('save-hair_stylist','Admin\HairStylistController@save')->name('save_hair_stylist');
+    // feedback
+
+    Route::get('list-feedback','Admin\FeedbackController@index')->name('list_feedback');
+    Route::get('delete-feedback/{id}','Admin\FeedbackController@delete')->name('delete_feedback');
     //comment
     Route::get('comment','Home\CommentController@index')->name('list_comment');
     Route::get('delete-comment/{id}','Home\CommentController@delete')->name('delete_comment');
