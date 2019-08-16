@@ -7,13 +7,28 @@
     <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
       
       <div class="col-md-12 appointment ftco-animate">
-        <form autocomplete="off" action="{{route('formdatlich')}}" class="appointment-form" onsubmit="return validate_phonenumber()">
+        <form autocomplete="off" action="{{route('form_book_p2')}}" class="appointment-form" onsubmit="return validate_phonenumber()">
+          @php if(Auth::check()){
+          @endphp
+          <div >
+            <div class="form-group col-md-12">
+              <input type="number" name="phone_number" id="phone_number" class="form-control" value="{{Auth::user()->phone_number}}">
+            </div>
+            <span id="err_phone" class="col-md-12"></span>
+          </div>
+            
+          @php
+          }else{
+          @endphp
           <div >
             <div class="form-group col-md-12">
               <input type="number" name="phone_number" id="phone_number" class="form-control" placeholder="Số điện thoại">
             </div>
             <span id="err_phone" class="col-md-12"></span>
-          </div>  
+          </div>
+          @php
+          }
+          @endphp   
           <div class="d-md-flex">
             <div class="form-group col-md-6">
               <div class="input-wrap">
@@ -26,8 +41,17 @@
              <label for="exampleFormControlSelect2"  class="stylist">Hair Stylist</label>
              <select class="form-control" name="hair_stylist" id="exampleFormControlSelect2">
               @foreach($stylist as $stylists)
-              <option value="{{$stylists->id}}">{{$stylists->name}}
-              </option>
+              @php  
+                if($hair_stylist_id == $stylists->id){ 
+              @endphp
+              <option value="{{$stylists->id}}" selected>{{$stylists->name}}</option>
+              @php 
+                }else{
+              @endphp
+              <option value="{{$stylists->id}}">{{$stylists->name}} </option>
+              @php 
+                }
+              @endphp
               @endforeach
             </select>
             </div>

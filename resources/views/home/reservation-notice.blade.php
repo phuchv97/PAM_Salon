@@ -9,7 +9,8 @@
 
 			<div class="col-md-12 appointment ftco-animate text-center">
                  <h1>Đặt lịch thành công</h1>
-                 <h3>Hẹn gặp lại bạn vào lúc 12h ngày 20-10-2019</h3>
+                 <h3>Hẹn gặp lại bạn vào lúc <span class="text-warning">{{$model->timeReservation->time_reservation}}</span> ngày <span class="text-warning">{{$model->reservation_date}}</span> do stylist <span class="text-warning">{{$model->hairStylist->name}}</span> phụ trách. Cảm ơn đã sử dụng tính năng đặt lịch của chúng tôi!</h3>
+                 <a href="{{route('home')}}">Trang chủ</a>
 			</div>
 
 		</div>

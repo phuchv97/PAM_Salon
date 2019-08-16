@@ -27,7 +27,7 @@ class HomeController extends Controller
     }
 
     public function index(){
-        $posts = Posts::take(3)->get();
+        $posts = Posts::orderBy('id','desc')->take(3)->get();
         $service_detail = Services::all();
         $services = Services::take(4)->get();
         $hairStylist = HairStylist::limit(4)->get();
@@ -79,13 +79,18 @@ class HomeController extends Controller
         
         return view('home.profile',['gallery'=>$gallery,'user'=>$user,'reservation'=>$reservation]);
     }
-    public function formdatlich(Request $request){
+    public function formBookP1($hair_stylist_id){
+        $hairStylist = HairStylist::limit(4)->get();
+        $stylist = HairStylist::all();
+        return view('home.form-book-p1',compact('hairStylist','stylist','hair_stylist_id'));
+    }
+    public function formBookP2(Request $request){
         $phone_number = $request->phone_number;
         $reservation_date = $request->reservation_date;
         $hair_stylist = $request->hair_stylist;
         $services = Services::all();
         $reservation_time = TimeReservation::orderBy('time_reservation')->get();
-        return view('home.formdatlich',compact('phone_number','reservation_date','hair_stylist','services','reservation_time'));
+        return view('home.form-book-p2',compact('phone_number','reservation_date','hair_stylist','services','reservation_time'));
     }
     public function save_reservation(Request $request){
         
@@ -110,11 +115,7 @@ class HomeController extends Controller
 
 
     }
-    public function bookb1(){
-        $hairStylist = HairStylist::limit(4)->get();
-        $stylist = HairStylist::all();
-        return view('home.bookb1',compact('hairStylist','stylist'));
-    }
+    
     public function saveContact(Request $request){
         $validatedData = $request->validate([
                 'email' => 'required',

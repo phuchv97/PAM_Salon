@@ -7,13 +7,28 @@
     <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
       
       <div class="col-md-8 appointment ftco-animate">
-        <form autocomplete="off" action="{{route('formdatlich')}}" class="appointment-form" onsubmit="return validate_phonenumber()">
+        <form autocomplete="off" action="{{route('form_book_p2')}}" class="appointment-form" onsubmit="return validate_phonenumber()">
+          @php if(Auth::check()){
+          @endphp
+          <div >
+            <div class="form-group col-md-12">
+              <input type="number" name="phone_number" id="phone_number" class="form-control" value="{{Auth::user()->phone_number}}">
+            </div>
+            <span id="err_phone" class="col-md-12"></span>
+          </div>
+            
+          @php
+          }else{
+          @endphp
           <div >
             <div class="form-group col-md-12">
               <input type="number" name="phone_number" id="phone_number" class="form-control" placeholder="Số điện thoại">
             </div>
             <span id="err_phone" class="col-md-12"></span>
-          </div>  
+          </div>
+          @php
+          }
+          @endphp  
           <div class="d-md-flex">
             <div class="form-group col-md-6">
               <div class="input-wrap">
@@ -161,6 +176,7 @@
         <h3>Tiết kiệm tới 25%</h3>
         <h2 class="mb-4">TẤT CẢ CÁC DỊCH VỤ GIẢM GIÁ</h2>
         <p class="mb-4">Không chỉ cung cấp dịch vụ, Salon PAM còn là nơi tư vấn và phân phối mỹ phẩm nam giới hàng đầu tại Việt Nam</p>
+        <a href="{{route('form_book_p1',['hair_stylist_id'=>'9'])}}" class="btn btn-primary py-3 px-4 mt-3">Đặt Lịch ngay</a>
       </div>
     </div>
   </div>
@@ -181,7 +197,7 @@
         <div class="staff">
           <div class="img mb-4" style="background-image: url({{ asset($stylist->avatar) }});"></div>
           <div class="info text-center">
-            <h3><a href="teacher-single.html">{{$stylist -> name}}</a></h3>
+            <h3><a href="{{route('form_book_p1',['hair_stylist_id'=>$stylist ->id])}}">{{$stylist -> name}}</a></h3>
             <!-- <span class="position">Hair Specialist</span> -->
             <div class="text">
               <p>{{$stylist -> description}}</p>
