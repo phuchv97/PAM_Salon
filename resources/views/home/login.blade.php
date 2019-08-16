@@ -16,7 +16,6 @@
 
         <h3>Đăng nhập</h3>
         @if(isset($notification))
-        <br>
         <span class="text-center font-weight-bold text-success">{{$notification}}</span>
         @endif
         <div class="txtb">

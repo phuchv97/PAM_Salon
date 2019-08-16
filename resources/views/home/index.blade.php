@@ -237,7 +237,7 @@
     <div class="row no-gutters">
       @foreach($gallery as $g)
       <div class="col-md-3 ftco-animate">
-        <a href="gallery.html" class="gallery img d-flex align-items-center" style="background-image: url({{ asset($g->image) }});">
+        <a href="{{ route("album") }}" class="gallery img d-flex align-items-center" style="background-image: url({{ asset($g->image) }});">
           <div class="icon mb-4 d-flex align-items-center justify-content-center">
             <span class="icon-search"></span>
           </div>

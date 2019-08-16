@@ -9471,3 +9471,6 @@ select option{
 .c-rating--big {
   font-size: 150%;
 }
+.services .icon img{
+  width: 50%;
+}
