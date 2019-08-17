@@ -44,7 +44,7 @@ use App\Model\FeedbackHairStylist;
 							$feedback = FeedbackHairStylist::where('reservation_id','=',"$r->id")->first();
 						@endphp
 						<div class="col-md-12 mb-3">
-							<button class="btn btn-primary py-3 px-4" data-toggle="collapse" href="#collapseExample{{$r->id}}" role="button" aria-expanded="false" aria-controls="collapseExample{{$r->id}}">{{$r->reservation_date}}</button>
+							<button class="btn btn-primary py-3 px-4 mt-4" data-toggle="collapse" href="#collapseExample{{$r->id}}" role="button" aria-expanded="false" aria-controls="collapseExample{{$r->id}}">{{$r->reservation_date}}</button>
 						</div>
 						<div class="collapse" id="collapseExample{{$r->id}}">
 							<div class="card card-body">
