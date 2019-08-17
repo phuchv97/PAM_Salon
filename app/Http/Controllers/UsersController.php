@@ -17,10 +17,10 @@ class UsersController extends Controller
         $query = null;
         if($request->has('name')){
             $name = $request->name;
-            $query = User::whare('role_id','<','4')->where('name','like',"%$name%");
+            $query = User::where('role_id','<','4')->where('name','like',"%$name%");
         }
         if($query == null){
-            $users = User::whare('role_id','<','4')->paginate(8);
+            $users = User::where('role_id','<','4')->paginate(8);
         }else{
             $users = $query->paginate(8);
         }

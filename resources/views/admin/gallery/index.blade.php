@@ -42,7 +42,7 @@
                                                     <th>Id</th>
                                                     <th>Image</th>
                                                     <th>Description</th>
-                                                    <th class="text-center">User id</th>
+                                                   
 
                                                     <th class="text-center"><a class="btn btn-outline-primary" href="{{route('add_image_gallery')}}" role="button">Add Image</a></th>
                                                 </tr>
@@ -55,7 +55,7 @@
                                                         <img src="{{asset($g->image)}}" width="100">
                                                     </td>
                                                     <td>{{$g->description}}</td>
-                                                    <td class="text-center">{{$g->user_id}}</td>
+                                                    
                                                     
                                                     <td class="text-center">
                                                         <a href="javascript:void(0);" linkurl="{{route('delete_gallery',['id'=>$g->id])}}" data-toggle="m-tooltip" data-placement="left" title data-original-title="remove" class="text-danger btn-remove btn btn-outline-danger m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air delete_user_Model">
