@@ -301,9 +301,33 @@
 										<!--end::New Orders-->
 									</div>
 									
-									
-								</div>
+								</div>	
+								<div class="row m-row--col-separator-xl">
+									<div class="rounded border border-secondary col-md-12 col-lg-6 col-xl-3">
 
+										<!--begin::New Orders-->
+										<div class="m-widget24">
+											<div class="m-widget24__item">
+												<a href="{{route('list_guest')}}" class="m-widget24__title text-danger">
+												<h4 class="">
+													Guest
+												</h4>
+												</a>
+												<br>
+												<span class="m-widget24__desc">
+												All value
+												</span>
+												<span class="m-widget24__stats m--font-danger">
+													
+												</span>
+												<div class="m--space-10"></div>
+												
+											</div>
+										</div>
+
+										<!--end::New Orders-->
+									</div>
+								</div>
 								<!--end: Search Form -->
 
 								

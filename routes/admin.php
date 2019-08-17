@@ -22,6 +22,9 @@ Route::group(['middleware'=>'checkAdmin'],function(){
         Route::get('edit-user/{id}','UsersController@editUser')->name('edit_user');
         Route::get('delete-user/{id}','UsersController@delete')->name('delete_user');
     });
+    // guest
+    Route::get('list-guest','UsersController@listGuest')->name('list_guest');
+    Route::get('delete-guest/{id}','UsersController@deleteGuest')->name('delete_guest');
 
     //gallery
     Route::get('gallery','Admin\GalleryController@index')->name('list_gallery');

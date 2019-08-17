@@ -90,7 +90,28 @@ class UsersController extends Controller
         return view('home.login',['notification'=>'Đăng ký thành công bạn có thể đăng nhập']);
 
     }
-
+    public function listGuest(Request $request){
+        $name = null;
+        $query = null;
+        if($request->has('name')){
+            $name = $request->name;
+            $query = User::where('role_id','=','4')->where('name','like',"%$name%");
+        }
+        if($query == null){
+            $guests = User::where('role_id','=','4')->paginate(8);
+        }else{
+            $guests = $query->paginate(8);
+        }
+        
+        return view('admin.guests.index',['guests'=>$guests,'name'=>$name]);
+    }
+    public function deleteGuest($id){
+        $guest = User::find($id);
+        if($guest != null){
+            $guest->delete();
+        }
+        return redirect(route('list_guest'));
+    }
     public function editAccountGuest($id){
         $guest = User::find($id);
         $menus = Menus::all();
@@ -99,6 +120,7 @@ class UsersController extends Controller
         }
         return view('home');
     }
+
     public function saveAccountGuest(Request $request){
                 
         $validatedData = $request->validate([
